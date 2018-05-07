@@ -58,7 +58,8 @@
         "Maximum number of intermediate airports",
         "Minimum stopping time at intermediate airport",
         "Maximum stopping time at intermediate airport",
-        "The number of ticket category",
+        "The number of 1st tickets",
+        "The number of 2nd tickets",
         "The slowest time when booking tickets",
         "Ticket cancellation time"};
             this.listSex.Location = new System.Drawing.Point(119, 111);
@@ -67,7 +68,7 @@
             this.listSex.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
             this.listSex.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
             this.listSex.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.listSex.selectedIndex = 0;
+            this.listSex.selectedIndex = -1;
             this.listSex.Size = new System.Drawing.Size(365, 31);
             this.listSex.TabIndex = 6;
             // 
@@ -123,6 +124,7 @@
             this.updateRuleBt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.updateRuleBt.Textcolor = System.Drawing.Color.White;
             this.updateRuleBt.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateRuleBt.Click += new System.EventHandler(this.updateRuleBt_Click);
             // 
             // RuleChangeControl
             // 

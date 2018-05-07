@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConnectToSQL.cs" />
     <Compile Include="DatabaseControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
