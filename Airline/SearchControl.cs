@@ -13,7 +13,7 @@ namespace Airline
 {
     public partial class SearchControl : UserControl
     {
-
+    
         public SearchControl()
         {
             InitializeComponent();
@@ -22,17 +22,7 @@ namespace Airline
 
         private void bunifuCustomDataGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            ConnectToSQL con = new ConnectToSQL();
-            con.OpenConn();
-            string sql = "SELECT MACHUYENBAY, SANBAYDI, SANBAYDEN, GIO, HANG1CONLAI, GIAVE*1.05 as price1, HANG2CONLAI, GIAVE " +
-                "FROM dbo.CHUYENBAY";
-            SqlCommand cmd = new SqlCommand(sql, con.Connection);
-            cmd.CommandType = CommandType.Text;
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            con.CloseConn();
-            flightInfo.DataSource = dt;
+            
 
         }
 
@@ -48,9 +38,15 @@ namespace Airline
                 myReader = cmd.ExecuteReader();
                 if (myReader.HasRows)
                 {
-                    while (myReader.Read())
+                    if (bunifuDropdown1.selectedValue == "...")
                     {
-                        bunifuDropdown1.AddItem(myReader[0].ToString());
+                        bunifuDropdown1.RemoveItem("...");
+                        bunifuDropdown1.AddItem("---------Select Station--------");
+                        while (myReader.Read())
+                        {
+                            string sName = myReader[0].ToString();
+                            bunifuDropdown1.AddItem(sName);
+                        }
                     }
                 }
             }
@@ -69,12 +65,18 @@ namespace Airline
             try
             {
                 myReader = cmd.ExecuteReader();
+                
                 if (myReader.HasRows)
                 {
-                    while (myReader.Read())
+                    if (yearRp.selectedValue == "...")
                     {
-                        string sName = myReader[0].ToString();
-                        yearRp.AddItem(sName);
+                        yearRp.RemoveItem("...");
+                        yearRp.AddItem("---------Select Station--------");
+                        while (myReader.Read())
+                        {
+                            string sName = myReader[0].ToString();
+                            yearRp.AddItem(sName);
+                        }
                     }
                 }
             }
@@ -115,9 +117,15 @@ namespace Airline
                 myReader = cmd.ExecuteReader();
                 if (myReader.HasRows)
                 {
-                    while (myReader.Read())
+                    if (bunifuDropdown2.selectedValue == "...")
                     {
-                        bunifuDropdown2.AddItem(myReader[0].ToString());
+                        bunifuDropdown2.RemoveItem("...");
+                        bunifuDropdown2.AddItem("Any Time");
+                        while (myReader.Read())
+                        {
+                            string sName = myReader[0].ToString();
+                            bunifuDropdown2.AddItem(sName);
+                        }
                     }
                 }
             }
@@ -134,7 +142,7 @@ namespace Airline
                 "WHERE SANBAYDI='" + yearRp.selectedValue +
                 "' AND SANBAYDEN='" + bunifuDropdown1.selectedValue +
                 "' AND NGAY='" + bunifuDatepicker1.Value.ToString() + "'";
-            if(bunifuDropdown2.selectedValue!="Any Time")
+            if((bunifuDropdown2.selectedValue!="Any Time")&&(bunifuDropdown2.selectedValue!="..."))
                 sql+="AND GIO='" + bunifuDropdown2.selectedValue + "'";
             SqlCommand cmd = new SqlCommand(sql, con.Connection);
             cmd.CommandType = CommandType.Text;

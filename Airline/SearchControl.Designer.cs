@@ -38,10 +38,6 @@
             this.bunifuDatepicker1 = new Bunifu.Framework.UI.BunifuDatepicker();
             this.searchBt = new Bunifu.Framework.UI.BunifuFlatButton();
             this.flightInfo = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.yearRp = new Bunifu.Framework.UI.BunifuDropdown();
-            this.bunifuDropdown1 = new Bunifu.Framework.UI.BunifuDropdown();
-            this.label4 = new System.Windows.Forms.Label();
-            this.bunifuDropdown2 = new Bunifu.Framework.UI.BunifuDropdown();
             this.stt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.from = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.to = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,6 +46,10 @@
             this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.price2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.yearRp = new Bunifu.Framework.UI.BunifuDropdown();
+            this.bunifuDropdown1 = new Bunifu.Framework.UI.BunifuDropdown();
+            this.label4 = new System.Windows.Forms.Label();
+            this.bunifuDropdown2 = new Bunifu.Framework.UI.BunifuDropdown();
             ((System.ComponentModel.ISupportInitialize)(this.flightInfo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,7 +94,7 @@
             this.bunifuDatepicker1.FormatCustom = null;
             this.bunifuDatepicker1.Location = new System.Drawing.Point(189, 178);
             this.bunifuDatepicker1.Name = "bunifuDatepicker1";
-            this.bunifuDatepicker1.Size = new System.Drawing.Size(255, 29);
+            this.bunifuDatepicker1.Size = new System.Drawing.Size(205, 29);
             this.bunifuDatepicker1.TabIndex = 3;
             this.bunifuDatepicker1.Value = new System.DateTime(2018, 4, 9, 0, 1, 18, 460);
             // 
@@ -184,79 +184,6 @@
             this.flightInfo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bunifuCustomDataGrid1_CellContentClick);
             this.flightInfo.SelectionChanged += new System.EventHandler(this.flightInfo_SelectionChanged);
             // 
-            // yearRp
-            // 
-            this.yearRp.BackColor = System.Drawing.Color.Transparent;
-            this.yearRp.BorderRadius = 3;
-            this.yearRp.Cursor = System.Windows.Forms.Cursors.Default;
-            this.yearRp.DisabledColor = System.Drawing.Color.Gray;
-            this.yearRp.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.yearRp.ForeColor = System.Drawing.Color.White;
-            this.yearRp.Items = new string[] {
-        "HCM"};
-            this.yearRp.Location = new System.Drawing.Point(189, 74);
-            this.yearRp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.yearRp.Name = "yearRp";
-            this.yearRp.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
-            this.yearRp.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
-            this.yearRp.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.yearRp.selectedIndex = 0;
-            this.yearRp.Size = new System.Drawing.Size(187, 31);
-            this.yearRp.TabIndex = 10;
-            this.yearRp.onItemSelected += new System.EventHandler(this.yearRp_onItemSelected);
-            // 
-            // bunifuDropdown1
-            // 
-            this.bunifuDropdown1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuDropdown1.BorderRadius = 3;
-            this.bunifuDropdown1.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuDropdown1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuDropdown1.ForeColor = System.Drawing.Color.White;
-            this.bunifuDropdown1.Items = new string[] {
-        "HN"};
-            this.bunifuDropdown1.Location = new System.Drawing.Point(189, 124);
-            this.bunifuDropdown1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuDropdown1.Name = "bunifuDropdown1";
-            this.bunifuDropdown1.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
-            this.bunifuDropdown1.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
-            this.bunifuDropdown1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuDropdown1.selectedIndex = 0;
-            this.bunifuDropdown1.Size = new System.Drawing.Size(187, 31);
-            this.bunifuDropdown1.TabIndex = 10;
-            this.bunifuDropdown1.onItemSelected += new System.EventHandler(this.bunifuDropdown1_onItemSelected);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.label4.Location = new System.Drawing.Point(37, 231);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(106, 17);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Departure Time";
-            // 
-            // bunifuDropdown2
-            // 
-            this.bunifuDropdown2.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuDropdown2.BorderRadius = 3;
-            this.bunifuDropdown2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuDropdown2.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuDropdown2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuDropdown2.ForeColor = System.Drawing.Color.White;
-            this.bunifuDropdown2.Items = new string[] {
-        "Any Time"};
-            this.bunifuDropdown2.Location = new System.Drawing.Point(189, 231);
-            this.bunifuDropdown2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuDropdown2.Name = "bunifuDropdown2";
-            this.bunifuDropdown2.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
-            this.bunifuDropdown2.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
-            this.bunifuDropdown2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuDropdown2.selectedIndex = 0;
-            this.bunifuDropdown2.Size = new System.Drawing.Size(187, 31);
-            this.bunifuDropdown2.TabIndex = 12;
-            this.bunifuDropdown2.onItemSelected += new System.EventHandler(this.bunifuDropdown2_onItemSelected);
-            // 
             // stt
             // 
             this.stt.DataPropertyName = "MACHUYENBAY";
@@ -312,6 +239,79 @@
             this.price2.HeaderText = "Price 2nd Class";
             this.price2.Name = "price2";
             this.price2.ReadOnly = true;
+            // 
+            // yearRp
+            // 
+            this.yearRp.BackColor = System.Drawing.Color.Transparent;
+            this.yearRp.BorderRadius = 3;
+            this.yearRp.Cursor = System.Windows.Forms.Cursors.Default;
+            this.yearRp.DisabledColor = System.Drawing.Color.Gray;
+            this.yearRp.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.yearRp.ForeColor = System.Drawing.Color.White;
+            this.yearRp.Items = new string[] {
+        "..."};
+            this.yearRp.Location = new System.Drawing.Point(189, 74);
+            this.yearRp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.yearRp.Name = "yearRp";
+            this.yearRp.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
+            this.yearRp.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
+            this.yearRp.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.yearRp.selectedIndex = 0;
+            this.yearRp.Size = new System.Drawing.Size(205, 31);
+            this.yearRp.TabIndex = 10;
+            this.yearRp.onItemSelected += new System.EventHandler(this.yearRp_onItemSelected);
+            // 
+            // bunifuDropdown1
+            // 
+            this.bunifuDropdown1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuDropdown1.BorderRadius = 3;
+            this.bunifuDropdown1.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuDropdown1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuDropdown1.ForeColor = System.Drawing.Color.White;
+            this.bunifuDropdown1.Items = new string[] {
+        "..."};
+            this.bunifuDropdown1.Location = new System.Drawing.Point(189, 124);
+            this.bunifuDropdown1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuDropdown1.Name = "bunifuDropdown1";
+            this.bunifuDropdown1.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
+            this.bunifuDropdown1.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
+            this.bunifuDropdown1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuDropdown1.selectedIndex = 0;
+            this.bunifuDropdown1.Size = new System.Drawing.Size(205, 31);
+            this.bunifuDropdown1.TabIndex = 10;
+            this.bunifuDropdown1.onItemSelected += new System.EventHandler(this.bunifuDropdown1_onItemSelected);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.label4.Location = new System.Drawing.Point(37, 231);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(106, 17);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Departure Time";
+            // 
+            // bunifuDropdown2
+            // 
+            this.bunifuDropdown2.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuDropdown2.BorderRadius = 3;
+            this.bunifuDropdown2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuDropdown2.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuDropdown2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuDropdown2.ForeColor = System.Drawing.Color.White;
+            this.bunifuDropdown2.Items = new string[] {
+        "..."};
+            this.bunifuDropdown2.Location = new System.Drawing.Point(189, 231);
+            this.bunifuDropdown2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuDropdown2.Name = "bunifuDropdown2";
+            this.bunifuDropdown2.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
+            this.bunifuDropdown2.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
+            this.bunifuDropdown2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuDropdown2.selectedIndex = 0;
+            this.bunifuDropdown2.Size = new System.Drawing.Size(205, 31);
+            this.bunifuDropdown2.TabIndex = 12;
+            this.bunifuDropdown2.onItemSelected += new System.EventHandler(this.bunifuDropdown2_onItemSelected);
             // 
             // SearchControl
             // 
