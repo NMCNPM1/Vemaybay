@@ -14,7 +14,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using Airline.DTO;
+
 
 namespace Airline
 {
@@ -24,36 +24,45 @@ namespace Airline
         {
             InitializeComponent();
         }
-        ConnectToSQL DA = new ConnectToSQL();
-        KhachHang KH = new KhachHang();
-
-       void dis_en(bool e)
-        {
-            contactName.Enabled = e;
-            phoneNumber.Enabled = e;
-            cMND.Enabled = e;
-            eMail.Enabled = e;
+        ConnectToSQL con = new ConnectToSQL();
+        SqlCommand cmd = new SqlCommand();
+        public void GanDuLieu()
+        {         
+            string HoTen = contactName.Text;
+            string Phonenumber = phoneNumber.Text;
+            string Addr = Address.Text;
+            string Cmnd = CMND.Text;
+            string Email = eMail.Text;
         }
-        void Gandulieu(KhachHang KH)
-        {
-            KH.HOTEN = contactName.Text.Trim();
-            KH.SDT = phoneNumber.Text.Trim();
-            KH.CMND = cMND.Text.Trim();
-            KH.EMAIL = eMail.Text.Trim();
-
-           
-                
-        }
-        void Listsex()
-        {
-            contactDrD.AddItem("Mr");
-            contactDrD.AddItem("Mrs");
-        }
+        // void Listsex()
+        //{    
+        //    contactDrD.AddItem("Mr");
+        //    contactDrD.AddItem("Mrs");
+        //}
+        // làm sao để insert giới tình từ dropdown đổ vào sql?
+             
         private void bookBt_Click(object sender, EventArgs e)
         {
-            Listsex();
-            Gandulieu(KH);
-            dis_en(true);   
+            GanDuLieu();
+            //Listsex();
+            cmd.CommandText = " insert into KhachHang values ('" + contactName.Text +"','" + phoneNumber.Text + "','" + Address.Text + "','" + CMND.Text + "','" + eMail.Text + "')";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = con.Connection;
+            try
+            {
+                con.OpenConn();
+                cmd.ExecuteNonQuery();
+                con.CloseConn();
+                
+            }
+            catch (Exception ex)
+            {
+                string mex = ex.Message;
+                cmd.Dispose();
+                con.CloseConn();
+            }
+            MessageBox.Show("Bạn Book vé thành công!");
+         
         }
         //public string SinhMA1()
         //{
