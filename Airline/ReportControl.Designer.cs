@@ -99,6 +99,7 @@
             this.yearRp.Items = new string[] {
         "2017",
         "2018",
+        "2019",
         "2020",
         "2021",
         "2022",
@@ -116,7 +117,7 @@
             this.yearRp.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
             this.yearRp.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
             this.yearRp.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.yearRp.selectedIndex = 0;
+            this.yearRp.selectedIndex = -1;
             this.yearRp.Size = new System.Drawing.Size(87, 31);
             this.yearRp.TabIndex = 8;
             // 
