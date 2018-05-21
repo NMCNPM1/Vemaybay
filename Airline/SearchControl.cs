@@ -17,6 +17,10 @@ namespace Airline
         public SearchControl()
         {
             InitializeComponent();
+            this.yearRp.Load += new System.EventHandler(this.yearRp_onItemSelected);
+            this.bunifuDropdown1.Load += new System.EventHandler(this.bunifuDropdown1_onItemSelected);
+            this.bunifuDropdown2.Load += new System.EventHandler(this.bunifuDropdown2_onItemSelected);
+
         }
 
 
@@ -109,7 +113,7 @@ namespace Airline
         {
             ConnectToSQL con = new ConnectToSQL();
             con.OpenConn();
-            string sql = "SELECT GIO FROM dbo.CHUYENBAY ORDER BY GIO ASC ";
+            string sql = "SELECT GIO FROM dbo.CHUYENBAY ORDER BY GIO ASC";
             SqlCommand cmd = new SqlCommand(sql, con.Connection);
             SqlDataReader myReader;
             try
@@ -151,6 +155,11 @@ namespace Airline
             da.Fill(dt);
             con.CloseConn();
             flightInfo.DataSource = dt;
+        }
+
+        private void bunifuDatepicker1_onValueChanged_1(object sender, EventArgs e)
+        {
+            
         }
     }
 }

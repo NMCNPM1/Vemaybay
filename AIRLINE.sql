@@ -266,17 +266,23 @@ CREATE TRIGGER HANCHOTDATVE ON VE
 					ROLLBACK TRAN
 				END
 		END
-TEST THỬ
+
+
+TEST 
 insert into SANBAY values ('HCM','HoChiMinh','VIETNAM')
 insert into SANBAY values ('HN','HaNoi','VIETNAM')
 insert into SANBAY values ('DN','DaNang','VIETNAM')
 SELECT * FROM SANBAY
 
 
-insert into CHUYENBAY values('123','1500','HCM','HN','09/05/2018','23:30','90','15','15','15','15')
-insert into CHUYENBAY values('456','2000','HCM','DN','09/09/2018','15:00','90','15','15','15','15')
-SELECT * FROM CHUYENBAY
+insert into CHUYENBAY values('1001','1500','HCM','HN','21/05/2018','10:00','90','15','15','15','15')
+insert into CHUYENBAY values('1002','2000','HCM','HN','21/05/2018','11:30','90','15','15','15','15')
+insert into CHUYENBAY values('1003','2500','HCM','HN','21/05/2018','12:00','90','15','15','15','15')
+insert into CHUYENBAY values('1004','3000','HCM','DN','21/05/2018','12:30','90','15','15','15','15')
+insert into CHUYENBAY values('1005','3500','HCM','DN','21/05/2018','13:00','90','15','15','15','15')
+insert into CHUYENBAY values('1006','4000','HCM','DN','21/05/2018','13:30','90','15','15','15','15')
 
+SELECT * FROM CHUYENBAY
 
 
            
