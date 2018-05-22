@@ -26,57 +26,32 @@ namespace Airline
         }
         ConnectToSQL con = new ConnectToSQL();
         SqlCommand cmd = new SqlCommand();
-        public void GanDuLieu()
-        {         
-            string HoTen = contactName.Text;
-            string Phonenumber = phoneNumber.Text;
-            string Addr = Address.Text;
-            string Cmnd = CMND.Text;
-            string Email = eMail.Text;
-        }
-        // void Listsex()
-        //{    
-        //    contactDrD.AddItem("Mr");
-        //    contactDrD.AddItem("Mrs");
-        //}
-        // làm sao để insert giới tình từ dropdown đổ vào sql?
-             
+ 
         private void bookBt_Click(object sender, EventArgs e)
         {
-            GanDuLieu();
-            //Listsex();
-            cmd.CommandText = " insert into KhachHang values ('" + contactName.Text +"','" + phoneNumber.Text + "','" + Address.Text + "','" + CMND.Text + "','" + eMail.Text + "')";
-            cmd.CommandType = CommandType.Text;
-            cmd.Connection = con.Connection;
+            
+            ConnectToSQL con = new ConnectToSQL();
+            con.OpenConn();
+            string sql = " insert into KhachHang values ('" + this.contactName.Text + "','" + this.contactDrD.selectedValue.ToString() + "','" + this.CMND.Text + "','" + this.phoneNumber.Text + "','" + this.Address.Text + "','" + this.eMail.Text + "')";
+            SqlCommand cmd = new SqlCommand(sql, con.Connection);
+            SqlDataReader myReader;
             try
-            {
-                con.OpenConn();
-                cmd.ExecuteNonQuery();
+            {           
+                myReader = cmd.ExecuteReader();
+                MessageBox.Show("Booked!");
+                while (myReader.Read())
+                {
+                    string Gender = myReader[0].ToString();
+                    contactDrD.AddItem(Gender);
+                }
                 con.CloseConn();
-                
             }
             catch (Exception ex)
             {
-                string mex = ex.Message;
-                cmd.Dispose();
-                con.CloseConn();
+                MessageBox.Show(ex.Message);
             }
-            MessageBox.Show("Bạn Book vé thành công!");
-         
+            MessageBox.Show("Book failed!");
         }
-        //public string SinhMA1()
-        //{
-        //    string maKH;
-        //    DataTable myTB = DA.TbView("select MaKhachHang From KhachHang");
-        //    if (myTB.Rows.Count == 0) { return maKH = "MKH000"; }
-        //    if (myTB.Rows.Count > 0)
-        //    {
-        //        int temp = Int32.Parse(myTB.Rows[(myTB.Rows.Count - 1)]["MaKhachHang"].ToString().Substring(3, 3)) + 2;
-        //        if (temp < 10) { return maKH = "MKH00" + temp.ToString(); };
-        //        if (10 <= temp && temp < 100) { return maKH = "MKH0" + temp.ToString(); };
-        //    }
-        //    myTB = null;
-        //    return null;
-        //}
+
     }
 }

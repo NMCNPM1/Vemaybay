@@ -36,7 +36,6 @@
             this.bookBt = new Bunifu.Framework.UI.BunifuFlatButton();
             this.contactDrD = new Bunifu.Framework.UI.BunifuDropdown();
             this.label2 = new System.Windows.Forms.Label();
-            this.flightCode = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.CMND = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.Address = new Bunifu.Framework.UI.BunifuMaterialTextbox();
@@ -144,7 +143,7 @@
             this.contactDrD.Items = new string[] {
         "Mr.",
         "Mrs."};
-            this.contactDrD.Location = new System.Drawing.Point(118, 120);
+            this.contactDrD.Location = new System.Drawing.Point(144, 124);
             this.contactDrD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.contactDrD.Name = "contactDrD";
             this.contactDrD.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
@@ -158,30 +157,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(76, 83);
+            this.label2.Location = new System.Drawing.Point(62, 99);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(182, 21);
             this.label2.TabIndex = 4;
             this.label2.Text = "Passenger Infomation:";
-            // 
-            // flightCode
-            // 
-            this.flightCode.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.flightCode.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.flightCode.ForeColor = System.Drawing.Color.Black;
-            this.flightCode.HintForeColor = System.Drawing.Color.DimGray;
-            this.flightCode.HintText = "PASSENGER CODE";
-            this.flightCode.isPassword = false;
-            this.flightCode.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
-            this.flightCode.LineIdleColor = System.Drawing.Color.Gray;
-            this.flightCode.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
-            this.flightCode.LineThickness = 3;
-            this.flightCode.Location = new System.Drawing.Point(251, 58);
-            this.flightCode.Margin = new System.Windows.Forms.Padding(4);
-            this.flightCode.Name = "flightCode";
-            this.flightCode.Size = new System.Drawing.Size(260, 33);
-            this.flightCode.TabIndex = 10;
-            this.flightCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // contextMenuStrip1
             // 
@@ -232,7 +212,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.Address);
             this.Controls.Add(this.CMND);
-            this.Controls.Add(this.flightCode);
             this.Controls.Add(this.bookBt);
             this.Controls.Add(this.eMail);
             this.Controls.Add(this.phoneNumber);
@@ -253,7 +232,6 @@
         private Bunifu.Framework.UI.BunifuFlatButton bookBt;
         private Bunifu.Framework.UI.BunifuDropdown contactDrD;
         private System.Windows.Forms.Label label2;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox flightCode;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private Bunifu.Framework.UI.BunifuMaterialTextbox CMND;
         private Bunifu.Framework.UI.BunifuMaterialTextbox Address;
