@@ -24,8 +24,6 @@ namespace Airline
         {
             InitializeComponent();
         }
-        ConnectToSQL con = new ConnectToSQL();
-        SqlCommand cmd = new SqlCommand();
  
         private void bookBt_Click(object sender, EventArgs e)
         {
