@@ -39,6 +39,7 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.CMND = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.Address = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.backSearch = new Bunifu.Framework.UI.BunifuFlatButton();
             this.SuspendLayout();
             // 
             // contactName
@@ -206,10 +207,46 @@
             this.Address.TabIndex = 12;
             this.Address.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // backSearch
+            // 
+            this.backSearch.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(76)))), ((int)(((byte)(157)))));
+            this.backSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
+            this.backSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.backSearch.BorderRadius = 7;
+            this.backSearch.ButtonText = "Back to Search";
+            this.backSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.backSearch.DisabledColor = System.Drawing.Color.Gray;
+            this.backSearch.Iconcolor = System.Drawing.Color.Transparent;
+            this.backSearch.Iconimage =((System.Drawing.Image)(resources.GetObject("searchBt.Iconimage")));
+            this.backSearch.Iconimage_right = null;
+            this.backSearch.Iconimage_right_Selected = null;
+            this.backSearch.Iconimage_Selected = null;
+            this.backSearch.IconMarginLeft = 0;
+            this.backSearch.IconMarginRight = 0;
+            this.backSearch.IconRightVisible = true;
+            this.backSearch.IconRightZoom = 0D;
+            this.backSearch.IconVisible = true;
+            this.backSearch.IconZoom = 70D;
+            this.backSearch.IsTab = true;
+            this.backSearch.Location = new System.Drawing.Point(382, 383);
+            this.backSearch.Name = "backSearch";
+            this.backSearch.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
+            this.backSearch.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(76)))), ((int)(((byte)(157)))));
+            this.backSearch.OnHoverTextColor = System.Drawing.Color.White;
+            this.backSearch.selected = false;
+            this.backSearch.Size = new System.Drawing.Size(112, 52);
+            this.backSearch.TabIndex = 13;
+            this.backSearch.Text = "Back to Search";
+            this.backSearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.backSearch.Textcolor = System.Drawing.Color.White;
+            this.backSearch.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backSearch.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
+            // 
             // SaleControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.backSearch);
             this.Controls.Add(this.Address);
             this.Controls.Add(this.CMND);
             this.Controls.Add(this.bookBt);
@@ -235,5 +272,7 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private Bunifu.Framework.UI.BunifuMaterialTextbox CMND;
         private Bunifu.Framework.UI.BunifuMaterialTextbox Address;
+        private Bunifu.Framework.UI.BunifuFlatButton backSearch;
+        private SearchControl backToSearch;
     }
 }

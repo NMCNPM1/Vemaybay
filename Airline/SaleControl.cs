@@ -51,5 +51,12 @@ namespace Airline
             MessageBox.Show("Book failed!");
         }
 
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            backToSearch = new SearchControl();
+            this.Controls.Add(this.backToSearch);
+            backToSearch.Visible = true;
+            backToSearch.BringToFront();
+        }
     }
 }

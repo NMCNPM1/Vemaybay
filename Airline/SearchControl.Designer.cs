@@ -182,6 +182,7 @@
             this.flightInfo.Size = new System.Drawing.Size(583, 155);
             this.flightInfo.TabIndex = 8;
             this.flightInfo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bunifuCustomDataGrid1_CellContentClick);
+            this.flightInfo.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.flightInfo_RowHeaderMouseDoubleClick);
             this.flightInfo.SelectionChanged += new System.EventHandler(this.flightInfo_SelectionChanged);
             // 
             // stt
@@ -356,5 +357,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn price;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn price2;
+        private SaleControl sale1;
     }
 }

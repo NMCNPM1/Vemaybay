@@ -141,6 +141,8 @@ namespace Airline
         {
             ConnectToSQL con = new ConnectToSQL();
             con.OpenConn();
+            if ((yearRp.selectedIndex == -1) || (bunifuDropdown1.selectedIndex == -1) || (bunifuDropdown2.selectedIndex == -1))
+                return;
             string sql = "SELECT MACHUYENBAY, SANBAYDI, SANBAYDEN, GIO, HANG1CONLAI, GIAVE*1.05 as price1, HANG2CONLAI, GIAVE " +
                 "FROM dbo.CHUYENBAY " +
                 "WHERE SANBAYDI='" + yearRp.selectedValue +
@@ -160,6 +162,19 @@ namespace Airline
         private void bunifuDatepicker1_onValueChanged_1(object sender, EventArgs e)
         {
             
+        }
+
+        private void flightInfo_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            try
+            {
+                sale1 = new SaleControl();
+                this.Controls.Add(this.sale1);
+                sale1.Visible = true;
+                sale1.BringToFront();
+            }
+            catch { }
+           
         }
     }
 }
