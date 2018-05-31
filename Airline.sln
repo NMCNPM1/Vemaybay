@@ -5,8 +5,6 @@ VisualStudioVersion = 15.0.27428.2043
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Airline", "Airline\Airline.csproj", "{5A0777B1-A827-417F-A278-C94EF635A4BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infinity Running Gamee", "E:\Visual Studio 2015\Projects\Infinity Running Gamee\Infinity Running Gamee\Infinity Running Gamee.csproj", "{6BCCFD7E-9900-412B-88BB-7EC750421858}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +15,6 @@ Global
 		{5A0777B1-A827-417F-A278-C94EF635A4BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5A0777B1-A827-417F-A278-C94EF635A4BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5A0777B1-A827-417F-A278-C94EF635A4BD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6BCCFD7E-9900-412B-88BB-7EC750421858}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6BCCFD7E-9900-412B-88BB-7EC750421858}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6BCCFD7E-9900-412B-88BB-7EC750421858}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6BCCFD7E-9900-412B-88BB-7EC750421858}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
