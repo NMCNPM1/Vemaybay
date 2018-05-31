@@ -1,6 +1,6 @@
 ﻿
 CREATE DATABASE AIRLINE
-
+Drop database AIRLINE
 
 use AIRLINE
 
@@ -268,7 +268,7 @@ CREATE TRIGGER HANCHOTDATVE ON VE
 		END
 
 
-TEST 
+--TEST 
 insert into SANBAY values ('HCM','HoChiMinh','VIETNAM')
 insert into SANBAY values ('HN','HaNoi','VIETNAM')
 insert into SANBAY values ('DN','DaNang','VIETNAM')

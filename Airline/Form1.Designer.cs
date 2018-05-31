@@ -167,7 +167,7 @@
             this.reportBt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
             this.reportBt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.reportBt.BorderRadius = 0;
-            this.reportBt.ButtonText = "  Income Report";
+            this.reportBt.ButtonText = " Revenue Report";
             this.reportBt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.reportBt.DisabledColor = System.Drawing.Color.Gray;
             this.reportBt.Iconcolor = System.Drawing.Color.Transparent;
@@ -190,7 +190,7 @@
             this.reportBt.selected = false;
             this.reportBt.Size = new System.Drawing.Size(200, 53);
             this.reportBt.TabIndex = 4;
-            this.reportBt.Text = "  Income Report";
+            this.reportBt.Text = " Revenue Report";
             this.reportBt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.reportBt.Textcolor = System.Drawing.Color.White;
             this.reportBt.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
