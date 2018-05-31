@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DatabaseControl));
             this.dataBt = new Bunifu.Framework.UI.BunifuFlatButton();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // dataBt
@@ -54,7 +55,7 @@
             this.dataBt.IconVisible = true;
             this.dataBt.IconZoom = 70D;
             this.dataBt.IsTab = true;
-            this.dataBt.Location = new System.Drawing.Point(204, 145);
+            this.dataBt.Location = new System.Drawing.Point(223, 230);
             this.dataBt.Name = "dataBt";
             this.dataBt.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
             this.dataBt.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(76)))), ((int)(((byte)(157)))));
@@ -72,13 +73,24 @@
             // 
             this.openFileDialog1.FileName = "Database File";
             // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(148, 175);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(225, 21);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Update Database(.xls): ";
+            // 
             // DatabaseControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.dataBt);
             this.Name = "DatabaseControl";
-            this.Size = new System.Drawing.Size(599, 349);
+            this.Size = new System.Drawing.Size(617, 550);
             this.ResumeLayout(false);
 
         }
@@ -87,5 +99,6 @@
 
         private Bunifu.Framework.UI.BunifuFlatButton dataBt;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Label label1;
     }
 }

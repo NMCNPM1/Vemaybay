@@ -53,7 +53,7 @@
             this.contactName.LineIdleColor = System.Drawing.Color.Gray;
             this.contactName.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
             this.contactName.LineThickness = 3;
-            this.contactName.Location = new System.Drawing.Point(251, 99);
+            this.contactName.Location = new System.Drawing.Point(247, 163);
             this.contactName.Margin = new System.Windows.Forms.Padding(4);
             this.contactName.Name = "contactName";
             this.contactName.Size = new System.Drawing.Size(260, 33);
@@ -72,7 +72,7 @@
             this.phoneNumber.LineIdleColor = System.Drawing.Color.Gray;
             this.phoneNumber.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
             this.phoneNumber.LineThickness = 3;
-            this.phoneNumber.Location = new System.Drawing.Point(251, 140);
+            this.phoneNumber.Location = new System.Drawing.Point(247, 204);
             this.phoneNumber.Margin = new System.Windows.Forms.Padding(4);
             this.phoneNumber.Name = "phoneNumber";
             this.phoneNumber.Size = new System.Drawing.Size(260, 33);
@@ -91,7 +91,7 @@
             this.eMail.LineIdleColor = System.Drawing.Color.Gray;
             this.eMail.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
             this.eMail.LineThickness = 3;
-            this.eMail.Location = new System.Drawing.Point(251, 263);
+            this.eMail.Location = new System.Drawing.Point(247, 327);
             this.eMail.Margin = new System.Windows.Forms.Padding(4);
             this.eMail.Name = "eMail";
             this.eMail.Size = new System.Drawing.Size(260, 33);
@@ -119,7 +119,7 @@
             this.bookBt.IconVisible = true;
             this.bookBt.IconZoom = 70D;
             this.bookBt.IsTab = true;
-            this.bookBt.Location = new System.Drawing.Point(251, 319);
+            this.bookBt.Location = new System.Drawing.Point(247, 383);
             this.bookBt.Name = "bookBt";
             this.bookBt.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
             this.bookBt.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(76)))), ((int)(((byte)(157)))));
@@ -143,7 +143,7 @@
             this.contactDrD.Items = new string[] {
         "Mr.",
         "Mrs."};
-            this.contactDrD.Location = new System.Drawing.Point(144, 124);
+            this.contactDrD.Location = new System.Drawing.Point(140, 188);
             this.contactDrD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.contactDrD.Name = "contactDrD";
             this.contactDrD.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
@@ -157,7 +157,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(62, 99);
+            this.label2.Location = new System.Drawing.Point(58, 163);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(182, 21);
             this.label2.TabIndex = 4;
@@ -180,7 +180,7 @@
             this.CMND.LineIdleColor = System.Drawing.Color.Gray;
             this.CMND.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
             this.CMND.LineThickness = 3;
-            this.CMND.Location = new System.Drawing.Point(251, 222);
+            this.CMND.Location = new System.Drawing.Point(247, 286);
             this.CMND.Margin = new System.Windows.Forms.Padding(4);
             this.CMND.Name = "CMND";
             this.CMND.Size = new System.Drawing.Size(260, 33);
@@ -199,7 +199,7 @@
             this.Address.LineIdleColor = System.Drawing.Color.Gray;
             this.Address.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
             this.Address.LineThickness = 3;
-            this.Address.Location = new System.Drawing.Point(251, 181);
+            this.Address.Location = new System.Drawing.Point(247, 245);
             this.Address.Margin = new System.Windows.Forms.Padding(4);
             this.Address.Name = "Address";
             this.Address.Size = new System.Drawing.Size(260, 33);
@@ -219,7 +219,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.contactName);
             this.Name = "SaleControl";
-            this.Size = new System.Drawing.Size(684, 462);
+            this.Size = new System.Drawing.Size(617, 550);
             this.ResumeLayout(false);
             this.PerformLayout();
 

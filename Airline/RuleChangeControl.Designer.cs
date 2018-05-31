@@ -39,7 +39,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(53, 58);
+            this.label1.Location = new System.Drawing.Point(108, 181);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(284, 21);
             this.label1.TabIndex = 2;
@@ -62,7 +62,7 @@
         "The number of 2nd tickets",
         "The slowest time when booking tickets",
         "Ticket cancellation time"};
-            this.listSex.Location = new System.Drawing.Point(119, 111);
+            this.listSex.Location = new System.Drawing.Point(174, 234);
             this.listSex.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listSex.Name = "listSex";
             this.listSex.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
@@ -84,7 +84,7 @@
             this.newValue.LineIdleColor = System.Drawing.Color.Gray;
             this.newValue.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
             this.newValue.LineThickness = 3;
-            this.newValue.Location = new System.Drawing.Point(119, 150);
+            this.newValue.Location = new System.Drawing.Point(174, 273);
             this.newValue.Margin = new System.Windows.Forms.Padding(4);
             this.newValue.Name = "newValue";
             this.newValue.Size = new System.Drawing.Size(254, 33);
@@ -112,7 +112,7 @@
             this.updateRuleBt.IconVisible = true;
             this.updateRuleBt.IconZoom = 50D;
             this.updateRuleBt.IsTab = true;
-            this.updateRuleBt.Location = new System.Drawing.Point(183, 205);
+            this.updateRuleBt.Location = new System.Drawing.Point(238, 328);
             this.updateRuleBt.Name = "updateRuleBt";
             this.updateRuleBt.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
             this.updateRuleBt.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(76)))), ((int)(((byte)(157)))));
@@ -135,7 +135,7 @@
             this.Controls.Add(this.listSex);
             this.Controls.Add(this.label1);
             this.Name = "RuleChangeControl";
-            this.Size = new System.Drawing.Size(599, 349);
+            this.Size = new System.Drawing.Size(617, 550);
             this.ResumeLayout(false);
             this.PerformLayout();
 

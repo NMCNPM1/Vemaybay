@@ -108,5 +108,15 @@ namespace Airline
         //    if(panel1.Width == 56)
         //    changeWidthPanel(200, 56, true);
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

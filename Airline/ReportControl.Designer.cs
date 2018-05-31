@@ -40,7 +40,7 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(224, 69);
+            this.label1.Location = new System.Drawing.Point(201, 190);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(66, 21);
             this.label1.TabIndex = 2;
@@ -51,7 +51,7 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(224, 114);
+            this.label2.Location = new System.Drawing.Point(201, 235);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 21);
             this.label2.TabIndex = 4;
@@ -78,7 +78,7 @@
         "10",
         "11",
         "12"};
-            this.monthRp.Location = new System.Drawing.Point(337, 59);
+            this.monthRp.Location = new System.Drawing.Point(314, 180);
             this.monthRp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.monthRp.Name = "monthRp";
             this.monthRp.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
@@ -111,7 +111,7 @@
         "2028",
         "2029",
         "2030"};
-            this.yearRp.Location = new System.Drawing.Point(314, 109);
+            this.yearRp.Location = new System.Drawing.Point(291, 230);
             this.yearRp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.yearRp.Name = "yearRp";
             this.yearRp.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
@@ -143,7 +143,7 @@
             this.reportBt.IconVisible = true;
             this.reportBt.IconZoom = 70D;
             this.reportBt.IsTab = true;
-            this.reportBt.Location = new System.Drawing.Point(264, 174);
+            this.reportBt.Location = new System.Drawing.Point(241, 295);
             this.reportBt.Name = "reportBt";
             this.reportBt.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
             this.reportBt.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(76)))), ((int)(((byte)(157)))));
@@ -166,7 +166,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "ReportControl";
-            this.Size = new System.Drawing.Size(599, 349);
+            this.Size = new System.Drawing.Size(617, 550);
             this.ResumeLayout(false);
 
         }
