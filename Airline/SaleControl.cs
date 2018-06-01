@@ -27,28 +27,35 @@ namespace Airline
  
         private void bookBt_Click(object sender, EventArgs e)
         {
-            
-            ConnectToSQL con = new ConnectToSQL();
-            con.OpenConn();
-            string sql = " insert into KhachHang values ('" + this.contactName.Text + "','" + this.contactDrD.selectedValue.ToString() + "','" + this.CMND.Text + "','" + this.phoneNumber.Text + "','" + this.Address.Text + "','" + this.eMail.Text + "')";
-            SqlCommand cmd = new SqlCommand(sql, con.Connection);
-            SqlDataReader myReader;
-            try
-            {           
-                myReader = cmd.ExecuteReader();
-                MessageBox.Show("Booked!");
-                while (myReader.Read())
+
+            Random rdKH = new Random();
+            int rdNum = rdKH.Next(1, 1000);
+            string rdIDKH = "KH00" + rdNum.ToString();
+            if ((this.contactName.Text == "") || (this.phoneNumber.Text == "") || (Address.Text == "") || (ID.Text == ""))
+            {
+                MessageBox.Show("Please fill information");
+            }
+            else
+            {
+                ConnectToSQL con = new ConnectToSQL();
+                con.OpenConn();
+                string sql = " insert into KhachHang values ('" + rdIDKH + "','" + this.contactName.Text + "','" + this.contactDrD.selectedIndex.ToString() + "','" + this.phoneNumber.Text + "','" + this.Address.Text + "','" + this.ID.Text + "')";
+                SqlCommand cmd = new SqlCommand(sql, con.Connection);
+                SqlDataReader myReader;
+                try
                 {
-                    string Gender = myReader[0].ToString();
-                    contactDrD.AddItem(Gender);
+                    myReader = cmd.ExecuteReader();
+                    MessageBox.Show("Booked!");
+
+
                 }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Book Failed");
+                }
+
                 con.CloseConn();
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            MessageBox.Show("Book failed!");
         }
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)

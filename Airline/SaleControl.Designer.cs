@@ -39,7 +39,7 @@ namespace Airline
             this.contactDrD = new Bunifu.Framework.UI.BunifuDropdown();
             this.label2 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.CMND = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.ID = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.Address = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.backSearch = new Bunifu.Framework.UI.BunifuFlatButton();
             this.SuspendLayout();
@@ -146,7 +146,7 @@ namespace Airline
             this.contactDrD.Items = new string[] {
         "Mr.",
         "Mrs."};
-            this.contactDrD.Location = new System.Drawing.Point(140, 188);
+            this.contactDrD.Location = new System.Drawing.Point(140, 165);
             this.contactDrD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.contactDrD.Name = "contactDrD";
             this.contactDrD.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
@@ -160,7 +160,7 @@ namespace Airline
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(58, 163);
+            this.label2.Location = new System.Drawing.Point(56, 118);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(182, 21);
             this.label2.TabIndex = 4;
@@ -171,24 +171,24 @@ namespace Airline
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // CMND
+            // ID
             // 
-            this.CMND.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.CMND.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.CMND.ForeColor = System.Drawing.Color.Black;
-            this.CMND.HintForeColor = System.Drawing.Color.DimGray;
-            this.CMND.HintText = "ID";
-            this.CMND.isPassword = false;
-            this.CMND.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
-            this.CMND.LineIdleColor = System.Drawing.Color.Gray;
-            this.CMND.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
-            this.CMND.LineThickness = 3;
-            this.CMND.Location = new System.Drawing.Point(247, 286);
-            this.CMND.Margin = new System.Windows.Forms.Padding(4);
-            this.CMND.Name = "CMND";
-            this.CMND.Size = new System.Drawing.Size(260, 33);
-            this.CMND.TabIndex = 11;
-            this.CMND.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ID.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.ID.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.ID.ForeColor = System.Drawing.Color.Black;
+            this.ID.HintForeColor = System.Drawing.Color.DimGray;
+            this.ID.HintText = "ID";
+            this.ID.isPassword = false;
+            this.ID.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
+            this.ID.LineIdleColor = System.Drawing.Color.Gray;
+            this.ID.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
+            this.ID.LineThickness = 3;
+            this.ID.Location = new System.Drawing.Point(247, 286);
+            this.ID.Margin = new System.Windows.Forms.Padding(4);
+            this.ID.Name = "ID";
+            this.ID.Size = new System.Drawing.Size(260, 33);
+            this.ID.TabIndex = 11;
+            this.ID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Address
             // 
@@ -251,7 +251,7 @@ namespace Airline
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.backSearch);
             this.Controls.Add(this.Address);
-            this.Controls.Add(this.CMND);
+            this.Controls.Add(this.ID);
             this.Controls.Add(this.bookBt);
             this.Controls.Add(this.eMail);
             this.Controls.Add(this.phoneNumber);
@@ -273,7 +273,7 @@ namespace Airline
         private Bunifu.Framework.UI.BunifuDropdown contactDrD;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox CMND;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox ID;
         private Bunifu.Framework.UI.BunifuMaterialTextbox Address;
         private Bunifu.Framework.UI.BunifuFlatButton backSearch;
         private SearchControl backToSearch;
