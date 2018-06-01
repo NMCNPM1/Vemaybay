@@ -38,6 +38,10 @@
             this.bunifuDatepicker1 = new Bunifu.Framework.UI.BunifuDatepicker();
             this.searchBt = new Bunifu.Framework.UI.BunifuFlatButton();
             this.flightInfo = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.yearRp = new Bunifu.Framework.UI.BunifuDropdown();
+            this.bunifuDropdown1 = new Bunifu.Framework.UI.BunifuDropdown();
+            this.label4 = new System.Windows.Forms.Label();
+            this.bunifuDropdown2 = new Bunifu.Framework.UI.BunifuDropdown();
             this.stt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.from = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.to = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,10 +50,6 @@
             this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.price2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.yearRp = new Bunifu.Framework.UI.BunifuDropdown();
-            this.bunifuDropdown1 = new Bunifu.Framework.UI.BunifuDropdown();
-            this.label4 = new System.Windows.Forms.Label();
-            this.bunifuDropdown2 = new Bunifu.Framework.UI.BunifuDropdown();
             ((System.ComponentModel.ISupportInitialize)(this.flightInfo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -96,7 +96,7 @@
             this.bunifuDatepicker1.Name = "bunifuDatepicker1";
             this.bunifuDatepicker1.Size = new System.Drawing.Size(205, 29);
             this.bunifuDatepicker1.TabIndex = 3;
-            this.bunifuDatepicker1.Value = new System.DateTime(2018, 4, 9, 0, 1, 18, 460);
+            this.bunifuDatepicker1.Value = new System.DateTime(2018, 6, 1, 0, 1, 18, 460);
             // 
             // searchBt
             // 
@@ -185,62 +185,6 @@
             this.flightInfo.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.flightInfo_RowHeaderMouseDoubleClick);
             this.flightInfo.SelectionChanged += new System.EventHandler(this.flightInfo_SelectionChanged);
             // 
-            // stt
-            // 
-            this.stt.DataPropertyName = "MACHUYENBAY";
-            this.stt.HeaderText = "Flight Code";
-            this.stt.Name = "stt";
-            this.stt.ReadOnly = true;
-            // 
-            // from
-            // 
-            this.from.DataPropertyName = "SANBAYDI";
-            this.from.HeaderText = "From";
-            this.from.Name = "from";
-            this.from.ReadOnly = true;
-            // 
-            // to
-            // 
-            this.to.DataPropertyName = "SANBAYDEN";
-            this.to.HeaderText = "To";
-            this.to.Name = "to";
-            this.to.ReadOnly = true;
-            // 
-            // time
-            // 
-            this.time.DataPropertyName = "GIO";
-            this.time.HeaderText = "Departure Time";
-            this.time.Name = "time";
-            this.time.ReadOnly = true;
-            // 
-            // cl1
-            // 
-            this.cl1.DataPropertyName = "HANG1CONLAI";
-            this.cl1.HeaderText = "No. 1st class";
-            this.cl1.Name = "cl1";
-            this.cl1.ReadOnly = true;
-            // 
-            // price
-            // 
-            this.price.DataPropertyName = "price1";
-            this.price.HeaderText = "Price 1st Class";
-            this.price.Name = "price";
-            this.price.ReadOnly = true;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "HANG2CONLAI";
-            this.Column1.HeaderText = "No. 2nd class";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // price2
-            // 
-            this.price2.DataPropertyName = "GIAVE";
-            this.price2.HeaderText = "Price 2nd Class";
-            this.price2.Name = "price2";
-            this.price2.ReadOnly = true;
-            // 
             // yearRp
             // 
             this.yearRp.BackColor = System.Drawing.Color.Transparent;
@@ -314,6 +258,62 @@
             this.bunifuDropdown2.TabIndex = 12;
             this.bunifuDropdown2.onItemSelected += new System.EventHandler(this.bunifuDropdown2_onItemSelected);
             // 
+            // stt
+            // 
+            this.stt.DataPropertyName = "MACHUYENBAY";
+            this.stt.HeaderText = "Flight Code";
+            this.stt.Name = "stt";
+            this.stt.ReadOnly = true;
+            // 
+            // from
+            // 
+            this.from.DataPropertyName = "SANBAYDI";
+            this.from.HeaderText = "From";
+            this.from.Name = "from";
+            this.from.ReadOnly = true;
+            // 
+            // to
+            // 
+            this.to.DataPropertyName = "SANBAYDEN";
+            this.to.HeaderText = "To";
+            this.to.Name = "to";
+            this.to.ReadOnly = true;
+            // 
+            // time
+            // 
+            this.time.DataPropertyName = "GIO";
+            this.time.HeaderText = "Departure Time";
+            this.time.Name = "time";
+            this.time.ReadOnly = true;
+            // 
+            // cl1
+            // 
+            this.cl1.DataPropertyName = "HANG1CONLAI";
+            this.cl1.HeaderText = "No. 1st class";
+            this.cl1.Name = "cl1";
+            this.cl1.ReadOnly = true;
+            // 
+            // price
+            // 
+            this.price.DataPropertyName = "GIAVEHANG1";
+            this.price.HeaderText = "Price 1st Class";
+            this.price.Name = "price";
+            this.price.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "HANG2CONLAI";
+            this.Column1.HeaderText = "No. 2nd class";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // price2
+            // 
+            this.price2.DataPropertyName = "GIAVEHANG2";
+            this.price2.HeaderText = "Price 2nd Class";
+            this.price2.Name = "price2";
+            this.price2.ReadOnly = true;
+            // 
             // SearchControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -349,6 +349,7 @@
         private Bunifu.Framework.UI.BunifuDropdown bunifuDropdown1;
         private System.Windows.Forms.Label label4;
         private Bunifu.Framework.UI.BunifuDropdown bunifuDropdown2;
+        private SaleControl sale1;
         private System.Windows.Forms.DataGridViewTextBoxColumn stt;
         private System.Windows.Forms.DataGridViewTextBoxColumn from;
         private System.Windows.Forms.DataGridViewTextBoxColumn to;
@@ -357,6 +358,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn price;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn price2;
-        private SaleControl sale1;
     }
 }

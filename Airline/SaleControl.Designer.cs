@@ -1,4 +1,6 @@
-﻿namespace Airline
+﻿using Bunifu.Framework.UI;
+
+namespace Airline
 {
     partial class SaleControl
     {
@@ -217,7 +219,7 @@
             this.backSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.backSearch.DisabledColor = System.Drawing.Color.Gray;
             this.backSearch.Iconcolor = System.Drawing.Color.Transparent;
-            this.backSearch.Iconimage =((System.Drawing.Image)(resources.GetObject("searchBt.Iconimage")));
+            this.backSearch.Iconimage = ((System.Drawing.Image)(resources.GetObject("backSearch.Iconimage")));
             this.backSearch.Iconimage_right = null;
             this.backSearch.Iconimage_right_Selected = null;
             this.backSearch.Iconimage_Selected = null;
@@ -240,6 +242,7 @@
             this.backSearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.backSearch.Textcolor = System.Drawing.Color.White;
             this.backSearch.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backSearch.Visible = false;
             this.backSearch.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
             // 
             // SaleControl
@@ -274,5 +277,7 @@
         private Bunifu.Framework.UI.BunifuMaterialTextbox Address;
         private Bunifu.Framework.UI.BunifuFlatButton backSearch;
         private SearchControl backToSearch;
+
+        public BunifuFlatButton BackSearch { get => backSearch; set => backSearch = value; }
     }
 }
