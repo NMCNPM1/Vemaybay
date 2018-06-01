@@ -42,6 +42,12 @@ namespace Airline
             this.ID = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.Address = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.backSearch = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.SuspendLayout();
             // 
             // contactName
@@ -245,10 +251,83 @@ namespace Airline
             this.backSearch.Visible = false;
             this.backSearch.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
             // 
+            // bunifuCustomLabel1
+            // 
+            this.bunifuCustomLabel1.AutoSize = true;
+            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.Red;
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(515, 165);
+            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(15, 20);
+            this.bunifuCustomLabel1.TabIndex = 14;
+            this.bunifuCustomLabel1.Text = "*";
+            // 
+            // bunifuCustomLabel2
+            // 
+            this.bunifuCustomLabel2.AutoSize = true;
+            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel2.ForeColor = System.Drawing.Color.Red;
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(515, 204);
+            this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
+            this.bunifuCustomLabel2.Size = new System.Drawing.Size(15, 20);
+            this.bunifuCustomLabel2.TabIndex = 15;
+            this.bunifuCustomLabel2.Text = "*";
+            // 
+            // bunifuCustomLabel3
+            // 
+            this.bunifuCustomLabel3.AutoSize = true;
+            this.bunifuCustomLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel3.ForeColor = System.Drawing.Color.Red;
+            this.bunifuCustomLabel3.Location = new System.Drawing.Point(515, 245);
+            this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
+            this.bunifuCustomLabel3.Size = new System.Drawing.Size(15, 20);
+            this.bunifuCustomLabel3.TabIndex = 16;
+            this.bunifuCustomLabel3.Text = "*";
+            // 
+            // bunifuCustomLabel4
+            // 
+            this.bunifuCustomLabel4.AutoSize = true;
+            this.bunifuCustomLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel4.ForeColor = System.Drawing.Color.Red;
+            this.bunifuCustomLabel4.Location = new System.Drawing.Point(515, 286);
+            this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
+            this.bunifuCustomLabel4.Size = new System.Drawing.Size(15, 20);
+            this.bunifuCustomLabel4.TabIndex = 17;
+            this.bunifuCustomLabel4.Text = "*";
+            // 
+            // bunifuCustomLabel5
+            // 
+            this.bunifuCustomLabel5.AutoSize = true;
+            this.bunifuCustomLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel5.ForeColor = System.Drawing.Color.Red;
+            this.bunifuCustomLabel5.Location = new System.Drawing.Point(494, 507);
+            this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
+            this.bunifuCustomLabel5.Size = new System.Drawing.Size(15, 20);
+            this.bunifuCustomLabel5.TabIndex = 18;
+            this.bunifuCustomLabel5.Text = "*";
+            this.bunifuCustomLabel5.Click += new System.EventHandler(this.bunifuCustomLabel5_Click);
+            // 
+            // bunifuCustomLabel6
+            // 
+            this.bunifuCustomLabel6.AutoSize = true;
+            this.bunifuCustomLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel6.ForeColor = System.Drawing.Color.Red;
+            this.bunifuCustomLabel6.Location = new System.Drawing.Point(515, 507);
+            this.bunifuCustomLabel6.Name = "bunifuCustomLabel6";
+            this.bunifuCustomLabel6.Size = new System.Drawing.Size(80, 20);
+            this.bunifuCustomLabel6.TabIndex = 19;
+            this.bunifuCustomLabel6.Text = "Obligatory";
+            // 
             // SaleControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.bunifuCustomLabel6);
+            this.Controls.Add(this.bunifuCustomLabel5);
+            this.Controls.Add(this.bunifuCustomLabel4);
+            this.Controls.Add(this.bunifuCustomLabel3);
+            this.Controls.Add(this.bunifuCustomLabel2);
+            this.Controls.Add(this.bunifuCustomLabel1);
             this.Controls.Add(this.backSearch);
             this.Controls.Add(this.Address);
             this.Controls.Add(this.ID);
@@ -277,6 +356,12 @@ namespace Airline
         private Bunifu.Framework.UI.BunifuMaterialTextbox Address;
         private Bunifu.Framework.UI.BunifuFlatButton backSearch;
         private SearchControl backToSearch;
+        private BunifuCustomLabel bunifuCustomLabel1;
+        private BunifuCustomLabel bunifuCustomLabel2;
+        private BunifuCustomLabel bunifuCustomLabel3;
+        private BunifuCustomLabel bunifuCustomLabel4;
+        private BunifuCustomLabel bunifuCustomLabel5;
+        private BunifuCustomLabel bunifuCustomLabel6;
 
         public BunifuFlatButton BackSearch { get => backSearch; set => backSearch = value; }
     }

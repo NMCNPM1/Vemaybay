@@ -65,5 +65,10 @@ namespace Airline
             backToSearch.Visible = true;
             backToSearch.BringToFront();
         }
+
+        private void bunifuCustomLabel5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
