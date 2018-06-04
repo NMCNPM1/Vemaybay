@@ -143,7 +143,7 @@ namespace Airline
             con.OpenConn();
             if ((yearRp.selectedIndex == -1) || (bunifuDropdown1.selectedIndex == -1) || (bunifuDropdown2.selectedIndex == -1))
                 return;
-            string sql = "SELECT MACHUYENBAY, SANBAYDI, SANBAYDEN, GIO, HANG1CONLAI, GIAVE*1.05 as price1, HANG2CONLAI, GIAVE " +
+            string sql = "SELECT MACHUYENBAY, SANBAYDI, SANBAYDEN, GIO, HANG1CONLAI, GIAVEHANG1, HANG2CONLAI, GIAVEHANG2 " +
                 "FROM dbo.CHUYENBAY " +
                 "WHERE SANBAYDI='" + yearRp.selectedValue +
                 "' AND SANBAYDEN='" + bunifuDropdown1.selectedValue +
@@ -172,6 +172,7 @@ namespace Airline
                 this.Controls.Add(this.sale1);
                 sale1.Visible = true;
                 sale1.BringToFront();
+                sale1.BackSearch.Visible = true;
             }
             catch { }
            

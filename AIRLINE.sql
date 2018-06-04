@@ -1,6 +1,6 @@
 ﻿
 CREATE DATABASE AIRLINE
-Drop database AIRLINE
+
 
 use AIRLINE
 
@@ -59,8 +59,10 @@ CREATE TABLE KHACHHANG(
 	MAKHACHHANG CHAR(10) PRIMARY KEY,
 	HOTEN CHAR(50),
 	GIOITINH BIT,
-	CMND CHAR(10),
 	SDT CHAR(11),
+	DIACHI CHAR(30),
+	CMND CHAR(10),
+	EMAIL CHAR(30)
 )
 
 -- BẢNG VÉ
@@ -266,7 +268,7 @@ CREATE TRIGGER HANCHOTDATVE ON VE
 --insert into SANBAY values ('HN','HaNoi','VIETNAM')
 --insert into SANBAY values ('DN','DaNang','VIETNAM')
 --SELECT * FROM SANBAY
-
+Select * from KHACHHANG
 
 --insert into CHUYENBAY values('1001','1500','HCM','HN','21/05/2018','10:00','90','15','15','15','15')
 --insert into CHUYENBAY values('1002','2000','HCM','HN','21/05/2018','11:30','90','15','15','15','15')
