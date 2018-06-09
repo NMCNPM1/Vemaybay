@@ -34,18 +34,23 @@
             this.monthRp = new Bunifu.Framework.UI.BunifuDropdown();
             this.yearRp = new Bunifu.Framework.UI.BunifuDropdown();
             this.reportBt = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.listView = new System.Windows.Forms.DataGridView();
+            this.MAVE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MACHUYENBAY = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HANGVE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GIAVE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.listView)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(201, 190);
+            this.label1.Location = new System.Drawing.Point(201, 186);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(66, 21);
             this.label1.TabIndex = 2;
             this.label1.Text = "Month:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -87,6 +92,7 @@
             this.monthRp.selectedIndex = 0;
             this.monthRp.Size = new System.Drawing.Size(64, 31);
             this.monthRp.TabIndex = 7;
+            this.monthRp.onItemSelected += new System.EventHandler(this.monthRp_onItemSelected);
             // 
             // yearRp
             // 
@@ -117,9 +123,10 @@
             this.yearRp.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
             this.yearRp.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
             this.yearRp.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.yearRp.selectedIndex = -1;
+            this.yearRp.selectedIndex = 0;
             this.yearRp.Size = new System.Drawing.Size(87, 31);
             this.yearRp.TabIndex = 8;
+            this.yearRp.onItemSelected += new System.EventHandler(this.yearRp_onItemSelected);
             // 
             // reportBt
             // 
@@ -155,11 +162,51 @@
             this.reportBt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.reportBt.Textcolor = System.Drawing.Color.White;
             this.reportBt.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reportBt.Click += new System.EventHandler(this.reportBt_Click);
+            // 
+            // listView
+            // 
+            this.listView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.listView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MAVE,
+            this.MACHUYENBAY,
+            this.HANGVE,
+            this.GIAVE});
+            this.listView.Location = new System.Drawing.Point(51, 368);
+            this.listView.Name = "listView";
+            this.listView.Size = new System.Drawing.Size(443, 73);
+            this.listView.TabIndex = 10;
+            this.listView.Visible = false;
+            // 
+            // MAVE
+            // 
+            this.MAVE.DataPropertyName = "MAVE";
+            this.MAVE.HeaderText = "MAVE";
+            this.MAVE.Name = "MAVE";
+            // 
+            // MACHUYENBAY
+            // 
+            this.MACHUYENBAY.DataPropertyName = "MACHUYENBAY";
+            this.MACHUYENBAY.HeaderText = "MACHUYENBAY";
+            this.MACHUYENBAY.Name = "MACHUYENBAY";
+            // 
+            // HANGVE
+            // 
+            this.HANGVE.DataPropertyName = "HANGVE";
+            this.HANGVE.HeaderText = "HANGVE";
+            this.HANGVE.Name = "HANGVE";
+            // 
+            // GIAVE
+            // 
+            this.GIAVE.DataPropertyName = "GIAVE";
+            this.GIAVE.HeaderText = "GIAVE";
+            this.GIAVE.Name = "GIAVE";
             // 
             // ReportControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.listView);
             this.Controls.Add(this.reportBt);
             this.Controls.Add(this.yearRp);
             this.Controls.Add(this.monthRp);
@@ -167,6 +214,7 @@
             this.Controls.Add(this.label1);
             this.Name = "ReportControl";
             this.Size = new System.Drawing.Size(617, 550);
+            ((System.ComponentModel.ISupportInitialize)(this.listView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -178,5 +226,10 @@
         private Bunifu.Framework.UI.BunifuDropdown monthRp;
         private Bunifu.Framework.UI.BunifuDropdown yearRp;
         private Bunifu.Framework.UI.BunifuFlatButton reportBt;
+        private System.Windows.Forms.DataGridView listView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MAVE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MACHUYENBAY;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HANGVE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GIAVE;
     }
 }
