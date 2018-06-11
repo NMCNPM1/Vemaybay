@@ -15,16 +15,16 @@ namespace Airline
 {
     public partial class DatabaseControl : UserControl
     {
+        #region INIT
 
         public DatabaseControl()
         {
             InitializeComponent();
         }
 
-        private void fileSystemWatcher1_Changed(object sender, System.IO.FileSystemEventArgs e)
-        {
+        #endregion
 
-        }
+        #region Main button
 
         private void dataBt_Click(object sender, EventArgs e)
         {
@@ -120,10 +120,17 @@ namespace Airline
             }
 
         }
+
+        #endregion
+
+        #region Support Methods
+
         public void ExcuteCommand(string command)
         {
             SqlCommand cmd = new SqlCommand(command, Form1.Connection.Connection);
             cmd.ExecuteNonQuery();
         }
+
+        #endregion
     }
 }

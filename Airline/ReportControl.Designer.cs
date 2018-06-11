@@ -92,7 +92,6 @@
             this.monthRp.selectedIndex = 0;
             this.monthRp.Size = new System.Drawing.Size(64, 31);
             this.monthRp.TabIndex = 7;
-            this.monthRp.onItemSelected += new System.EventHandler(this.monthRp_onItemSelected);
             // 
             // yearRp
             // 
@@ -126,7 +125,6 @@
             this.yearRp.selectedIndex = 0;
             this.yearRp.Size = new System.Drawing.Size(87, 31);
             this.yearRp.TabIndex = 8;
-            this.yearRp.onItemSelected += new System.EventHandler(this.yearRp_onItemSelected);
             // 
             // reportBt
             // 

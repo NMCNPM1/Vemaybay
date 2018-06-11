@@ -20,14 +20,19 @@ namespace Airline
 {
     public partial class SaleControl : UserControl
     {
+        #region INIT
+
         public SaleControl()
         {
             InitializeComponent();
         }
- 
+
+        #endregion
+
+        #region Main button
+
         private void bookBt_Click(object sender, EventArgs e)
         {
-
             Random rdKH = new Random();
             int rdNum = rdKH.Next(1, 1000);
             string rdIDKH = "KH00" + rdNum.ToString();
@@ -37,7 +42,7 @@ namespace Airline
             }
             else
             {
-                string sql = "insert into KhachHang values ('" + rdIDKH + "','" + this.contactName.Text + "','" + this.contactDrD.selectedIndex.ToString() + "','" + this.phoneNumber.Text + "','" + this.Address.Text + "','" + this.ID.Text + "','"+this.eMail.Text+"')";
+                string sql = "insert into KhachHang values ('" + rdIDKH + "','" + this.contactName.Text + "','" + this.sex.selectedIndex.ToString() + "','" + this.phoneNumber.Text + "','" + this.Address.Text + "','" + this.ID.Text + "','"+this.eMail.Text+"')";
                 SqlCommand cmd = new SqlCommand(sql, Form1.Connection.Connection);
                 SqlDataReader myReader;
                 try
@@ -54,17 +59,11 @@ namespace Airline
             }
         }
 
-        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        private void backBt_Click(object sender, EventArgs e)
         {
-            backToSearch = new SearchControl();
-            this.Controls.Add(this.backToSearch);
-            backToSearch.Visible = true;
-            backToSearch.BringToFront();
+            this.SendToBack();
         }
 
-        private void bunifuCustomLabel5_Click(object sender, EventArgs e)
-        {
-
-        }
+        #endregion
     }
 }

@@ -13,19 +13,29 @@ namespace Airline
 {
     public partial class SearchControl : UserControl
     {
-    
-        public SearchControl()
-        {            
-            InitializeComponent();
-            LoadData();
-        }        
+        #region INIT
 
-        void LoadData()
+        SqlCommand cmd = new SqlCommand();
+
+        public SearchControl()
+        {
+            InitializeComponent();
+        }
+
+        #endregion
+
+        #region Load dữ liệu từ Database
+
+        // khởi tạo dữ liệu ban đầu
+        public void LoadData()
         {
             // load sân bay đến và sân bay đi
             string sql = "SELECT MASANBAY FROM dbo.SANBAY ORDER BY MASANBAY ASC";
-            SqlCommand cmd;
-            cmd = new SqlCommand(sql, Form1.Connection.Connection);
+            cmd.Connection = Form1.Connection.Connection;
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = sql;
+
+
             SqlDataReader myReader;
             try
             {
@@ -44,7 +54,7 @@ namespace Airline
                             fromStation.AddItem(sName);
                         }
                         myReader.Close();
-                   
+
                     }
                     if (toStation.selectedValue == "...")
                     {
@@ -85,19 +95,6 @@ namespace Airline
                 }
             }
             catch { }
-        }     
-       
-
-
-        private void flightInfo_SelectionChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                flightInfo.CurrentRow.Selected = true;
-            }
-            catch
-            {
-            }
         }
 
         private void searchBt_Click(object sender, EventArgs e)
@@ -109,8 +106,8 @@ namespace Airline
                 "WHERE SANBAYDI='" + fromStation.selectedValue +
                 "' AND SANBAYDEN='" + toStation.selectedValue +
                 "' AND NGAY='" + datePicker.Value.ToString() + "'";
-            if((gioKhoiHanh.selectedValue!="Any Time")&&(gioKhoiHanh.selectedValue!="..."))
-                sql+="AND GIO='" + gioKhoiHanh.selectedValue + "'";
+            if ((gioKhoiHanh.selectedValue != "Any Time") && (gioKhoiHanh.selectedValue != "..."))
+                sql += "AND GIO='" + gioKhoiHanh.selectedValue + "'";
             SqlCommand cmd = new SqlCommand(sql, Form1.Connection.Connection);
             cmd.CommandType = CommandType.Text;
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -118,6 +115,10 @@ namespace Airline
             da.Fill(dt);
             flightInfo.DataSource = dt;
         }
+
+        #endregion        
+
+        #region Event      
 
         private void flightInfo_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
@@ -132,6 +133,19 @@ namespace Airline
             catch { }
            
         }
+
+        private void flightInfo_SelectionChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                flightInfo.CurrentRow.Selected = true;
+            }
+            catch
+            {
+            }
+        }
+
+        #region Xử lí trùng chuyến bay
 
         private void fromStation_onItemSelected(object sender, EventArgs e)
         {
@@ -151,9 +165,13 @@ namespace Airline
             }
         }
 
-        private void flightInfo_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
+        #endregion
 
+        #endregion
+
+        private void SearchControl_VisibleChanged(object sender, EventArgs e)
+        {
+           // LoadData();
         }
     }
 }

@@ -13,41 +13,17 @@ namespace Airline
 {
     public partial class ReportControl : UserControl
     {
+        #region INIT
+
         public ReportControl()
         {
             InitializeComponent();
         }
-        private string money(string str)
-        {
-            string str1 = "";
-            int j = 0;
-            for(int i = str.Length - 1; i >= 0; i--)
-            {
-                str1 = str[i] + str1;
-                j++;
-                if (j == 3)
-                {
-                    str1 = " " + str1;
-                    j = 0;
-                }                
-            }
-            return str1;
-        }
-        private string countMoney()
-        {
-            string sql = "SELECT sum(VE.GIAVE) FROM VE , CHUYENBAY WHERE VE.MACHUYENBAY=CHUYENBAY.MACHUYENBAY AND month(CHUYENBAY.NGAY)=" +
-                monthRp.selectedValue + " AND YEAR(NGAY)=" + yearRp.selectedValue;
 
-            SqlCommand cmd = new SqlCommand(sql, Form1.Connection.Connection);
-            SqlDataReader myReader;
+        #endregion
 
-            myReader = cmd.ExecuteReader();
-            myReader.Read();
-            string revenue = myReader[0].ToString();
-            if (revenue == "") revenue = "0 VNĐ";
-            else revenue = money(float.Parse(revenue).ToString()) + " VNĐ";
-            return revenue;
-        }
+        #region Main button
+        
         private void reportBt_Click(object sender, EventArgs e)
         {
             if(countMoney()=="0 VNĐ")
@@ -135,14 +111,43 @@ namespace Airline
 
         }
 
-        private void monthRp_onItemSelected(object sender, EventArgs e)
-        {
+        #endregion
 
+        #region Support Methods
+
+        private string money(string str)
+        {
+            string str1 = "";
+            int j = 0;
+            for (int i = str.Length - 1; i >= 0; i--)
+            {
+                str1 = str[i] + str1;
+                j++;
+                if (j == 3)
+                {
+                    str1 = " " + str1;
+                    j = 0;
+                }
+            }
+            return str1;
         }
 
-        private void yearRp_onItemSelected(object sender, EventArgs e)
+        private string countMoney()
         {
+            string sql = "SELECT sum(VE.GIAVE) FROM VE , CHUYENBAY WHERE VE.MACHUYENBAY=CHUYENBAY.MACHUYENBAY AND month(CHUYENBAY.NGAY)=" +
+                monthRp.selectedValue + " AND YEAR(NGAY)=" + yearRp.selectedValue;
 
+            SqlCommand cmd = new SqlCommand(sql, Form1.Connection.Connection);
+            SqlDataReader myReader;
+
+            myReader = cmd.ExecuteReader();
+            myReader.Read();
+            string revenue = myReader[0].ToString();
+            if (revenue == "") revenue = "0 VNĐ";
+            else revenue = money(float.Parse(revenue).ToString()) + " VNĐ";
+            return revenue;
         }
+
+        #endregion
     }
 }

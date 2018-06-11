@@ -30,14 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.searchBt = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bookBt = new Bunifu.Framework.UI.BunifuFlatButton();
             this.dataBt = new Bunifu.Framework.UI.BunifuFlatButton();
             this.reportBt = new Bunifu.Framework.UI.BunifuFlatButton();
             this.changeBt = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.minimizeBt = new Bunifu.Framework.UI.BunifuThinButton2();
             this.closeBt = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.reportControl1 = new Airline.ReportControl();
@@ -60,8 +60,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 630);
             this.panel1.TabIndex = 0;
-            this.panel1.MouseLeave += new System.EventHandler(this.panel1_MouseLeave);
-            this.panel1.MouseHover += new System.EventHandler(this.panel1_MouseHover);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(200, 169);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // searchBt
             // 
@@ -97,7 +106,6 @@
             this.searchBt.Textcolor = System.Drawing.Color.White;
             this.searchBt.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchBt.Click += new System.EventHandler(this.saleBt_Click);
-            this.searchBt.MouseHover += new System.EventHandler(this.searchBt_MouseHover);
             // 
             // bookBt
             // 
@@ -237,35 +245,35 @@
             this.changeBt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.changeBt.Textcolor = System.Drawing.Color.White;
             this.changeBt.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.changeBt.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
+            this.changeBt.Click += new System.EventHandler(this.changeBt_Click);
             // 
-            // bunifuThinButton21
+            // minimizeBt
             // 
-            this.bunifuThinButton21.ActiveBorderThickness = 1;
-            this.bunifuThinButton21.ActiveCornerRadius = 20;
-            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(235)))), ((int)(((byte)(243)))));
-            this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
-            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(235)))), ((int)(((byte)(243)))));
-            this.bunifuThinButton21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuThinButton21.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
-            this.bunifuThinButton21.ButtonText = "_";
-            this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton21.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton21.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton21.IdleBorderThickness = 1;
-            this.bunifuThinButton21.IdleCornerRadius = 1;
-            this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(235)))), ((int)(((byte)(243)))));
-            this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
-            this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(235)))), ((int)(((byte)(243)))));
-            this.bunifuThinButton21.Location = new System.Drawing.Point(700, -2);
-            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuThinButton21.Name = "bunifuThinButton21";
-            this.bunifuThinButton21.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.bunifuThinButton21.Size = new System.Drawing.Size(58, 47);
-            this.bunifuThinButton21.TabIndex = 13;
-            this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuThinButton21.Click += new System.EventHandler(this.bunifuThinButton21_Click);
+            this.minimizeBt.ActiveBorderThickness = 1;
+            this.minimizeBt.ActiveCornerRadius = 20;
+            this.minimizeBt.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(235)))), ((int)(((byte)(243)))));
+            this.minimizeBt.ActiveForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
+            this.minimizeBt.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(235)))), ((int)(((byte)(243)))));
+            this.minimizeBt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.minimizeBt.BackColor = System.Drawing.Color.Transparent;
+            this.minimizeBt.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("minimizeBt.BackgroundImage")));
+            this.minimizeBt.ButtonText = "_";
+            this.minimizeBt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.minimizeBt.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.minimizeBt.ForeColor = System.Drawing.Color.SeaGreen;
+            this.minimizeBt.IdleBorderThickness = 1;
+            this.minimizeBt.IdleCornerRadius = 1;
+            this.minimizeBt.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(235)))), ((int)(((byte)(243)))));
+            this.minimizeBt.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
+            this.minimizeBt.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(235)))), ((int)(((byte)(243)))));
+            this.minimizeBt.Location = new System.Drawing.Point(696, -2);
+            this.minimizeBt.Margin = new System.Windows.Forms.Padding(5);
+            this.minimizeBt.Name = "minimizeBt";
+            this.minimizeBt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.minimizeBt.Size = new System.Drawing.Size(58, 47);
+            this.minimizeBt.TabIndex = 13;
+            this.minimizeBt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.minimizeBt.Click += new System.EventHandler(this.minimizeBt_Click);
             // 
             // closeBt
             // 
@@ -275,7 +283,7 @@
             this.closeBt.ActiveForecolor = System.Drawing.Color.White;
             this.closeBt.ActiveLineColor = System.Drawing.Color.Red;
             this.closeBt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.closeBt.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.closeBt.BackColor = System.Drawing.Color.Transparent;
             this.closeBt.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("closeBt.BackgroundImage")));
             this.closeBt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.closeBt.ButtonText = "x  ";
@@ -287,7 +295,7 @@
             this.closeBt.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
             this.closeBt.IdleForecolor = System.Drawing.Color.White;
             this.closeBt.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
-            this.closeBt.Location = new System.Drawing.Point(756, 0);
+            this.closeBt.Location = new System.Drawing.Point(753, 0);
             this.closeBt.Margin = new System.Windows.Forms.Padding(5);
             this.closeBt.Name = "closeBt";
             this.closeBt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -296,34 +304,23 @@
             this.closeBt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.closeBt.Click += new System.EventHandler(this.closeBt_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(203, 169);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // panel2
             // 
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Location = new System.Drawing.Point(198, 25);
+            this.panel2.Location = new System.Drawing.Point(200, 28);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(810, 605);
+            this.panel2.Size = new System.Drawing.Size(807, 602);
             this.panel2.TabIndex = 14;
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panel3.BackColor = System.Drawing.Color.Transparent;
             this.panel3.Controls.Add(this.closeBt);
-            this.panel3.Controls.Add(this.bunifuThinButton21);
-            this.panel3.Location = new System.Drawing.Point(198, -6);
+            this.panel3.Controls.Add(this.minimizeBt);
+            this.panel3.Location = new System.Drawing.Point(200, -6);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(810, 34);
+            this.panel3.Size = new System.Drawing.Size(808, 34);
             this.panel3.TabIndex = 15;
             // 
             // reportControl1
@@ -331,47 +328,45 @@
             this.reportControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.reportControl1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.reportControl1.Cursor = System.Windows.Forms.Cursors.No;
-            this.reportControl1.Location = new System.Drawing.Point(304, 113);
+            this.reportControl1.Location = new System.Drawing.Point(200, 28);
             this.reportControl1.Name = "reportControl1";
-            this.reportControl1.Size = new System.Drawing.Size(587, 496);
+            this.reportControl1.Size = new System.Drawing.Size(807, 602);
             this.reportControl1.TabIndex = 9;
             this.reportControl1.Visible = false;
-            this.reportControl1.Load += new System.EventHandler(this.reportControl1_Load);
             // 
             // ruleChangeControl1
             // 
-            this.ruleChangeControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.ruleChangeControl1.Location = new System.Drawing.Point(304, 100);
+            this.ruleChangeControl1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ruleChangeControl1.Location = new System.Drawing.Point(200, 28);
             this.ruleChangeControl1.Name = "ruleChangeControl1";
-            this.ruleChangeControl1.Size = new System.Drawing.Size(599, 494);
+            this.ruleChangeControl1.Size = new System.Drawing.Size(807, 602);
             this.ruleChangeControl1.TabIndex = 11;
             this.ruleChangeControl1.Visible = false;
             // 
             // databaseControl1
             // 
             this.databaseControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.databaseControl1.Location = new System.Drawing.Point(304, 100);
+            this.databaseControl1.Location = new System.Drawing.Point(200, 28);
             this.databaseControl1.Name = "databaseControl1";
-            this.databaseControl1.Size = new System.Drawing.Size(599, 494);
+            this.databaseControl1.Size = new System.Drawing.Size(807, 602);
             this.databaseControl1.TabIndex = 8;
             this.databaseControl1.Visible = false;
             // 
             // saleControl1
             // 
             this.saleControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.saleControl1.Location = new System.Drawing.Point(304, 100);
+            this.saleControl1.Location = new System.Drawing.Point(200, 28);
             this.saleControl1.Name = "saleControl1";
-            this.saleControl1.Size = new System.Drawing.Size(599, 494);
+            this.saleControl1.Size = new System.Drawing.Size(807, 602);
             this.saleControl1.TabIndex = 7;
             this.saleControl1.Visible = false;
             // 
             // searchControl1
             // 
-            this.searchControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.searchControl1.Location = new System.Drawing.Point(304, 100);
+            this.searchControl1.Location = new System.Drawing.Point(200, 28);
             this.searchControl1.Name = "searchControl1";
-            this.searchControl1.Size = new System.Drawing.Size(599, 494);
-            this.searchControl1.TabIndex = 6;
+            this.searchControl1.Size = new System.Drawing.Size(807, 602);
+            this.searchControl1.TabIndex = 16;
             this.searchControl1.Visible = false;
             // 
             // Form1
@@ -381,23 +376,22 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(235)))), ((int)(((byte)(243)))));
             this.ClientSize = new System.Drawing.Size(1007, 630);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.changeBt);
             this.Controls.Add(this.reportBt);
             this.Controls.Add(this.dataBt);
             this.Controls.Add(this.bookBt);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.searchControl1);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.reportControl1);
             this.Controls.Add(this.ruleChangeControl1);
             this.Controls.Add(this.databaseControl1);
             this.Controls.Add(this.saleControl1);
-            this.Controls.Add(this.searchControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
@@ -413,16 +407,17 @@
         private Bunifu.Framework.UI.BunifuFlatButton dataBt;
         private Bunifu.Framework.UI.BunifuFlatButton reportBt;
         private Bunifu.Framework.UI.BunifuFlatButton changeBt;
-        private SearchControl searchControl1;
+
         private SaleControl saleControl1;
         private DatabaseControl databaseControl1;
         private ReportControl reportControl1;
         private RuleChangeControl ruleChangeControl1;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
+        private Bunifu.Framework.UI.BunifuThinButton2 minimizeBt;
         private Bunifu.Framework.UI.BunifuThinButton2 closeBt;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
+        private SearchControl searchControl1;
     }
 }
 

@@ -36,7 +36,7 @@ namespace Airline
             this.phoneNumber = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.eMail = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bookBt = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.contactDrD = new Bunifu.Framework.UI.BunifuDropdown();
+            this.sex = new Bunifu.Framework.UI.BunifuDropdown();
             this.label2 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.ID = new Bunifu.Framework.UI.BunifuMaterialTextbox();
@@ -52,6 +52,7 @@ namespace Airline
             // 
             // contactName
             // 
+            this.contactName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.contactName.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.contactName.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.contactName.ForeColor = System.Drawing.Color.Black;
@@ -71,6 +72,7 @@ namespace Airline
             // 
             // phoneNumber
             // 
+            this.phoneNumber.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.phoneNumber.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.phoneNumber.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.phoneNumber.ForeColor = System.Drawing.Color.Black;
@@ -90,6 +92,7 @@ namespace Airline
             // 
             // eMail
             // 
+            this.eMail.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.eMail.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.eMail.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.eMail.ForeColor = System.Drawing.Color.Black;
@@ -110,6 +113,7 @@ namespace Airline
             // bookBt
             // 
             this.bookBt.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(76)))), ((int)(((byte)(157)))));
+            this.bookBt.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bookBt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
             this.bookBt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bookBt.BorderRadius = 7;
@@ -142,28 +146,30 @@ namespace Airline
             this.bookBt.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bookBt.Click += new System.EventHandler(this.bookBt_Click);
             // 
-            // contactDrD
+            // sex
             // 
-            this.contactDrD.BackColor = System.Drawing.Color.Transparent;
-            this.contactDrD.BorderRadius = 3;
-            this.contactDrD.DisabledColor = System.Drawing.Color.Gray;
-            this.contactDrD.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contactDrD.ForeColor = System.Drawing.Color.White;
-            this.contactDrD.Items = new string[] {
+            this.sex.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.sex.BackColor = System.Drawing.Color.Transparent;
+            this.sex.BorderRadius = 3;
+            this.sex.DisabledColor = System.Drawing.Color.Gray;
+            this.sex.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sex.ForeColor = System.Drawing.Color.White;
+            this.sex.Items = new string[] {
         "Mr.",
         "Mrs."};
-            this.contactDrD.Location = new System.Drawing.Point(140, 165);
-            this.contactDrD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.contactDrD.Name = "contactDrD";
-            this.contactDrD.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
-            this.contactDrD.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
-            this.contactDrD.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.contactDrD.selectedIndex = 0;
-            this.contactDrD.Size = new System.Drawing.Size(87, 31);
-            this.contactDrD.TabIndex = 6;
+            this.sex.Location = new System.Drawing.Point(140, 165);
+            this.sex.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sex.Name = "sex";
+            this.sex.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
+            this.sex.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
+            this.sex.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.sex.selectedIndex = 0;
+            this.sex.Size = new System.Drawing.Size(87, 31);
+            this.sex.TabIndex = 6;
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(56, 118);
@@ -179,6 +185,7 @@ namespace Airline
             // 
             // ID
             // 
+            this.ID.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ID.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.ID.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.ID.ForeColor = System.Drawing.Color.Black;
@@ -198,6 +205,7 @@ namespace Airline
             // 
             // Address
             // 
+            this.Address.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Address.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Address.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.Address.ForeColor = System.Drawing.Color.Black;
@@ -218,6 +226,7 @@ namespace Airline
             // backSearch
             // 
             this.backSearch.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(76)))), ((int)(((byte)(157)))));
+            this.backSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.backSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
             this.backSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.backSearch.BorderRadius = 7;
@@ -249,10 +258,11 @@ namespace Airline
             this.backSearch.Textcolor = System.Drawing.Color.White;
             this.backSearch.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backSearch.Visible = false;
-            this.backSearch.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
+            this.backSearch.Click += new System.EventHandler(this.backBt_Click);
             // 
             // bunifuCustomLabel1
             // 
+            this.bunifuCustomLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bunifuCustomLabel1.AutoSize = true;
             this.bunifuCustomLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.Red;
@@ -264,6 +274,7 @@ namespace Airline
             // 
             // bunifuCustomLabel2
             // 
+            this.bunifuCustomLabel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bunifuCustomLabel2.AutoSize = true;
             this.bunifuCustomLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel2.ForeColor = System.Drawing.Color.Red;
@@ -275,6 +286,7 @@ namespace Airline
             // 
             // bunifuCustomLabel3
             // 
+            this.bunifuCustomLabel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bunifuCustomLabel3.AutoSize = true;
             this.bunifuCustomLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel3.ForeColor = System.Drawing.Color.Red;
@@ -286,6 +298,7 @@ namespace Airline
             // 
             // bunifuCustomLabel4
             // 
+            this.bunifuCustomLabel4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bunifuCustomLabel4.AutoSize = true;
             this.bunifuCustomLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel4.ForeColor = System.Drawing.Color.Red;
@@ -297,6 +310,7 @@ namespace Airline
             // 
             // bunifuCustomLabel5
             // 
+            this.bunifuCustomLabel5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bunifuCustomLabel5.AutoSize = true;
             this.bunifuCustomLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel5.ForeColor = System.Drawing.Color.Red;
@@ -305,10 +319,10 @@ namespace Airline
             this.bunifuCustomLabel5.Size = new System.Drawing.Size(15, 20);
             this.bunifuCustomLabel5.TabIndex = 18;
             this.bunifuCustomLabel5.Text = "*";
-            this.bunifuCustomLabel5.Click += new System.EventHandler(this.bunifuCustomLabel5_Click);
             // 
             // bunifuCustomLabel6
             // 
+            this.bunifuCustomLabel6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bunifuCustomLabel6.AutoSize = true;
             this.bunifuCustomLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel6.ForeColor = System.Drawing.Color.Red;
@@ -334,7 +348,7 @@ namespace Airline
             this.Controls.Add(this.bookBt);
             this.Controls.Add(this.eMail);
             this.Controls.Add(this.phoneNumber);
-            this.Controls.Add(this.contactDrD);
+            this.Controls.Add(this.sex);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.contactName);
             this.Name = "SaleControl";
@@ -349,7 +363,7 @@ namespace Airline
         private Bunifu.Framework.UI.BunifuMaterialTextbox phoneNumber;
         private Bunifu.Framework.UI.BunifuMaterialTextbox eMail;
         private Bunifu.Framework.UI.BunifuFlatButton bookBt;
-        private Bunifu.Framework.UI.BunifuDropdown contactDrD;
+        private Bunifu.Framework.UI.BunifuDropdown sex;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private Bunifu.Framework.UI.BunifuMaterialTextbox ID;

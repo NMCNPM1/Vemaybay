@@ -37,6 +37,7 @@
             // dataBt
             // 
             this.dataBt.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(76)))), ((int)(((byte)(157)))));
+            this.dataBt.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dataBt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
             this.dataBt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.dataBt.BorderRadius = 7;
@@ -55,7 +56,7 @@
             this.dataBt.IconVisible = true;
             this.dataBt.IconZoom = 70D;
             this.dataBt.IsTab = true;
-            this.dataBt.Location = new System.Drawing.Point(223, 230);
+            this.dataBt.Location = new System.Drawing.Point(239, 223);
             this.dataBt.Name = "dataBt";
             this.dataBt.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
             this.dataBt.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(76)))), ((int)(((byte)(157)))));
@@ -77,11 +78,11 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(148, 175);
+            this.label1.Location = new System.Drawing.Point(135, 163);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(225, 21);
+            this.label1.Size = new System.Drawing.Size(238, 21);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Update Database(.xls): ";
+            this.label1.Text = "Update Database(.xls, .xlsx): ";
             // 
             // DatabaseControl
             // 

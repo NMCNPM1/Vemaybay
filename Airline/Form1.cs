@@ -12,6 +12,8 @@ namespace Airline
 {
     public partial class Form1 : Form
     {
+        #region INIT
+
         private static ConnectToSQL connection;
 
         internal static ConnectToSQL Connection { get => connection; set => connection = value; }
@@ -23,12 +25,15 @@ namespace Airline
             InitializeComponent();       
         }
 
+        #endregion
+
+        #region Main button
+        
         private void saleBt_Click(object sender, EventArgs e)
         {
             searchControl1.Visible = true;
+            searchControl1.LoadData();
             searchControl1.BringToFront();
-            //location: 202, 100
-            //SIze :599, 349
         }
 
         private void bookBt_Click(object sender, EventArgs e)
@@ -49,54 +54,28 @@ namespace Airline
             reportControl1.BringToFront();
         }
 
-        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        private void changeBt_Click(object sender, EventArgs e)
         {
             ruleChangeControl1.Visible = true;
             ruleChangeControl1.BringToFront();
         }
-        // nút tắt
+
+        #endregion
+
+        #region Phím chức năng
+
         private void closeBt_Click(object sender, EventArgs e)
         {
             Form1.Connection.CloseConn();
             Application.Exit();
         }
-        // nút minimized
-        private void bunifuThinButton21_Click(object sender, EventArgs e)
+
+        private void minimizeBt_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void reportControl1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_MouseHover(object sender, EventArgs e)
-        {
-          //  changeWidthPanel(200,56,true);
-        }
-
-        private void panel1_MouseLeave(object sender, EventArgs e)
-        {
-           // changeWidthPanel(56,200,false);
-        }
-
-        
-
-        private void searchBt_MouseHover(object sender, EventArgs e)
-        {   
-        //    if(panel1.Width == 56)
-        //    changeWidthPanel(200, 56, true);
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
+        #endregion
     }
+   
 }

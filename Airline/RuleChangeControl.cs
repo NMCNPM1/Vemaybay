@@ -14,18 +14,19 @@ namespace Airline
 {
     public partial class RuleChangeControl : UserControl
     {
+        #region INIT
+
         SqlCommand cmd = new SqlCommand();
         private int value;
         private int index;
-
-
         public RuleChangeControl()
         {
-            InitializeComponent();
-            
-           
-
+            InitializeComponent();          
         }
+
+        #endregion
+
+        #region Main button
 
         private void updateRuleBt_Click(object sender, EventArgs e)
         {
@@ -39,10 +40,12 @@ namespace Airline
             UpdateMaxStopTime();
             UpdateMinStopTime();
             Update2ndTickets();
-
-
-
         }
+
+        #endregion
+
+        #region Update methods
+
         void UpdateNumberAirport()
         {
             if (index == 0 && newValue.Text != null)
@@ -62,6 +65,7 @@ namespace Airline
                 MessageBox.Show("Update số lượng sân bay thành công");
             }
         }
+
         void UpdateMinimunFlying()
         {
             if (index == 1 && newValue.Text != null)
@@ -81,6 +85,7 @@ namespace Airline
                 MessageBox.Show("Update thời gian bay tối thiểu thành công");
             }
         }
+
         void UpdateImmeAirport()
         {
             if (index == 2 && newValue.Text != null)
@@ -120,6 +125,7 @@ namespace Airline
                 MessageBox.Show("Update thời gian dừng tối thiểu thành công");
             }
         }
+
         void UpdateMaxStopTime()
         {
             if (index == 4 && newValue.Text != null)
@@ -139,6 +145,7 @@ namespace Airline
                 MessageBox.Show("Update thời gian dừng tối đa thành công");
             }
         }
+
         void Update1stTickets()
         {
             if (index == 5 && newValue.Text != null)
@@ -158,6 +165,7 @@ namespace Airline
                 MessageBox.Show("Update số lượng vé hạng 1 thành công");
             }
         }
+
         void Update2ndTickets()
         {
             if (index == 6 && newValue.Text != null)
@@ -178,6 +186,7 @@ namespace Airline
             }
 
         }
+
         void UpdateSlowestBooking()
         {
             if (index == 7 && newValue.Text != null)
@@ -197,6 +206,7 @@ namespace Airline
                 MessageBox.Show("Update thời gian đặt vé chậm nhất thành công");
             }
         }
+
         void UpdateCancellationBooking()
         {
             if (index == 8 && newValue.Text != null)
@@ -216,5 +226,7 @@ namespace Airline
                 MessageBox.Show("Update thời gian hủy đặt vé thành công");
             }
         }
+
+        #endregion
     }
 }

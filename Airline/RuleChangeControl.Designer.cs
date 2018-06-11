@@ -37,6 +37,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(108, 181);
@@ -47,6 +48,7 @@
             // 
             // listSex
             // 
+            this.listSex.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.listSex.BackColor = System.Drawing.Color.Transparent;
             this.listSex.BorderRadius = 3;
             this.listSex.DisabledColor = System.Drawing.Color.Gray;
@@ -74,6 +76,7 @@
             // 
             // newValue
             // 
+            this.newValue.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.newValue.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.newValue.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.newValue.ForeColor = System.Drawing.Color.Black;
@@ -94,6 +97,7 @@
             // updateRuleBt
             // 
             this.updateRuleBt.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(76)))), ((int)(((byte)(157)))));
+            this.updateRuleBt.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.updateRuleBt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
             this.updateRuleBt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.updateRuleBt.BorderRadius = 7;
