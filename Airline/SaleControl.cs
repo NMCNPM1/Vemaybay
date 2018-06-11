@@ -37,10 +37,8 @@ namespace Airline
             }
             else
             {
-                ConnectToSQL con = new ConnectToSQL();
-                con.OpenConn();
-                string sql = " insert into KhachHang values ('" + rdIDKH + "','" + this.contactName.Text + "','" + this.contactDrD.selectedIndex.ToString() + "','" + this.phoneNumber.Text + "','" + this.Address.Text + "','" + this.ID.Text + "','"+this.eMail.Text+"')";
-                SqlCommand cmd = new SqlCommand(sql, con.Connection);
+                string sql = "insert into KhachHang values ('" + rdIDKH + "','" + this.contactName.Text + "','" + this.contactDrD.selectedIndex.ToString() + "','" + this.phoneNumber.Text + "','" + this.Address.Text + "','" + this.ID.Text + "','"+this.eMail.Text+"')";
+                SqlCommand cmd = new SqlCommand(sql, Form1.Connection.Connection);
                 SqlDataReader myReader;
                 try
                 {
@@ -53,8 +51,6 @@ namespace Airline
                 {
                     MessageBox.Show("Book Failed");
                 }
-
-                con.CloseConn();
             }
         }
 

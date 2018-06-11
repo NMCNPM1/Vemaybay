@@ -15,11 +15,9 @@ namespace Airline
 {
     public partial class DatabaseControl : UserControl
     {
-        ConnectToSQL conn;
 
         public DatabaseControl()
         {
-            conn = new ConnectToSQL();
             InitializeComponent();
         }
 
@@ -37,7 +35,7 @@ namespace Airline
             {
                 // tạo đối tượng excel
                 Excel.Application excel = new Excel.Application();
-                conn.OpenConn();
+                Form1.Connection.OpenConn();
                 // mở tệp
 
                 try
@@ -124,7 +122,7 @@ namespace Airline
         }
         public void ExcuteCommand(string command)
         {
-            SqlCommand cmd = new SqlCommand(command, conn.Connection);
+            SqlCommand cmd = new SqlCommand(command, Form1.Connection.Connection);
             cmd.ExecuteNonQuery();
         }
     }

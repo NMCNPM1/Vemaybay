@@ -35,13 +35,10 @@ namespace Airline
         }
         private string countMoney()
         {
-            ConnectToSQL con = new ConnectToSQL();
-            con.OpenConn();
-
             string sql = "SELECT sum(VE.GIAVE) FROM VE , CHUYENBAY WHERE VE.MACHUYENBAY=CHUYENBAY.MACHUYENBAY AND month(CHUYENBAY.NGAY)=" +
                 monthRp.selectedValue + " AND YEAR(NGAY)=" + yearRp.selectedValue;
 
-            SqlCommand cmd = new SqlCommand(sql, con.Connection);
+            SqlCommand cmd = new SqlCommand(sql, Form1.Connection.Connection);
             SqlDataReader myReader;
 
             myReader = cmd.ExecuteReader();
@@ -49,7 +46,6 @@ namespace Airline
             string revenue = myReader[0].ToString();
             if (revenue == "") revenue = "0 VNĐ";
             else revenue = money(float.Parse(revenue).ToString()) + " VNĐ";
-            con.CloseConn();
             return revenue;
         }
         private void reportBt_Click(object sender, EventArgs e)
@@ -59,16 +55,13 @@ namespace Airline
                 MessageBox.Show("Tháng này không có thu nhập !", "Thông báo");
                 return;
             }
-            ConnectToSQL con = new ConnectToSQL();
             string sql = "SELECT VE.MAVE, VE.MACHUYENBAY, VE.HANGVE, VE.GIAVE FROM VE , CHUYENBAY WHERE VE.MACHUYENBAY=CHUYENBAY.MACHUYENBAY AND month(CHUYENBAY.NGAY)=" +
                 monthRp.selectedValue + " AND YEAR(NGAY)=" + yearRp.selectedValue;
-            con.OpenConn();
-            SqlCommand cmd = new SqlCommand(sql, con.Connection);
+            SqlCommand cmd = new SqlCommand(sql, Form1.Connection.Connection);
             cmd.CommandType = CommandType.Text;
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
-            con.CloseConn();
             listView.DataSource = dt;
 
             //excel
