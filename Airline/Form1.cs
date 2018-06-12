@@ -36,12 +36,6 @@ namespace Airline
             searchControl1.BringToFront();
         }
 
-        private void bookBt_Click(object sender, EventArgs e)
-        {
-            saleControl1.Visible = true;
-            saleControl1.BringToFront();
-        }
-
         private void dataBt_Click(object sender, EventArgs e)
         {
             databaseControl1.Visible = true;

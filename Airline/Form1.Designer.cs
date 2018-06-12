@@ -32,7 +32,6 @@
             this.panel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.searchBt = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bookBt = new Bunifu.Framework.UI.BunifuFlatButton();
             this.dataBt = new Bunifu.Framework.UI.BunifuFlatButton();
             this.reportBt = new Bunifu.Framework.UI.BunifuFlatButton();
             this.changeBt = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -40,11 +39,10 @@
             this.closeBt = new Bunifu.Framework.UI.BunifuThinButton2();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.searchControl1 = new Airline.SearchControl();
             this.reportControl1 = new Airline.ReportControl();
             this.ruleChangeControl1 = new Airline.RuleChangeControl();
             this.databaseControl1 = new Airline.DatabaseControl();
-            this.saleControl1 = new Airline.SaleControl();
-            this.searchControl1 = new Airline.SearchControl();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
@@ -55,6 +53,9 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.searchBt);
+            this.panel1.Controls.Add(this.dataBt);
+            this.panel1.Controls.Add(this.reportBt);
+            this.panel1.Controls.Add(this.changeBt);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -67,7 +68,7 @@
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(200, 169);
+            this.pictureBox1.Size = new System.Drawing.Size(197, 169);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -107,41 +108,6 @@
             this.searchBt.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchBt.Click += new System.EventHandler(this.saleBt_Click);
             // 
-            // bookBt
-            // 
-            this.bookBt.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(76)))), ((int)(((byte)(157)))));
-            this.bookBt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
-            this.bookBt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bookBt.BorderRadius = 0;
-            this.bookBt.ButtonText = "  Book Trip";
-            this.bookBt.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bookBt.DisabledColor = System.Drawing.Color.Gray;
-            this.bookBt.Iconcolor = System.Drawing.Color.Transparent;
-            this.bookBt.Iconimage = ((System.Drawing.Image)(resources.GetObject("bookBt.Iconimage")));
-            this.bookBt.Iconimage_right = null;
-            this.bookBt.Iconimage_right_Selected = null;
-            this.bookBt.Iconimage_Selected = null;
-            this.bookBt.IconMarginLeft = 0;
-            this.bookBt.IconMarginRight = 0;
-            this.bookBt.IconRightVisible = true;
-            this.bookBt.IconRightZoom = 0D;
-            this.bookBt.IconVisible = true;
-            this.bookBt.IconZoom = 70D;
-            this.bookBt.IsTab = true;
-            this.bookBt.Location = new System.Drawing.Point(0, 231);
-            this.bookBt.Name = "bookBt";
-            this.bookBt.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
-            this.bookBt.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(76)))), ((int)(((byte)(157)))));
-            this.bookBt.OnHoverTextColor = System.Drawing.Color.White;
-            this.bookBt.selected = false;
-            this.bookBt.Size = new System.Drawing.Size(200, 53);
-            this.bookBt.TabIndex = 2;
-            this.bookBt.Text = "  Book Trip";
-            this.bookBt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bookBt.Textcolor = System.Drawing.Color.White;
-            this.bookBt.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bookBt.Click += new System.EventHandler(this.bookBt_Click);
-            // 
             // dataBt
             // 
             this.dataBt.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(76)))), ((int)(((byte)(157)))));
@@ -163,7 +129,7 @@
             this.dataBt.IconVisible = true;
             this.dataBt.IconZoom = 70D;
             this.dataBt.IsTab = true;
-            this.dataBt.Location = new System.Drawing.Point(0, 284);
+            this.dataBt.Location = new System.Drawing.Point(3, 237);
             this.dataBt.Name = "dataBt";
             this.dataBt.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
             this.dataBt.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(76)))), ((int)(((byte)(157)))));
@@ -198,7 +164,7 @@
             this.reportBt.IconVisible = true;
             this.reportBt.IconZoom = 70D;
             this.reportBt.IsTab = true;
-            this.reportBt.Location = new System.Drawing.Point(0, 337);
+            this.reportBt.Location = new System.Drawing.Point(3, 296);
             this.reportBt.Name = "reportBt";
             this.reportBt.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
             this.reportBt.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(76)))), ((int)(((byte)(157)))));
@@ -233,7 +199,7 @@
             this.changeBt.IconVisible = true;
             this.changeBt.IconZoom = 70D;
             this.changeBt.IsTab = true;
-            this.changeBt.Location = new System.Drawing.Point(0, 390);
+            this.changeBt.Location = new System.Drawing.Point(3, 355);
             this.changeBt.Name = "changeBt";
             this.changeBt.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
             this.changeBt.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(76)))), ((int)(((byte)(157)))));
@@ -323,6 +289,14 @@
             this.panel3.Size = new System.Drawing.Size(808, 34);
             this.panel3.TabIndex = 15;
             // 
+            // searchControl1
+            // 
+            this.searchControl1.Location = new System.Drawing.Point(200, 28);
+            this.searchControl1.Name = "searchControl1";
+            this.searchControl1.Size = new System.Drawing.Size(807, 602);
+            this.searchControl1.TabIndex = 16;
+            this.searchControl1.Visible = false;
+            // 
             // reportControl1
             // 
             this.reportControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
@@ -352,23 +326,6 @@
             this.databaseControl1.TabIndex = 8;
             this.databaseControl1.Visible = false;
             // 
-            // saleControl1
-            // 
-            this.saleControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.saleControl1.Location = new System.Drawing.Point(200, 28);
-            this.saleControl1.Name = "saleControl1";
-            this.saleControl1.Size = new System.Drawing.Size(807, 602);
-            this.saleControl1.TabIndex = 7;
-            this.saleControl1.Visible = false;
-            // 
-            // searchControl1
-            // 
-            this.searchControl1.Location = new System.Drawing.Point(200, 28);
-            this.searchControl1.Name = "searchControl1";
-            this.searchControl1.Size = new System.Drawing.Size(807, 602);
-            this.searchControl1.TabIndex = 16;
-            this.searchControl1.Visible = false;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -376,17 +333,12 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(235)))), ((int)(((byte)(243)))));
             this.ClientSize = new System.Drawing.Size(1007, 630);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.changeBt);
-            this.Controls.Add(this.reportBt);
-            this.Controls.Add(this.dataBt);
-            this.Controls.Add(this.bookBt);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.searchControl1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.reportControl1);
             this.Controls.Add(this.ruleChangeControl1);
             this.Controls.Add(this.databaseControl1);
-            this.Controls.Add(this.saleControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.Name = "Form1";
@@ -403,12 +355,9 @@
 
         private System.Windows.Forms.FlowLayoutPanel panel1;
         private Bunifu.Framework.UI.BunifuFlatButton searchBt;
-        private Bunifu.Framework.UI.BunifuFlatButton bookBt;
         private Bunifu.Framework.UI.BunifuFlatButton dataBt;
         private Bunifu.Framework.UI.BunifuFlatButton reportBt;
         private Bunifu.Framework.UI.BunifuFlatButton changeBt;
-
-        private SaleControl saleControl1;
         private DatabaseControl databaseControl1;
         private ReportControl reportControl1;
         private RuleChangeControl ruleChangeControl1;

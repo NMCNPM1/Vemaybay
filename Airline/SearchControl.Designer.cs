@@ -339,6 +339,7 @@
             this.Controls.Add(this.label1);
             this.Name = "SearchControl";
             this.Size = new System.Drawing.Size(617, 550);
+            this.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.SearchControl_MouseDoubleClick);
             ((System.ComponentModel.ISupportInitialize)(this.flightInfo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -357,7 +358,6 @@
         private Bunifu.Framework.UI.BunifuDropdown toStation;
         private System.Windows.Forms.Label label4;
         private Bunifu.Framework.UI.BunifuDropdown gioKhoiHanh;
-        private SaleControl sale1;
         private System.Windows.Forms.DataGridViewTextBoxColumn stt;
         private System.Windows.Forms.DataGridViewTextBoxColumn from;
         private System.Windows.Forms.DataGridViewTextBoxColumn to;

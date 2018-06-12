@@ -22,9 +22,22 @@ namespace Airline
     {
         #region INIT
 
+        private string sanBayDen, sanBayDi, maChuyenBay;
+
         public SaleControl()
         {
             InitializeComponent();
+        }
+
+        public SaleControl(string sanBayDen, string sanBayDi, string maChuyenBay)
+        {
+            InitializeComponent();
+            maCB.Text = "FLIGHT CODE: " + sanBayDen;
+            tinhDi.Text = "FROM: " + sanBayDi;
+            tinhDen.Text = "TO: " + maChuyenBay;
+            maCB.IsAccessible = false;
+            tinhDi.IsAccessible = false;
+            tinhDen.IsAccessible = false;
         }
 
         #endregion
@@ -42,15 +55,13 @@ namespace Airline
             }
             else
             {
-                string sql = "insert into KhachHang values ('" + rdIDKH + "','" + this.contactName.Text + "','" + this.sex.selectedIndex.ToString() + "','" + this.phoneNumber.Text + "','" + this.Address.Text + "','" + this.ID.Text + "','"+this.eMail.Text+"')";
+                string sql = "INSERT INTO KHACHHANG VALUES ('" + rdIDKH + "','" + this.contactName.Text + "','" + this.sex.selectedIndex.ToString() + "','" + this.phoneNumber.Text + "','" + this.Address.Text + "','" + this.ID.Text + "','"+this.eMail.Text+"')";
                 SqlCommand cmd = new SqlCommand(sql, Form1.Connection.Connection);
                 SqlDataReader myReader;
                 try
                 {
-                    myReader = cmd.ExecuteReader();
+                    cmd.ExecuteNonQuery();
                     MessageBox.Show("Booked!");
-
-
                 }
                 catch (Exception ex)
                 {

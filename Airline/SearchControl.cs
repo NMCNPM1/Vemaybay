@@ -22,11 +22,6 @@ namespace Airline
             InitializeComponent();
         }
 
-        #endregion
-
-        #region Load dữ liệu từ Database
-
-        // khởi tạo dữ liệu ban đầu
         public void LoadData()
         {
             // load sân bay đến và sân bay đi
@@ -97,6 +92,10 @@ namespace Airline
             catch { }
         }
 
+        #endregion
+
+        #region Main button
+
         private void searchBt_Click(object sender, EventArgs e)
         {
             if ((fromStation.selectedIndex == -1) || (toStation.selectedIndex == -1) || (gioKhoiHanh.selectedIndex == -1))
@@ -124,11 +123,12 @@ namespace Airline
         {
             try
             {
-                sale1 = new SaleControl();
-                this.Controls.Add(this.sale1);
-                sale1.Visible = true;
-                sale1.BringToFront();
-                sale1.BackSearch.Visible = true;
+                SaleControl saleControl = new SaleControl("", "", "");// truyền tỉnh đến, tỉnh đi, mã chuyến bay vào
+                this.Controls.Add(saleControl);
+                saleControl.Visible = true;
+                saleControl.Size = new Size(807, 602);
+                saleControl.Location = new Point(200, 28);
+                saleControl.BringToFront();
             }
             catch { }
            
@@ -169,9 +169,14 @@ namespace Airline
 
         #endregion
 
-        private void SearchControl_VisibleChanged(object sender, EventArgs e)
+        private void SearchControl_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-           // LoadData();
+            SaleControl saleControl = new SaleControl("", "", "");
+            this.Controls.Add(saleControl);
+            saleControl.Visible = true;
+            saleControl.Size = new Size(807, 602);
+            saleControl.Location = new Point(0, 0);
+            saleControl.BringToFront();
         }
     }
 }

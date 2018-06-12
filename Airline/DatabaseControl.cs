@@ -56,11 +56,12 @@ namespace Airline
                                 {
                                     string maSanBay = valueArray[j, 1].ToString();
                                     string tenSanBay = valueArray[j, 2].ToString();
-                                    string quocGia = valueArray[j, 3].ToString();
+                                    string tinh = valueArray[j, 3].ToString();
+                                    string quocGia = valueArray[j, 4].ToString();
                                     command = "INSERT INTO SANBAY VALUES("
                                      + "'" + maSanBay + "'" + ", "
                                      + "'" + tenSanBay + "'" + ", "
-                                     + "'" + quocGia + "'" + ")";
+                                     + "'" + tinh + "'" +", " + "'" + quocGia + "'" + ")";
                                     ExcuteCommand(command);
                                 }                                
                                 break;                    
@@ -108,6 +109,7 @@ namespace Airline
                                 break;
                         }
                     }
+                    MessageBox.Show("Data update successful !");
                 }
                 catch (Exception ex)
                 {
@@ -116,7 +118,7 @@ namespace Airline
             }
             else
             {
-                MessageBox.Show("Bạn chưa chọn tếp tin nào !", "Thông báo !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Bạn chưa chọn tệp tin nào !", "Thông báo !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
         }

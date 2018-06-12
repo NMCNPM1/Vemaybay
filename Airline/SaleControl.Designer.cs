@@ -48,6 +48,10 @@ namespace Airline
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.maCB = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.tinhDi = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.tinhDen = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.SuspendLayout();
             // 
             // contactName
@@ -63,7 +67,7 @@ namespace Airline
             this.contactName.LineIdleColor = System.Drawing.Color.Gray;
             this.contactName.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
             this.contactName.LineThickness = 3;
-            this.contactName.Location = new System.Drawing.Point(247, 163);
+            this.contactName.Location = new System.Drawing.Point(237, 228);
             this.contactName.Margin = new System.Windows.Forms.Padding(4);
             this.contactName.Name = "contactName";
             this.contactName.Size = new System.Drawing.Size(260, 33);
@@ -83,7 +87,7 @@ namespace Airline
             this.phoneNumber.LineIdleColor = System.Drawing.Color.Gray;
             this.phoneNumber.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
             this.phoneNumber.LineThickness = 3;
-            this.phoneNumber.Location = new System.Drawing.Point(247, 204);
+            this.phoneNumber.Location = new System.Drawing.Point(237, 269);
             this.phoneNumber.Margin = new System.Windows.Forms.Padding(4);
             this.phoneNumber.Name = "phoneNumber";
             this.phoneNumber.Size = new System.Drawing.Size(260, 33);
@@ -103,7 +107,7 @@ namespace Airline
             this.eMail.LineIdleColor = System.Drawing.Color.Gray;
             this.eMail.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
             this.eMail.LineThickness = 3;
-            this.eMail.Location = new System.Drawing.Point(247, 327);
+            this.eMail.Location = new System.Drawing.Point(237, 392);
             this.eMail.Margin = new System.Windows.Forms.Padding(4);
             this.eMail.Name = "eMail";
             this.eMail.Size = new System.Drawing.Size(260, 33);
@@ -132,7 +136,7 @@ namespace Airline
             this.bookBt.IconVisible = true;
             this.bookBt.IconZoom = 70D;
             this.bookBt.IsTab = true;
-            this.bookBt.Location = new System.Drawing.Point(247, 383);
+            this.bookBt.Location = new System.Drawing.Point(237, 453);
             this.bookBt.Name = "bookBt";
             this.bookBt.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
             this.bookBt.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(76)))), ((int)(((byte)(157)))));
@@ -157,7 +161,7 @@ namespace Airline
             this.sex.Items = new string[] {
         "Mr.",
         "Mrs."};
-            this.sex.Location = new System.Drawing.Point(140, 165);
+            this.sex.Location = new System.Drawing.Point(129, 228);
             this.sex.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.sex.Name = "sex";
             this.sex.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
@@ -172,7 +176,7 @@ namespace Airline
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(56, 118);
+            this.label2.Location = new System.Drawing.Point(34, 184);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(182, 21);
             this.label2.TabIndex = 4;
@@ -196,7 +200,7 @@ namespace Airline
             this.ID.LineIdleColor = System.Drawing.Color.Gray;
             this.ID.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
             this.ID.LineThickness = 3;
-            this.ID.Location = new System.Drawing.Point(247, 286);
+            this.ID.Location = new System.Drawing.Point(237, 351);
             this.ID.Margin = new System.Windows.Forms.Padding(4);
             this.ID.Name = "ID";
             this.ID.Size = new System.Drawing.Size(260, 33);
@@ -216,7 +220,7 @@ namespace Airline
             this.Address.LineIdleColor = System.Drawing.Color.Gray;
             this.Address.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
             this.Address.LineThickness = 3;
-            this.Address.Location = new System.Drawing.Point(247, 245);
+            this.Address.Location = new System.Drawing.Point(237, 310);
             this.Address.Margin = new System.Windows.Forms.Padding(4);
             this.Address.Name = "Address";
             this.Address.Size = new System.Drawing.Size(260, 33);
@@ -245,7 +249,7 @@ namespace Airline
             this.backSearch.IconVisible = true;
             this.backSearch.IconZoom = 70D;
             this.backSearch.IsTab = true;
-            this.backSearch.Location = new System.Drawing.Point(382, 383);
+            this.backSearch.Location = new System.Drawing.Point(385, 453);
             this.backSearch.Name = "backSearch";
             this.backSearch.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
             this.backSearch.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(76)))), ((int)(((byte)(157)))));
@@ -266,7 +270,7 @@ namespace Airline
             this.bunifuCustomLabel1.AutoSize = true;
             this.bunifuCustomLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.Red;
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(515, 165);
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(503, 237);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
             this.bunifuCustomLabel1.Size = new System.Drawing.Size(15, 20);
             this.bunifuCustomLabel1.TabIndex = 14;
@@ -278,7 +282,7 @@ namespace Airline
             this.bunifuCustomLabel2.AutoSize = true;
             this.bunifuCustomLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel2.ForeColor = System.Drawing.Color.Red;
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(515, 204);
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(503, 276);
             this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
             this.bunifuCustomLabel2.Size = new System.Drawing.Size(15, 20);
             this.bunifuCustomLabel2.TabIndex = 15;
@@ -290,7 +294,7 @@ namespace Airline
             this.bunifuCustomLabel3.AutoSize = true;
             this.bunifuCustomLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel3.ForeColor = System.Drawing.Color.Red;
-            this.bunifuCustomLabel3.Location = new System.Drawing.Point(515, 245);
+            this.bunifuCustomLabel3.Location = new System.Drawing.Point(503, 317);
             this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
             this.bunifuCustomLabel3.Size = new System.Drawing.Size(15, 20);
             this.bunifuCustomLabel3.TabIndex = 16;
@@ -302,7 +306,7 @@ namespace Airline
             this.bunifuCustomLabel4.AutoSize = true;
             this.bunifuCustomLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel4.ForeColor = System.Drawing.Color.Red;
-            this.bunifuCustomLabel4.Location = new System.Drawing.Point(515, 286);
+            this.bunifuCustomLabel4.Location = new System.Drawing.Point(503, 358);
             this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
             this.bunifuCustomLabel4.Size = new System.Drawing.Size(15, 20);
             this.bunifuCustomLabel4.TabIndex = 17;
@@ -314,7 +318,7 @@ namespace Airline
             this.bunifuCustomLabel5.AutoSize = true;
             this.bunifuCustomLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel5.ForeColor = System.Drawing.Color.Red;
-            this.bunifuCustomLabel5.Location = new System.Drawing.Point(494, 507);
+            this.bunifuCustomLabel5.Location = new System.Drawing.Point(482, 529);
             this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
             this.bunifuCustomLabel5.Size = new System.Drawing.Size(15, 20);
             this.bunifuCustomLabel5.TabIndex = 18;
@@ -326,16 +330,94 @@ namespace Airline
             this.bunifuCustomLabel6.AutoSize = true;
             this.bunifuCustomLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel6.ForeColor = System.Drawing.Color.Red;
-            this.bunifuCustomLabel6.Location = new System.Drawing.Point(515, 507);
+            this.bunifuCustomLabel6.Location = new System.Drawing.Point(503, 529);
             this.bunifuCustomLabel6.Name = "bunifuCustomLabel6";
             this.bunifuCustomLabel6.Size = new System.Drawing.Size(80, 20);
             this.bunifuCustomLabel6.TabIndex = 19;
             this.bunifuCustomLabel6.Text = "Obligatory";
             // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(34, 42);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(146, 21);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "Flight Infomation:";
+            // 
+            // maCB
+            // 
+            this.maCB.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.maCB.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.maCB.Enabled = false;
+            this.maCB.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.maCB.ForeColor = System.Drawing.Color.Black;
+            this.maCB.HintForeColor = System.Drawing.Color.DimGray;
+            this.maCB.HintText = "FLIGHT CODE";
+            this.maCB.isPassword = false;
+            this.maCB.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
+            this.maCB.LineIdleColor = System.Drawing.Color.Gray;
+            this.maCB.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
+            this.maCB.LineThickness = 3;
+            this.maCB.Location = new System.Drawing.Point(237, 64);
+            this.maCB.Margin = new System.Windows.Forms.Padding(4);
+            this.maCB.Name = "maCB";
+            this.maCB.Size = new System.Drawing.Size(260, 33);
+            this.maCB.TabIndex = 21;
+            this.maCB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // tinhDi
+            // 
+            this.tinhDi.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tinhDi.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tinhDi.Enabled = false;
+            this.tinhDi.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.tinhDi.ForeColor = System.Drawing.Color.Black;
+            this.tinhDi.HintForeColor = System.Drawing.Color.DimGray;
+            this.tinhDi.HintText = "FROM";
+            this.tinhDi.isPassword = false;
+            this.tinhDi.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
+            this.tinhDi.LineIdleColor = System.Drawing.Color.Gray;
+            this.tinhDi.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
+            this.tinhDi.LineThickness = 3;
+            this.tinhDi.Location = new System.Drawing.Point(237, 105);
+            this.tinhDi.Margin = new System.Windows.Forms.Padding(4);
+            this.tinhDi.Name = "tinhDi";
+            this.tinhDi.Size = new System.Drawing.Size(260, 33);
+            this.tinhDi.TabIndex = 22;
+            this.tinhDi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // tinhDen
+            // 
+            this.tinhDen.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tinhDen.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tinhDen.Enabled = false;
+            this.tinhDen.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.tinhDen.ForeColor = System.Drawing.Color.Black;
+            this.tinhDen.HintForeColor = System.Drawing.Color.DimGray;
+            this.tinhDen.HintText = "TO";
+            this.tinhDen.isPassword = false;
+            this.tinhDen.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
+            this.tinhDen.LineIdleColor = System.Drawing.Color.Gray;
+            this.tinhDen.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
+            this.tinhDen.LineThickness = 3;
+            this.tinhDen.Location = new System.Drawing.Point(237, 146);
+            this.tinhDen.Margin = new System.Windows.Forms.Padding(4);
+            this.tinhDen.Name = "tinhDen";
+            this.tinhDen.Size = new System.Drawing.Size(260, 33);
+            this.tinhDen.TabIndex = 23;
+            this.tinhDen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // SaleControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.tinhDen);
+            this.Controls.Add(this.tinhDi);
+            this.Controls.Add(this.maCB);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.bunifuCustomLabel6);
             this.Controls.Add(this.bunifuCustomLabel5);
             this.Controls.Add(this.bunifuCustomLabel4);
@@ -376,6 +458,10 @@ namespace Airline
         private BunifuCustomLabel bunifuCustomLabel4;
         private BunifuCustomLabel bunifuCustomLabel5;
         private BunifuCustomLabel bunifuCustomLabel6;
+        private System.Windows.Forms.Label label1;
+        private BunifuMaterialTextbox maCB;
+        private BunifuMaterialTextbox tinhDi;
+        private BunifuMaterialTextbox tinhDen;
 
         public BunifuFlatButton BackSearch { get => backSearch; set => backSearch = value; }
     }
