@@ -35,7 +35,7 @@ namespace Airline
             {
                 // tạo đối tượng excel
                 Excel.Application excel = new Excel.Application();
-                Form1.Connection.OpenConn();
+                LoginForm.Connection.OpenConn();
                 // mở tệp
 
                 try
@@ -129,7 +129,7 @@ namespace Airline
 
         public void ExcuteCommand(string command)
         {
-            SqlCommand cmd = new SqlCommand(command, Form1.Connection.Connection);
+            SqlCommand cmd = new SqlCommand(command, LoginForm.Connection.Connection);
             cmd.ExecuteNonQuery();
         }
 

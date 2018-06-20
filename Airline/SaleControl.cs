@@ -56,7 +56,7 @@ namespace Airline
             else
             {
                 string sql = "INSERT INTO KHACHHANG VALUES ('" + rdIDKH + "','" + this.contactName.Text + "','" + this.sex.selectedIndex.ToString() + "','" + this.phoneNumber.Text + "','" + this.Address.Text + "','" + this.ID.Text + "','"+this.eMail.Text+"')";
-                SqlCommand cmd = new SqlCommand(sql, Form1.Connection.Connection);
+                SqlCommand cmd = new SqlCommand(sql, LoginForm.Connection.Connection);
                 SqlDataReader myReader;
                 try
                 {

@@ -14,14 +14,8 @@ namespace Airline
     {
         #region INIT
 
-        private static ConnectToSQL connection;
-
-        internal static ConnectToSQL Connection { get => connection; set => connection = value; }
-
         public Form1()
         {
-            Connection = new ConnectToSQL();
-            Connection.OpenConn();
             InitializeComponent();       
         }
 
@@ -60,8 +54,8 @@ namespace Airline
 
         private void closeBt_Click(object sender, EventArgs e)
         {
-            Form1.Connection.CloseConn();
-            Application.Exit();
+            LoginForm.Connection.CloseConn();
+            this.Close();
         }
 
         private void minimizeBt_Click(object sender, EventArgs e)

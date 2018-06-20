@@ -26,7 +26,7 @@ namespace Airline
         {
             // load sân bay đến và sân bay đi
             string sql = "SELECT MASANBAY FROM dbo.SANBAY ORDER BY MASANBAY ASC";
-            cmd.Connection = Form1.Connection.Connection;
+            cmd.Connection = LoginForm.Connection.Connection;
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = sql;
 
@@ -70,7 +70,7 @@ namespace Airline
             catch { }
             // Load giờ bay
             sql = "SELECT GIO FROM dbo.CHUYENBAY ORDER BY GIO ASC";
-            cmd = new SqlCommand(sql, Form1.Connection.Connection);
+            cmd = new SqlCommand(sql, LoginForm.Connection.Connection);
             try
             {
                 myReader = cmd.ExecuteReader();
@@ -107,7 +107,7 @@ namespace Airline
                 "' AND NGAY='" + datePicker.Value.ToString() + "'";
             if ((gioKhoiHanh.selectedValue != "Any Time") && (gioKhoiHanh.selectedValue != "..."))
                 sql += "AND GIO='" + gioKhoiHanh.selectedValue + "'";
-            SqlCommand cmd = new SqlCommand(sql, Form1.Connection.Connection);
+            SqlCommand cmd = new SqlCommand(sql, LoginForm.Connection.Connection);
             cmd.CommandType = CommandType.Text;
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
@@ -145,6 +145,16 @@ namespace Airline
             }
         }
 
+        private void SearchControl_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            SaleControl saleControl = new SaleControl("", "", "");
+            this.Controls.Add(saleControl);
+            saleControl.Visible = true;
+            saleControl.Size = new Size(807, 602);
+            saleControl.Location = new Point(0, 0);
+            saleControl.BringToFront();
+        }
+
         #region Xử lí trùng chuyến bay
 
         private void fromStation_onItemSelected(object sender, EventArgs e)
@@ -169,14 +179,6 @@ namespace Airline
 
         #endregion
 
-        private void SearchControl_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            SaleControl saleControl = new SaleControl("", "", "");
-            this.Controls.Add(saleControl);
-            saleControl.Visible = true;
-            saleControl.Size = new Size(807, 602);
-            saleControl.Location = new Point(0, 0);
-            saleControl.BringToFront();
-        }
+
     }
 }

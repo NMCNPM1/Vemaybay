@@ -33,7 +33,7 @@ namespace Airline
             }
             string sql = "SELECT VE.MAVE, VE.MACHUYENBAY, VE.HANGVE, VE.GIAVE FROM VE , CHUYENBAY WHERE VE.MACHUYENBAY=CHUYENBAY.MACHUYENBAY AND month(CHUYENBAY.NGAY)=" +
                 monthRp.selectedValue + " AND YEAR(NGAY)=" + yearRp.selectedValue;
-            SqlCommand cmd = new SqlCommand(sql, Form1.Connection.Connection);
+            SqlCommand cmd = new SqlCommand(sql, LoginForm.Connection.Connection);
             cmd.CommandType = CommandType.Text;
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
@@ -137,7 +137,7 @@ namespace Airline
             string sql = "SELECT sum(VE.GIAVE) FROM VE , CHUYENBAY WHERE VE.MACHUYENBAY=CHUYENBAY.MACHUYENBAY AND month(CHUYENBAY.NGAY)=" +
                 monthRp.selectedValue + " AND YEAR(NGAY)=" + yearRp.selectedValue;
 
-            SqlCommand cmd = new SqlCommand(sql, Form1.Connection.Connection);
+            SqlCommand cmd = new SqlCommand(sql, LoginForm.Connection.Connection);
             SqlDataReader myReader;
 
             myReader = cmd.ExecuteReader();
