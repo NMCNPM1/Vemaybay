@@ -25,7 +25,7 @@ namespace Airline
         public void LoadData()
         {
             // load sân bay đến và sân bay đi
-            string sql = "SELECT MASANBAY FROM dbo.SANBAY ORDER BY MASANBAY ASC";
+            string sql = "SELECT TINH FROM dbo.SANBAY ORDER BY MASANBAY ASC";
             cmd.Connection = LoginForm.Connection.Connection;
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = sql;
@@ -88,6 +88,7 @@ namespace Airline
                         }
                     }
                 }
+                myReader.Close();
             }
             catch { }
         }
@@ -100,10 +101,11 @@ namespace Airline
         {
             if ((fromStation.selectedIndex == -1) || (toStation.selectedIndex == -1) || (gioKhoiHanh.selectedIndex == -1))
                 return;
-            string sql = "SELECT MACHUYENBAY, SANBAYDI, SANBAYDEN, GIO, HANG1CONLAI, GIAVEHANG1, HANG2CONLAI, GIAVEHANG2 " +
-                "FROM dbo.CHUYENBAY " +
-                "WHERE SANBAYDI='" + fromStation.selectedValue +
-                "' AND SANBAYDEN='" + toStation.selectedValue +
+            string sql = "SELECT MACHUYENBAY, SB1.TENSANBAY AS SANBAYDI, SB2.TENSANBAY AS SANBAYDEN, GIO, HANG1CONLAI, GIAVEHANG1, HANG2CONLAI, GIAVEHANG2 " +
+                "FROM CHUYENBAY, SANBAY SB1, SANBAY SB2 " +
+                "WHERE CHUYENBAY.SANBAYDEN=SB2.MASANBAY AND CHUYENBAY.SANBAYDI= SB1.MASANBAY" +
+                " AND SB1.TINH='" + fromStation.selectedValue +
+                "' AND SB2.TINH='" + toStation.selectedValue +
                 "' AND NGAY='" + datePicker.Value.ToString() + "'";
             if ((gioKhoiHanh.selectedValue != "Any Time") && (gioKhoiHanh.selectedValue != "..."))
                 sql += "AND GIO='" + gioKhoiHanh.selectedValue + "'";
@@ -132,41 +134,8 @@ namespace Airline
                 saleControl.Location = new Point(0, 28);
                 saleControl.BringToFront();
                 saleControl.MaCB.Text = flightInfo.CurrentRow.Cells[0].Value.ToString();
-                #region Copy Tinh Di
-                try
-                {
-                    string text = flightInfo.CurrentRow.Cells[1].Value.ToString();
-                    string sql = "SELECT TINH FROM SANBAY WHERE MASANBAY='" + text + "'";
-                    SqlCommand cmd = new SqlCommand(sql, LoginForm.Connection.Connection);
-                    cmd.CommandType = CommandType.Text;
-                    SqlDataReader myReader = cmd.ExecuteReader();
-                    if (myReader.HasRows)
-                    {
-                        myReader.Read();
-                        saleControl.TinhDi.Text = myReader[0].ToString();
-                    }
-                    myReader.Close();
-                }
-                catch { }
-
-                #endregion
-                #region Copy Tinh Den
-                try
-                {
-                    string text = flightInfo.CurrentRow.Cells[2].Value.ToString();
-                    string sql = "SELECT TINH FROM SANBAY WHERE MASANBAY='" + text + "'";
-                    SqlCommand cmd = new SqlCommand(sql, LoginForm.Connection.Connection);
-                    cmd.CommandType = CommandType.Text;
-                    SqlDataReader myReader = cmd.ExecuteReader();
-                    if (myReader.HasRows)
-                    {
-                        myReader.Read();
-                        saleControl.TinhDen.Text = myReader[0].ToString();
-                    }
-                    myReader.Close();
-                }
-                catch { }
-                #endregion
+                saleControl.TinhDi.Text = fromStation.selectedValue;
+                saleControl.TinhDen.Text = toStation.selectedValue;
             }
             catch { }
            
