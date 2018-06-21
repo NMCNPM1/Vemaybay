@@ -22,22 +22,38 @@ namespace Airline
     {
         #region INIT
 
-        private string sanBayDen, sanBayDi, maChuyenBay;
+        private string _sanBayDen, _sanBayDi, _maChuyenBay;
+        private long _giaVeHang1, _giaVeHang2;
 
         public SaleControl()
         {
             InitializeComponent();
         }
 
-        public SaleControl(string sanBayDen, string sanBayDi, string maChuyenBay)
+        private void classInfo_onItemSelected(object sender, EventArgs e)
         {
+            if (classInfo.selectedIndex == 1)
+                price.Text = "PRICE: " + _giaVeHang2.ToString() + " VND";
+            else
+                price.Text = "PRICE: " + _giaVeHang1.ToString() + " VND";
+        }
+
+        public SaleControl(string sanBayDen, string sanBayDi, string maChuyenBay, string giaVeHang1, string giaVeHang2)
+        {
+            _sanBayDen = sanBayDen;
+            _sanBayDi = sanBayDi;
+            _maChuyenBay = maChuyenBay;
+            _giaVeHang1 = long.Parse(giaVeHang1.Split('.')[0]);
+            _giaVeHang2 = long.Parse(giaVeHang2.Split('.')[0]);
             InitializeComponent();
-            MaCB.Text = "FLIGHT CODE: " + sanBayDen;
+            price.Text = "PRICE: " + _giaVeHang1.ToString() + " VND";
+            MaCB.Text = "CODE: " + maChuyenBay;
             TinhDi.Text = "FROM: " + sanBayDi;
-            TinhDen.Text = "TO: " + maChuyenBay;
+            TinhDen.Text = "TO: " + sanBayDen;
             MaCB.IsAccessible = false;
             TinhDi.IsAccessible = false;
             TinhDen.IsAccessible = false;
+            price.IsAccessible = false;
         }
 
         #endregion
@@ -72,8 +88,7 @@ namespace Airline
 
         private void backBt_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
-            this.SendToBack();
+            this.Parent.Controls.Remove(this);
         }
 
         #endregion

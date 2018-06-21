@@ -104,8 +104,8 @@ namespace Airline
             string sql = "SELECT MACHUYENBAY, SB1.TENSANBAY AS SANBAYDI, SB2.TENSANBAY AS SANBAYDEN, GIO, HANG1CONLAI, GIAVEHANG1, HANG2CONLAI, GIAVEHANG2 " +
                 "FROM CHUYENBAY, SANBAY SB1, SANBAY SB2 " +
                 "WHERE CHUYENBAY.SANBAYDEN=SB2.MASANBAY AND CHUYENBAY.SANBAYDI= SB1.MASANBAY" +
-                " AND SB1.TINH='" + fromStation.selectedValue +
-                "' AND SB2.TINH='" + toStation.selectedValue +
+                " AND SB1.TINH=N'" + fromStation.selectedValue +
+                "' AND SB2.TINH=N'" + toStation.selectedValue +
                 "' AND NGAY='" + datePicker.Value.ToString() + "'";
             if ((gioKhoiHanh.selectedValue != "Any Time") && (gioKhoiHanh.selectedValue != "..."))
                 sql += "AND GIO='" + gioKhoiHanh.selectedValue + "'";
@@ -123,19 +123,21 @@ namespace Airline
 
         private void flightInfo_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-          
+
             try
             {
-                SaleControl saleControl = new SaleControl("", "", "");// truyền tỉnh đến, tỉnh đi, mã chuyến bay vào
+                string maChuyenBay = flightInfo.CurrentRow.Cells[0].Value.ToString();
+                string tinhDi = fromStation.selectedValue;
+                string tinhDen = toStation.selectedValue;
+                string giaVeHang1 = flightInfo.CurrentRow.Cells[5].Value.ToString();
+                string giaVeHang2 = flightInfo.CurrentRow.Cells[7].Value.ToString();
+                SaleControl saleControl = new SaleControl(tinhDi, tinhDen, maChuyenBay, giaVeHang1, giaVeHang2);// truyền tỉnh đến, tỉnh đi, mã chuyến bay vào
                 this.Controls.Add(saleControl);
                 saleControl.Visible = true;
                 saleControl.BackSearch.Visible = true;
                 saleControl.Size = new Size(807, 602);
                 saleControl.Location = new Point(0, 28);
                 saleControl.BringToFront();
-                saleControl.MaCB.Text = flightInfo.CurrentRow.Cells[0].Value.ToString();
-                saleControl.TinhDi.Text = fromStation.selectedValue;
-                saleControl.TinhDen.Text = toStation.selectedValue;
             }
             catch { }
            
