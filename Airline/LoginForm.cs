@@ -13,6 +13,7 @@ namespace Airline
 {
     public partial class LoginForm : Form
     {
+        #region INIT
 
         private static ConnectToSQL connection;
 
@@ -26,43 +27,9 @@ namespace Airline
             tbPassword.isPassword = true;
         }
 
-        private void closeBt_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+        #endregion
 
-        private void bunifuFlatButton1_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
-        }
-
-        private void Enter_Press(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == (char)13)
-            {
-                string username = tbUser.Text;
-                string password = tbPassword.Text;
-
-
-                string sql = "SELECT TENNGUOIDUNG, MATKHAU, LOAINGUOIDUNG FROM NGUOIDUNG WHERE TENNGUOIDUNG = '"
-                    + username + "' AND MATKHAU = '" + password + "'";
-
-                DataTable dataTable = new DataTable();
-                SqlDataAdapter data = new SqlDataAdapter(sql, Connection.Connection);
-
-                data.Fill(dataTable);
-
-                if (dataTable.Rows.Count == 0)
-                    MessageBox.Show("Incorrect username or password !", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                else
-                {
-                    this.Visible = false;
-                    Form1 form = new Form1();
-                    form.ShowDialog();
-                    Application.Exit();
-                }
-            }
-        }
+        #region Main Event      
 
         private void btLogin_Click(object sender, EventArgs e)
         {
@@ -159,5 +126,21 @@ namespace Airline
                 }
             }
         }
+
+        #endregion
+
+        #region ON - OFF
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void closeBt_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        #endregion
     }
 }
