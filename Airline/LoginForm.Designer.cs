@@ -35,6 +35,7 @@
             this.tbPassword = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.btLogin = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.name = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,13 +60,13 @@
             this.closeBt.IconVisible = true;
             this.closeBt.IconZoom = 90D;
             this.closeBt.IsTab = false;
-            this.closeBt.Location = new System.Drawing.Point(342, 1);
+            this.closeBt.Location = new System.Drawing.Point(328, 1);
             this.closeBt.Name = "closeBt";
             this.closeBt.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.closeBt.OnHovercolor = System.Drawing.Color.Red;
             this.closeBt.OnHoverTextColor = System.Drawing.Color.White;
             this.closeBt.selected = false;
-            this.closeBt.Size = new System.Drawing.Size(42, 29);
+            this.closeBt.Size = new System.Drawing.Size(56, 29);
             this.closeBt.TabIndex = 0;
             this.closeBt.Text = " x";
             this.closeBt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -94,13 +95,13 @@
             this.bunifuFlatButton1.IconVisible = true;
             this.bunifuFlatButton1.IconZoom = 90D;
             this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(292, 1);
+            this.bunifuFlatButton1.Location = new System.Drawing.Point(291, 1);
             this.bunifuFlatButton1.Name = "bunifuFlatButton1";
             this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.LightGray;
             this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.Gray;
             this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
             this.bunifuFlatButton1.selected = false;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(44, 29);
+            this.bunifuFlatButton1.Size = new System.Drawing.Size(38, 29);
             this.bunifuFlatButton1.TabIndex = 1;
             this.bunifuFlatButton1.Text = " _";
             this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -116,9 +117,9 @@
             this.tbUser.HintForeColor = System.Drawing.Color.Empty;
             this.tbUser.HintText = "USERNAME";
             this.tbUser.isPassword = false;
-            this.tbUser.LineFocusedColor = System.Drawing.Color.CornflowerBlue;
-            this.tbUser.LineIdleColor = System.Drawing.Color.Lavender;
-            this.tbUser.LineMouseHoverColor = System.Drawing.Color.CornflowerBlue;
+            this.tbUser.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.tbUser.LineIdleColor = System.Drawing.Color.CornflowerBlue;
+            this.tbUser.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.tbUser.LineThickness = 3;
             this.tbUser.Location = new System.Drawing.Point(68, 164);
             this.tbUser.Margin = new System.Windows.Forms.Padding(4);
@@ -126,6 +127,7 @@
             this.tbUser.Size = new System.Drawing.Size(236, 33);
             this.tbUser.TabIndex = 4;
             this.tbUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbUser.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbUser_KeyDown);
             // 
             // tbPassword
             // 
@@ -133,20 +135,22 @@
             this.tbPassword.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.tbPassword.ForeColor = System.Drawing.Color.Black;
             this.tbPassword.HintForeColor = System.Drawing.Color.Empty;
-            this.tbPassword.HintText = "PASSWORD";
+            this.tbPassword.HintText = "";
             this.tbPassword.isPassword = true;
-            this.tbPassword.LineFocusedColor = System.Drawing.Color.CornflowerBlue;
-            this.tbPassword.LineIdleColor = System.Drawing.Color.Lavender;
-            this.tbPassword.LineMouseHoverColor = System.Drawing.Color.CornflowerBlue;
+            this.tbPassword.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.tbPassword.LineIdleColor = System.Drawing.Color.CornflowerBlue;
+            this.tbPassword.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.tbPassword.LineThickness = 3;
             this.tbPassword.Location = new System.Drawing.Point(68, 207);
             this.tbPassword.Margin = new System.Windows.Forms.Padding(4);
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.Size = new System.Drawing.Size(236, 33);
             this.tbPassword.TabIndex = 5;
-            this.tbPassword.Text = "password";
+            this.tbPassword.Text = "@@@@@@@@";
             this.tbPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.tbPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbPassword_KeyPress);
+            this.tbPassword.Enter += new System.EventHandler(this.tbPassword_Enter);
+            this.tbPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbPassword_KeyDown);
+            this.tbPassword.Leave += new System.EventHandler(this.tbPassword_Leave);
             // 
             // btLogin
             // 
@@ -188,14 +192,24 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = global::Airline.Properties.Resources.logo;
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(94, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(124, 27);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(192, 145);
+            this.pictureBox1.Size = new System.Drawing.Size(130, 130);
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
+            // 
+            // name
+            // 
+            this.name.AutoSize = true;
+            this.name.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.name.Location = new System.Drawing.Point(312, 299);
+            this.name.Name = "name";
+            this.name.Size = new System.Drawing.Size(64, 16);
+            this.name.TabIndex = 8;
+            this.name.Text = "© SE Airline";
             // 
             // LoginForm
             // 
@@ -203,6 +217,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(384, 321);
+            this.Controls.Add(this.name);
             this.Controls.Add(this.bunifuFlatButton1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btLogin);
@@ -213,10 +228,9 @@
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginForm";
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.LoginForm_KeyDown);
-            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.LoginForm_KeyPress);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -228,5 +242,6 @@
         private Bunifu.Framework.UI.BunifuMaterialTextbox tbPassword;
         private Bunifu.Framework.UI.BunifuFlatButton btLogin;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label name;
     }
 }
