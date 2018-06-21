@@ -127,9 +127,46 @@ namespace Airline
                 SaleControl saleControl = new SaleControl("", "", "");// truyền tỉnh đến, tỉnh đi, mã chuyến bay vào
                 this.Controls.Add(saleControl);
                 saleControl.Visible = true;
+                saleControl.BackSearch.Visible = true;
                 saleControl.Size = new Size(807, 602);
                 saleControl.Location = new Point(0, 28);
                 saleControl.BringToFront();
+                saleControl.MaCB.Text = flightInfo.CurrentRow.Cells[0].Value.ToString();
+                #region Copy Tinh Di
+                try
+                {
+                    string text = flightInfo.CurrentRow.Cells[1].Value.ToString();
+                    string sql = "SELECT TINH FROM SANBAY WHERE MASANBAY='" + text + "'";
+                    SqlCommand cmd = new SqlCommand(sql, LoginForm.Connection.Connection);
+                    cmd.CommandType = CommandType.Text;
+                    SqlDataReader myReader = cmd.ExecuteReader();
+                    if (myReader.HasRows)
+                    {
+                        myReader.Read();
+                        saleControl.TinhDi.Text = myReader[0].ToString();
+                    }
+                    myReader.Close();
+                }
+                catch { }
+
+                #endregion
+                #region Copy Tinh Den
+                try
+                {
+                    string text = flightInfo.CurrentRow.Cells[2].Value.ToString();
+                    string sql = "SELECT TINH FROM SANBAY WHERE MASANBAY='" + text + "'";
+                    SqlCommand cmd = new SqlCommand(sql, LoginForm.Connection.Connection);
+                    cmd.CommandType = CommandType.Text;
+                    SqlDataReader myReader = cmd.ExecuteReader();
+                    if (myReader.HasRows)
+                    {
+                        myReader.Read();
+                        saleControl.TinhDen.Text = myReader[0].ToString();
+                    }
+                    myReader.Close();
+                }
+                catch { }
+                #endregion
             }
             catch { }
            
@@ -146,15 +183,7 @@ namespace Airline
             }
         }
 
-        private void SearchControl_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            SaleControl saleControl = new SaleControl("", "", "");
-            this.Controls.Add(saleControl);
-            saleControl.Visible = true;
-            saleControl.Size = new Size(807, 602);
-            saleControl.Location = new Point(0, 0);
-            saleControl.BringToFront();
-        }
+        
 
         #region Xử lí trùng chuyến bay
 
