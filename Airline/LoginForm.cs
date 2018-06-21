@@ -62,5 +62,25 @@ namespace Airline
             
 
         }
+
+        private void LoginForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            
+        }
+
+        private void tbPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+           
+        }
+
+        private void LoginForm_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+                MessageBox.Show("sadasd");
+          
+                
+           
+
+        }
     }
 }

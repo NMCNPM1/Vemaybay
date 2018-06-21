@@ -65,7 +65,7 @@ namespace Airline
 
         #endregion
 
-        bool flag;
+        Boolean flag;
         int x;
         int y;
         private void TaskBar_MouseDown(object sender, MouseEventArgs e)
