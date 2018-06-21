@@ -32,12 +32,12 @@ namespace Airline
         public SaleControl(string sanBayDen, string sanBayDi, string maChuyenBay)
         {
             InitializeComponent();
-            maCB.Text = "FLIGHT CODE: " + sanBayDen;
-            tinhDi.Text = "FROM: " + sanBayDi;
-            tinhDen.Text = "TO: " + maChuyenBay;
-            maCB.IsAccessible = false;
-            tinhDi.IsAccessible = false;
-            tinhDen.IsAccessible = false;
+            MaCB.Text = "FLIGHT CODE: " + sanBayDen;
+            TinhDi.Text = "FROM: " + sanBayDi;
+            TinhDen.Text = "TO: " + maChuyenBay;
+            MaCB.IsAccessible = false;
+            TinhDi.IsAccessible = false;
+            TinhDen.IsAccessible = false;
         }
 
         #endregion
@@ -72,6 +72,7 @@ namespace Airline
 
         private void backBt_Click(object sender, EventArgs e)
         {
+            this.Visible = false;
             this.SendToBack();
         }
 

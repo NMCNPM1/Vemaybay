@@ -52,6 +52,9 @@ namespace Airline
             this.maCB = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.tinhDi = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.tinhDen = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // contactName
@@ -318,7 +321,7 @@ namespace Airline
             this.bunifuCustomLabel5.AutoSize = true;
             this.bunifuCustomLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel5.ForeColor = System.Drawing.Color.Red;
-            this.bunifuCustomLabel5.Location = new System.Drawing.Point(482, 529);
+            this.bunifuCustomLabel5.Location = new System.Drawing.Point(482, 519);
             this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
             this.bunifuCustomLabel5.Size = new System.Drawing.Size(15, 20);
             this.bunifuCustomLabel5.TabIndex = 18;
@@ -330,7 +333,7 @@ namespace Airline
             this.bunifuCustomLabel6.AutoSize = true;
             this.bunifuCustomLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel6.ForeColor = System.Drawing.Color.Red;
-            this.bunifuCustomLabel6.Location = new System.Drawing.Point(503, 529);
+            this.bunifuCustomLabel6.Location = new System.Drawing.Point(503, 519);
             this.bunifuCustomLabel6.Name = "bunifuCustomLabel6";
             this.bunifuCustomLabel6.Size = new System.Drawing.Size(80, 20);
             this.bunifuCustomLabel6.TabIndex = 19;
@@ -410,10 +413,46 @@ namespace Airline
             this.tinhDen.TabIndex = 23;
             this.tinhDen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(162, 68);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(58, 21);
+            this.label3.TabIndex = 24;
+            this.label3.Text = "Code:";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(168, 108);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(52, 21);
+            this.label4.TabIndex = 25;
+            this.label4.Text = "From:";
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(188, 150);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(32, 21);
+            this.label5.TabIndex = 26;
+            this.label5.Text = "To:";
+            // 
             // SaleControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.tinhDen);
             this.Controls.Add(this.tinhDi);
             this.Controls.Add(this.maCB);
@@ -462,7 +501,13 @@ namespace Airline
         private BunifuMaterialTextbox maCB;
         private BunifuMaterialTextbox tinhDi;
         private BunifuMaterialTextbox tinhDen;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
 
         public BunifuFlatButton BackSearch { get => backSearch; set => backSearch = value; }
+        public BunifuMaterialTextbox MaCB { get => maCB; set => maCB = value; }
+        public BunifuMaterialTextbox TinhDi { get => tinhDi; set => tinhDi = value; }
+        public BunifuMaterialTextbox TinhDen { get => tinhDen; set => tinhDen = value; }
     }
 }
