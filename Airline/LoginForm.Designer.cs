@@ -144,6 +144,7 @@
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.Size = new System.Drawing.Size(236, 33);
             this.tbPassword.TabIndex = 5;
+            this.tbPassword.Text = "password";
             this.tbPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btLogin

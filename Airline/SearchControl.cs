@@ -121,13 +121,14 @@ namespace Airline
 
         private void flightInfo_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
+          
             try
             {
                 SaleControl saleControl = new SaleControl("", "", "");// truyền tỉnh đến, tỉnh đi, mã chuyến bay vào
                 this.Controls.Add(saleControl);
                 saleControl.Visible = true;
                 saleControl.Size = new Size(807, 602);
-                saleControl.Location = new Point(200, 28);
+                saleControl.Location = new Point(0, 28);
                 saleControl.BringToFront();
             }
             catch { }

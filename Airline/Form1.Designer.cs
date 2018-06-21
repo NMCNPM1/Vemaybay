@@ -38,14 +38,14 @@
             this.minimizeBt = new Bunifu.Framework.UI.BunifuThinButton2();
             this.closeBt = new Bunifu.Framework.UI.BunifuThinButton2();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.TaskBar = new System.Windows.Forms.Panel();
             this.searchControl1 = new Airline.SearchControl();
             this.reportControl1 = new Airline.ReportControl();
             this.ruleChangeControl1 = new Airline.RuleChangeControl();
             this.databaseControl1 = new Airline.DatabaseControl();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel3.SuspendLayout();
+            this.TaskBar.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -279,23 +279,28 @@
             this.panel2.Size = new System.Drawing.Size(807, 602);
             this.panel2.TabIndex = 14;
             // 
-            // panel3
+            // TaskBar
             // 
-            this.panel3.BackColor = System.Drawing.Color.Transparent;
-            this.panel3.Controls.Add(this.closeBt);
-            this.panel3.Controls.Add(this.minimizeBt);
-            this.panel3.Location = new System.Drawing.Point(200, -6);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(808, 34);
-            this.panel3.TabIndex = 15;
+            this.TaskBar.BackColor = System.Drawing.Color.Transparent;
+            this.TaskBar.Controls.Add(this.closeBt);
+            this.TaskBar.Controls.Add(this.minimizeBt);
+            this.TaskBar.Location = new System.Drawing.Point(200, -6);
+            this.TaskBar.Name = "TaskBar";
+            this.TaskBar.Size = new System.Drawing.Size(808, 34);
+            this.TaskBar.TabIndex = 15;
+            this.TaskBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TaskBar_MouseDown);
+            this.TaskBar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.TaskBar_MouseMove);
+            this.TaskBar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.TaskBar_MouseUp);
             // 
             // searchControl1
             // 
+            this.searchControl1.BackColor = System.Drawing.SystemColors.Control;
             this.searchControl1.Location = new System.Drawing.Point(200, 28);
             this.searchControl1.Name = "searchControl1";
             this.searchControl1.Size = new System.Drawing.Size(807, 602);
             this.searchControl1.TabIndex = 16;
             this.searchControl1.Visible = false;
+            this.searchControl1.Load += new System.EventHandler(this.searchControl1_Load);
             // 
             // reportControl1
             // 
@@ -332,7 +337,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(235)))), ((int)(((byte)(243)))));
             this.ClientSize = new System.Drawing.Size(1007, 630);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.TaskBar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.searchControl1);
             this.Controls.Add(this.panel2);
@@ -346,7 +351,7 @@
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel3.ResumeLayout(false);
+            this.TaskBar.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -365,7 +370,7 @@
         private Bunifu.Framework.UI.BunifuThinButton2 closeBt;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel TaskBar;
         private SearchControl searchControl1;
     }
 }

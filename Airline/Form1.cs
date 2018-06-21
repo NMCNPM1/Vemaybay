@@ -64,6 +64,34 @@ namespace Airline
         }
 
         #endregion
+
+        bool flag;
+        int x;
+        int y;
+        private void TaskBar_MouseDown(object sender, MouseEventArgs e)
+        {
+            flag = true;
+            x = e.X;
+            y = e.Y;
+        }
+
+        private void TaskBar_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (flag == true)
+            {
+                this.SetDesktopLocation(Cursor.Position.X - x, Cursor.Position.Y - y);
+            }
+        }
+
+        private void TaskBar_MouseUp(object sender, MouseEventArgs e)
+        {
+            flag = false;
+        }
+
+        private void searchControl1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
    
 }

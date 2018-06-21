@@ -27,7 +27,7 @@ namespace Airline
         #region Constructor
         public ConnectToSQL()
         {
-            strCon = @"Data Source=FUCKINGMYLIFE;Initial Catalog=AIRLINE;Integrated Security=True";
+            strCon = @"Data Source=DESKTOP-RJMJFDH\SQLEXPRESS;Initial Catalog=AIRLINE;Integrated Security=True";
             Conn = new SqlConnection(strCon);
         }
         #endregion

@@ -40,6 +40,7 @@ namespace Airline
         {
             string username = tbUser.Text;
             string password = tbPassword.Text;
+          
 
             string sql = "SELECT TENNGUOIDUNG, MATKHAU, LOAINGUOIDUNG FROM NGUOIDUNG WHERE TENNGUOIDUNG = '"
                 + username + "' AND MATKHAU = '" + password + "'";
