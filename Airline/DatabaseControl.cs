@@ -60,8 +60,8 @@ namespace Airline
                                     string quocGia = valueArray[j, 4].ToString();
                                     command = "INSERT INTO SANBAY VALUES("
                                      + "'" + maSanBay + "'" + ", "
-                                     + "'" + tenSanBay + "'" + ", "
-                                     + "'" + tinh + "'" +", " + "'" + quocGia + "'" + ")";
+                                     + "N'" + tenSanBay + "'" + ", "
+                                     + "N'" + tinh + "'" +", " + "N'" + quocGia + "'" + ")";
                                     ExcuteCommand(command);
                                 }                                
                                 break;                    
