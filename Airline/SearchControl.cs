@@ -69,7 +69,7 @@ namespace Airline
             }
             catch { }
             // Load giờ bay
-            sql = "SELECT GIO FROM dbo.CHUYENBAY ORDER BY GIO ASC";
+            sql = "SELECT DISTINCT GIO FROM dbo.CHUYENBAY ORDER BY GIO ASC";
             cmd = new SqlCommand(sql, LoginForm.Connection.Connection);
             try
             {
@@ -99,7 +99,7 @@ namespace Airline
 
         private void searchBt_Click(object sender, EventArgs e)
         {
-            if ((fromStation.selectedIndex == -1) || (toStation.selectedIndex == -1) || (gioKhoiHanh.selectedIndex == -1))
+            if ((fromStation.selectedIndex == 0) || (toStation.selectedIndex == 0))
                 return;
             string sql = "SELECT MACHUYENBAY, SB1.TENSANBAY AS SANBAYDI, SB2.TENSANBAY AS SANBAYDEN, GIO, HANG1CONLAI, GIAVEHANG1, HANG2CONLAI, GIAVEHANG2 " +
                 "FROM CHUYENBAY, SANBAY SB1, SANBAY SB2 " +
@@ -107,7 +107,7 @@ namespace Airline
                 " AND SB1.TINH=N'" + fromStation.selectedValue +
                 "' AND SB2.TINH=N'" + toStation.selectedValue +
                 "' AND NGAY='" + datePicker.Value.ToString() + "'";
-            if ((gioKhoiHanh.selectedValue != "Any Time") && (gioKhoiHanh.selectedValue != "..."))
+            if (gioKhoiHanh.selectedValue != "Any Time")
                 sql += "AND GIO='" + gioKhoiHanh.selectedValue + "'";
             SqlCommand cmd = new SqlCommand(sql, LoginForm.Connection.Connection);
             cmd.CommandType = CommandType.Text;
@@ -156,7 +156,7 @@ namespace Airline
 
         
 
-        #region Xử lí trùng chuyến bay
+        #region Xử lí trùng from & to
 
         private void fromStation_onItemSelected(object sender, EventArgs e)
         {
