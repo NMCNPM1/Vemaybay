@@ -16,13 +16,13 @@ namespace Airline
 
         public Form1()
         {
-            InitializeComponent();       
+            InitializeComponent();
         }
 
         #endregion
 
         #region Main button
-        
+
         private void saleBt_Click(object sender, EventArgs e)
         {
             searchControl1.Visible = true;
@@ -65,6 +65,8 @@ namespace Airline
 
         #endregion
 
+        #region Form moving
+
         Boolean flag;
         int x;
         int y;
@@ -88,10 +90,35 @@ namespace Airline
             flag = false;
         }
 
-        private void searchControl1_Load(object sender, EventArgs e)
-        {
+        #endregion
 
+        #region Support Methods
+
+        public static string ChuanHoaMa(int Code)
+        {
+            if (Code < 10)
+            {
+                return "00" + Code.ToString();
+            }
+            else
+                if (Code < 100)
+            {
+                return "0" + Code.ToString();
+            }
+            else
+                    if (Code < 1000)
+            {
+                return Code.ToString();
+            }
+            return "";
         }
+
+        public static string ChuanHoaMaCuoi(string code)
+        {
+            return code.Split(' ')[0];
+        }
+
+        #endregion
     }
-   
+
 }

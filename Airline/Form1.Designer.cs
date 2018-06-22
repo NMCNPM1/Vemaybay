@@ -300,7 +300,6 @@
             this.searchControl1.Size = new System.Drawing.Size(807, 602);
             this.searchControl1.TabIndex = 16;
             this.searchControl1.Visible = false;
-            this.searchControl1.Load += new System.EventHandler(this.searchControl1_Load);
             // 
             // reportControl1
             // 

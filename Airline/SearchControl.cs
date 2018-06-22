@@ -126,7 +126,7 @@ namespace Airline
 
             try
             {
-                string maChuyenBay = flightInfo.CurrentRow.Cells[0].Value.ToString();
+                string maChuyenBay = Form1.ChuanHoaMaCuoi(flightInfo.CurrentRow.Cells[0].Value.ToString());
                 string tinhDi = fromStation.selectedValue;
                 string tinhDen = toStation.selectedValue;
                 string giaVeHang1 = flightInfo.CurrentRow.Cells[5].Value.ToString();

@@ -172,6 +172,7 @@ namespace Airline
             this.sex.selectedIndex = 0;
             this.sex.Size = new System.Drawing.Size(87, 31);
             this.sex.TabIndex = 6;
+            this.sex.onItemSelected += new System.EventHandler(this.sex_onItemSelected);
             // 
             // label2
             // 
@@ -454,7 +455,6 @@ namespace Airline
             this.price.Size = new System.Drawing.Size(260, 33);
             this.price.TabIndex = 25;
             this.price.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.price.OnValueChanged += new System.EventHandler(this.price_OnValueChanged);
             // 
             // SaleControl
             // 
