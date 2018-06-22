@@ -24,7 +24,7 @@ namespace Airline
 
         private string _sanBayDen, _sanBayDi, _maChuyenBay;
         private long _giaVeHang1, _giaVeHang2;
-
+        private static int idTicket;
         public SaleControl()
         {
             InitializeComponent();
@@ -36,6 +36,17 @@ namespace Airline
                 price.Text = "PRICE: " + _giaVeHang2.ToString() + " VND";
             else
                 price.Text = "PRICE: " + _giaVeHang1.ToString() + " VND";
+        }
+        private long GiaVe()
+        {
+            if (classInfo.selectedIndex == 1)
+                return _giaVeHang2;
+            else
+                return _giaVeHang1;
+        }
+        private void price_OnValueChanged(object sender, EventArgs e)
+        {
+
         }
 
         public SaleControl(string sanBayDen, string sanBayDi, string maChuyenBay, string giaVeHang1, string giaVeHang2)
@@ -62,27 +73,34 @@ namespace Airline
 
         private void bookBt_Click(object sender, EventArgs e)
         {
-            Random rdKH = new Random();
-            int rdNum = rdKH.Next(1, 1000);
-            string rdIDKH = "KH00" + rdNum.ToString();
+            string IDTK = "TK" + idTicket.ToString();
+            string IDKH = "KH00" + idTicket.ToString();
             if ((this.contactName.Text == "") || (this.phoneNumber.Text == "") || (Address.Text == "") || (ID.Text == ""))
             {
                 MessageBox.Show("Please fill information");
             }
             else
             {
-                string sql = "INSERT INTO KHACHHANG VALUES ('" + rdIDKH + "','" + this.contactName.Text + "','" + this.sex.selectedIndex.ToString() + "','" + this.phoneNumber.Text + "','" + this.Address.Text + "','" + this.ID.Text + "','"+this.eMail.Text+"')";
+                string sqlVe = @"INSERT INTO VE VALUES ('" + IDTK + "','" + _maChuyenBay + "','" + IDKH + "','" + classInfo.selectedIndex.ToString() + "','" + GiaVe().ToString() + "')";
+                string sql = @"INSERT INTO KHACHHANG VALUES ('" + IDKH + "','" + this.contactName.Text + "','" + this.sex.selectedIndex.ToString() + "','" + this.phoneNumber.Text + "','" + this.Address.Text + "','" + this.ID.Text + "','"+this.eMail.Text+"')";
                 SqlCommand cmd = new SqlCommand(sql, LoginForm.Connection.Connection);
-                SqlDataReader myReader;
+                SqlCommand cmd1 = new SqlCommand(sqlVe, LoginForm.Connection.Connection);
+                cmd.CommandType = CommandType.Text;
+                cmd1.CommandType = CommandType.Text;
+
                 try
                 {
                     cmd.ExecuteNonQuery();
-                    MessageBox.Show("Booked!");
+                    cmd1.ExecuteNonQuery();
+                    MessageBox.Show("Booked !");
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Book Failed");
+                    MessageBox.Show("Book Failed !");
+                    cmd.Dispose();
+                    cmd1.Dispose();
                 }
+                
             }
         }
 
