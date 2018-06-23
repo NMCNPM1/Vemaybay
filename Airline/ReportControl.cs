@@ -165,7 +165,8 @@ namespace Airline
                 }
                 else
                 {
-                    sql = "UPDATE DOANHTHU SET DOANHTHU=12 WHERE THANG='" + monthRp.selectedValue + "'AND NAM='" + yearRp.selectedValue + "'";
+                    sql = "UPDATE DOANHTHU SET DOANHTHU=" +revenue
+                        +" WHERE THANG='" + monthRp.selectedValue + "'AND NAM='" + yearRp.selectedValue + "'";
                     cmd = new SqlCommand(sql, LoginForm.Connection.Connection);
                     cmd.ExecuteNonQuery();
                 }
