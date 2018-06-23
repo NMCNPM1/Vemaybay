@@ -89,8 +89,6 @@ namespace Airline
             {
                 string sql = "SELECT COUNT(MAVE) FROM VE";
 
-                //string sql = @"INSERT INTO KHACHHANG VALUES ('" + IDKH + "','" + this.contactName.Text + "','" + this.sex.selectedIndex.ToString() + "','" + this.phoneNumber.Text + "','" + this.Address.Text + "','" + this.ID.Text + "','" + this.eMail.Text + "')";
-                //string sqlVe = @"INSERT INTO VE VALUES ('" + IDTK + "','" + _maChuyenBay + "','" + IDKH + "','" + classInfo.selectedIndex.ToString() + "','" + GiaVe().ToString() + "')";
                 #region Lấy số lượng vé hiện tại
                 SqlCommand cmd = new SqlCommand(sql, LoginForm.Connection.Connection);
                 cmd.CommandType = CommandType.Text;
@@ -104,6 +102,8 @@ namespace Airline
                 dt.Dispose();
                 #endregion
 
+                #region Kiểm tra thông tin khách hàng đã tồn tại chưa, đặt vé
+
                 sql = "SELECT MAKHACHHANG FROM KHACHHANG WHERE HOTEN = N'" + contactName.Text
                     + "' AND SDT = '" + phoneNumber.Text + "'";
 
@@ -112,7 +112,7 @@ namespace Airline
                 da = new SqlDataAdapter(cmd);
                 da.Fill(dt);
 
-                if (dt.Rows.Count == 1)
+                if (dt.Rows.Count <= 1)
                 {
                     da.Dispose();
                     sql = "SELECT COUNT(MAKHACHHANG) FROM KHACHHANG";
@@ -126,35 +126,67 @@ namespace Airline
                     string code = (Form1.ChuanHoaMa(soLuongKhachHang));
                     string maKhachHang = "KH" + code;
                     sql = "INSERT INTO KHACHHANG VALUES('" + maKhachHang + "', '" + contactName.Text
-                        + "', " + "0, '" + phoneNumber.Text + "', '" + Address.Text + "', '"
+                        + "', " + sex.selectedIndex.ToString() + ", '" + phoneNumber.Text + "', '" + Address.Text + "', '"
                         + ID.Text + "', '" + eMail.Text + "')";
                     cmd.CommandText = sql;
                     cmd.ExecuteNonQuery();
                     sql = "INSERT INTO VE VALUES('VE" + code + "', '" + _maChuyenBay
                         + "', '" + maKhachHang + "', " + hangVe.ToString()
-                        + ", " + _price.ToString() + ")";
+                        + ", " + _price.ToString() + ", '01-01-1998 23:59:59.999')";
                     cmd.CommandText = sql;
                     cmd.ExecuteNonQuery();
-                    MessageBox.Show("Booked !");
+                    BookedMessage();
                 }
                 else
                 {
                     row = dt.Select()[1];
                     string maKhachHang = row[1].ToString();
-                    string code = Form1.ChuanHoaMa(soLuongVe);
-                    sql = "INSERT INTO VE VALUES('VE" + code + "', '" + _maChuyenBay
+                    string code = "VE" + Form1.ChuanHoaMa(soLuongVe);
+                    sql = "SELECT MAKHACHHANG FROM VE WHERE MACHUYENBAY = '" + _maChuyenBay + "' AND MAKHACHHANG = '"
+                        + maKhachHang + "'";
+                    cmd.CommandText = sql;
+                    da.Dispose();
+                    dt.Dispose();
+                    da = new SqlDataAdapter(cmd);
+                    da.Fill(dt);
+
+                    if (dt.Rows.Count > 1)
+                    {
+                        MessageBox.Show("You already have a seat on this flight", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
+
+                    sql = "INSERT INTO VE VALUES('" + code + "', '" + _maChuyenBay
                         + "', '" + maKhachHang + "', " + hangVe.ToString()
                         + ", " + _price.ToString() + ")";
                     cmd.CommandText = sql;
                     cmd.ExecuteNonQuery();
-                    MessageBox.Show("Booked 1 !");
-                }                
+                    BookedMessage();
+                }
+                #endregion
             }
         }
 
         private void backBt_Click(object sender, EventArgs e)
         {
             this.Parent.Controls.Remove(this);
+        }
+
+        private void BookedMessage()
+        {
+            MessageBox.Show("Your ticket has been booked !\n"
+                            + "Your ticket infomation:\n" + maCB.Text + "\n"
+                            + tinhDi.Text + "\n"
+                            + tinhDen.Text + "\n"
+                            + classInfo.selectedValue + "\n"
+                            + price.Text + "\n"
+                            + "Passenger's name: " + contactName.Text
+                            + "\nContact phone number: " + phoneNumber.Text + "\n"
+                            + "Address: " + Address.Text + "\n"
+                            + "ID: " + ID.Text + "\n"
+                            + "Contact Email: " + eMail.Text
+                            );
         }
 
         #endregion

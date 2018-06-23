@@ -92,6 +92,7 @@ namespace Airline
                 {
                     this.Visible = false;
                     Form1 form = new Form1();
+                    data.Dispose();
                     form.ShowDialog();
                     Application.Exit();
                 }
