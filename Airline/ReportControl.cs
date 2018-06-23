@@ -82,11 +82,13 @@ namespace Airline
                     {
                         sheet.Cells[i + 2, 1] = i.ToString();
                         sheet.Cells[i + 2, 1].Borders.Weight = Excel.XlBorderWeight.xlThin;
+                        sheet.Cells[i + 2, 1].HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
                         sheet.Cells[i + 2, 2] = listView[0, i - 1].Value.ToString();
                         sheet.Cells[i + 2, 2].Borders.Weight = Excel.XlBorderWeight.xlThin;
                         for (int j = 1; j <= listView.Columns.Count; j++)
                         {
                             sheet.Cells[i + 2, j+1] = listView[j - 1, i - 1].Value.ToString();
+                            sheet.Cells[i + 2, j+1].HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
                             sheet.Cells[i + 2, j+1].Borders.Weight = Excel.XlBorderWeight.xlThin;
                         }
                     }
@@ -143,8 +145,33 @@ namespace Airline
             myReader = cmd.ExecuteReader();
             myReader.Read();
             string revenue = myReader[0].ToString();
+            myReader.Close();
             if (revenue == "") revenue = "0 VNĐ";
-            else revenue = money(float.Parse(revenue).ToString()) + " VNĐ";
+            else
+            {
+                bool exist=false;
+                // kiem tra da co thang nam trong bang doanh thu hay chua
+                sql = "SELECT * FROM DOANHTHU WHERE THANG='" + monthRp.selectedValue + "' AND NAM='" + yearRp.selectedValue + "'";
+                cmd = new SqlCommand(sql, LoginForm.Connection.Connection);
+                myReader = cmd.ExecuteReader();
+                myReader.Read();
+                if (myReader.HasRows) exist = true;
+                myReader.Close();
+                if (exist == false)
+                {
+                    sql = "INSERT INTO DOANHTHU VALUES('" + monthRp.selectedValue + "','" + yearRp.selectedValue + "','" + revenue + "')";
+                    cmd = new SqlCommand(sql, LoginForm.Connection.Connection);
+                    cmd.ExecuteNonQuery();
+                }
+                else
+                {
+                    sql = "UPDATE DOANHTHU SET DOANHTHU=" +revenue
+                        +" WHERE THANG='" + monthRp.selectedValue + "'AND NAM='" + yearRp.selectedValue + "'";
+                    cmd = new SqlCommand(sql, LoginForm.Connection.Connection);
+                    cmd.ExecuteNonQuery();
+                }
+                revenue = money(float.Parse(revenue).ToString()) + " VNĐ";
+            }
             return revenue;
         }
 
