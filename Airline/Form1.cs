@@ -50,12 +50,12 @@ namespace Airline
             SqlDataReader myReader;
             myReader = cmd.ExecuteReader();
             myReader.Read();
-            if (myReader[0].ToString() == "True")
+            string check = myReader[0].ToString();
+            myReader.Close();
+            if (check== "True")
             {
-                myReader.Close();
                 return true;
             }
-            myReader.Close();
             return false;
         }
 
@@ -144,12 +144,13 @@ namespace Airline
                                     break;
                             }
                         }
-                        MessageBox.Show("Data update successful !");
                     }
                     catch (Exception ex)
                     {
 
                     }
+
+                    MessageBox.Show("Data update successful !");
                 }
                 else
                 {
