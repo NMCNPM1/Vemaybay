@@ -319,6 +319,11 @@ namespace Airline
             if (reportControl1 != null)
                 reportControl1.Dispose();
         }
+
+        private void btSwitch_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 
 }

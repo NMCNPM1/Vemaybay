@@ -52,7 +52,7 @@ namespace Airline
                 this.Visible = false;
                 Form1 form = new Form1();
                 form.ShowDialog();
-                Application.Exit();
+                this.Visible = true;
             }
         }
 
@@ -90,11 +90,11 @@ namespace Airline
                     MessageBox.Show("Incorrect username or password !", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 else
                 {
-                    this.Visible = false;
-                    Form1 form = new Form1();
                     data.Dispose();
+                    this.Visible = false;
+                    Form1 form = new Form1();                    
                     form.ShowDialog();
-                    Application.Exit();
+                    this.Visible = true;
                 }
             }
 
@@ -122,11 +122,11 @@ namespace Airline
                     MessageBox.Show("Incorrect username or password !", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 else
                 {
+                    data.Dispose();
                     this.Visible = false;
                     Form1 form = new Form1();
                     form.ShowDialog();
-                    data.Dispose();
-                    Application.Exit();
+                    this.Visible = true;
                 }
             }
         }

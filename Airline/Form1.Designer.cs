@@ -43,7 +43,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.dock = new System.Windows.Forms.PictureBox();
-            this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btSwitch = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.backPic = new System.Windows.Forms.PictureBox();
@@ -360,47 +360,48 @@
             this.dock.TabStop = false;
             this.dock.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // bunifuFlatButton3
+            // btSwitch
             // 
-            this.bunifuFlatButton3.Activecolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton3.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton3.BorderRadius = 0;
-            this.bunifuFlatButton3.ButtonText = "  Switch User";
-            this.bunifuFlatButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton3.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton3.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton3.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton3.Iconimage")));
-            this.bunifuFlatButton3.Iconimage_right = null;
-            this.bunifuFlatButton3.Iconimage_right_Selected = null;
-            this.bunifuFlatButton3.Iconimage_Selected = null;
-            this.bunifuFlatButton3.IconMarginLeft = 0;
-            this.bunifuFlatButton3.IconMarginRight = 0;
-            this.bunifuFlatButton3.IconRightVisible = true;
-            this.bunifuFlatButton3.IconRightZoom = 0D;
-            this.bunifuFlatButton3.IconVisible = true;
-            this.bunifuFlatButton3.IconZoom = 60D;
-            this.bunifuFlatButton3.IsTab = false;
-            this.bunifuFlatButton3.Location = new System.Drawing.Point(671, 80);
-            this.bunifuFlatButton3.Name = "bunifuFlatButton3";
-            this.bunifuFlatButton3.Normalcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton3.OnHovercolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton3.OnHoverTextColor = System.Drawing.Color.Black;
-            this.bunifuFlatButton3.selected = false;
-            this.bunifuFlatButton3.Size = new System.Drawing.Size(139, 31);
-            this.bunifuFlatButton3.TabIndex = 21;
-            this.bunifuFlatButton3.Text = "  Switch User";
-            this.bunifuFlatButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFlatButton3.Textcolor = System.Drawing.Color.Black;
-            this.bunifuFlatButton3.TextFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btSwitch.Activecolor = System.Drawing.Color.Transparent;
+            this.btSwitch.BackColor = System.Drawing.Color.Transparent;
+            this.btSwitch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btSwitch.BorderRadius = 0;
+            this.btSwitch.ButtonText = "  Switch User";
+            this.btSwitch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btSwitch.DisabledColor = System.Drawing.Color.Gray;
+            this.btSwitch.Iconcolor = System.Drawing.Color.Transparent;
+            this.btSwitch.Iconimage = ((System.Drawing.Image)(resources.GetObject("btSwitch.Iconimage")));
+            this.btSwitch.Iconimage_right = null;
+            this.btSwitch.Iconimage_right_Selected = null;
+            this.btSwitch.Iconimage_Selected = null;
+            this.btSwitch.IconMarginLeft = 0;
+            this.btSwitch.IconMarginRight = 0;
+            this.btSwitch.IconRightVisible = true;
+            this.btSwitch.IconRightZoom = 0D;
+            this.btSwitch.IconVisible = true;
+            this.btSwitch.IconZoom = 60D;
+            this.btSwitch.IsTab = false;
+            this.btSwitch.Location = new System.Drawing.Point(671, 80);
+            this.btSwitch.Name = "btSwitch";
+            this.btSwitch.Normalcolor = System.Drawing.Color.Transparent;
+            this.btSwitch.OnHovercolor = System.Drawing.Color.Transparent;
+            this.btSwitch.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btSwitch.selected = false;
+            this.btSwitch.Size = new System.Drawing.Size(139, 31);
+            this.btSwitch.TabIndex = 21;
+            this.btSwitch.Text = "  Switch User";
+            this.btSwitch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btSwitch.Textcolor = System.Drawing.Color.Black;
+            this.btSwitch.TextFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btSwitch.Click += new System.EventHandler(this.btSwitch_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(707, 56);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(684, 53);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(103, 21);
+            this.label1.Size = new System.Drawing.Size(134, 24);
             this.label1.TabIndex = 20;
             this.label1.Text = "Hello Admin";
             // 
@@ -475,7 +476,7 @@
             this.ClientSize = new System.Drawing.Size(1000, 700);
             this.Controls.Add(this.creator);
             this.Controls.Add(this.backPic);
-            this.Controls.Add(this.bunifuFlatButton3);
+            this.Controls.Add(this.btSwitch);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox9);
@@ -524,7 +525,7 @@
         private System.Windows.Forms.PictureBox dock;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton3;
+        private Bunifu.Framework.UI.BunifuFlatButton btSwitch;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox8;
