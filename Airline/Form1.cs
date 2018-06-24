@@ -147,7 +147,7 @@ namespace Airline
                     }
                     catch (Exception ex)
                     {
-
+                        
                     }
 
                     MessageBox.Show("Data update successful !");
