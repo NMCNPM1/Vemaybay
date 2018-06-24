@@ -114,7 +114,9 @@ namespace Airline
                 DataTable dataTable = new DataTable();
                 SqlDataAdapter data = new SqlDataAdapter(sql, Connection.Connection);
 
+
                 data.Fill(dataTable);
+
 
                 if (dataTable.Rows.Count == 0)
                     MessageBox.Show("Incorrect username or password !", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -123,6 +125,7 @@ namespace Airline
                     this.Visible = false;
                     Form1 form = new Form1();
                     form.ShowDialog();
+                    data.Dispose();
                     Application.Exit();
                 }
             }

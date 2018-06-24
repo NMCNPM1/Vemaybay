@@ -19,6 +19,7 @@ namespace Airline
 
         public SearchControl()
         {
+            this.SetStyle(ControlStyles.SupportsTransparentBackColor, true);
             InitializeComponent();
         }
 
@@ -132,11 +133,11 @@ namespace Airline
                 string giaVeHang1 = flightInfo.CurrentRow.Cells[5].Value.ToString();
                 string giaVeHang2 = flightInfo.CurrentRow.Cells[7].Value.ToString();
                 SaleControl saleControl = new SaleControl(tinhDi, tinhDen, maChuyenBay, giaVeHang1, giaVeHang2);// truyền tỉnh đến, tỉnh đi, mã chuyến bay vào
-                this.Controls.Add(saleControl);
+                saleControl.BackColor = Color.Transparent;
                 saleControl.Visible = true;
                 saleControl.BackSearch.Visible = true;
-                saleControl.Size = new Size(807, 602);
-                saleControl.Location = new Point(0, 28);
+                saleControl.Size = new Size(856, 523);
+                saleControl.Location = new Point(66, 117);
                 saleControl.BringToFront();
             }
             catch { }

@@ -21,7 +21,10 @@ namespace Airline
         private int index;
         public RuleChangeControl()
         {
-            InitializeComponent();          
+            this.SetStyle(ControlStyles.SupportsTransparentBackColor, true);
+            this.BackColor = Color.Transparent;   
+            InitializeComponent();
+      
         }
 
         #endregion
