@@ -213,6 +213,7 @@
             this.Controls.Add(this.label1);
             this.Name = "ReportControl";
             this.Size = new System.Drawing.Size(617, 550);
+            this.Load += new System.EventHandler(this.ReportControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.listView)).EndInit();
             this.ResumeLayout(false);
 

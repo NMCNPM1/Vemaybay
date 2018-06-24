@@ -20,7 +20,9 @@ namespace Airline
         public SearchControl()
         {
             this.SetStyle(ControlStyles.SupportsTransparentBackColor, true);
+            
             InitializeComponent();
+            LoadData();
         }
 
         public void LoadData()
@@ -217,10 +219,14 @@ namespace Airline
             }
         }
 
-        #endregion
 
         #endregion
 
+        #endregion
 
+        private void SearchControl_Load(object sender, EventArgs e)
+        {
+            this.Visible = false;
+        }
     }
 }

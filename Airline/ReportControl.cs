@@ -176,5 +176,10 @@ namespace Airline
         }
 
         #endregion
+
+        private void ReportControl_Load(object sender, EventArgs e)
+        {
+            this.Visible = false;
+        }
     }
 }

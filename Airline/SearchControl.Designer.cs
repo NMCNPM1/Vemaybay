@@ -342,6 +342,7 @@
             this.Controls.Add(this.label1);
             this.Name = "SearchControl";
             this.Size = new System.Drawing.Size(617, 550);
+            this.Load += new System.EventHandler(this.SearchControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.flightInfo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

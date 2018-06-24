@@ -36,18 +36,7 @@ namespace Airline
         private void saleBt_Click(object sender, EventArgs e)
         {
             HidePicture();
-
-            searchControl1 = new SearchControl();
-            this.Controls.Add(searchControl1);
-            this.searchControl1.BackColor = System.Drawing.Color.Transparent;
-            this.searchControl1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.searchControl1.Location = new System.Drawing.Point(66, 117);
-            this.searchControl1.Name = "searchControl1";
-            this.searchControl1.Size = new System.Drawing.Size(856, 523);
-            this.searchControl1.TabIndex = 16;
-            this.searchControl1.Visible = true;
-            
-            searchControl1.LoadData();
+            searchControl1.Visible = true;
             searchControl1.BringToFront();
         }
 
@@ -149,19 +138,7 @@ namespace Airline
 
         private void reportBt_Click(object sender, EventArgs e)
         {
-            HidePicture();
-
-            reportControl1 = new ReportControl();
-            this.Controls.Add(reportControl1);
-            this.reportControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.reportControl1.BackColor = System.Drawing.Color.Transparent;
-            this.reportControl1.Cursor = System.Windows.Forms.Cursors.No;
-            this.reportControl1.Location = new System.Drawing.Point(95, 16);
-            this.reportControl1.Name = "reportControl1";
-            this.reportControl1.Size = new System.Drawing.Size(807, 672);
-            this.reportControl1.TabIndex = 9;
+            HidePicture();            
             reportControl1.Visible = true;
             reportControl1.BringToFront();
         }
@@ -169,16 +146,6 @@ namespace Airline
         private void changeBt_Click(object sender, EventArgs e)
         {
             HidePicture();
-
-
-            ruleChangeControl1 = new RuleChangeControl();
-            this.Controls.Add(ruleChangeControl1);
-            this.ruleChangeControl1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.ruleChangeControl1.BackColor = System.Drawing.Color.Transparent;
-            this.ruleChangeControl1.Location = new System.Drawing.Point(74, 117);
-            this.ruleChangeControl1.Name = "ruleChangeControl1";
-            this.ruleChangeControl1.Size = new System.Drawing.Size(848, 501);
-            this.ruleChangeControl1.TabIndex = 11;
             ruleChangeControl1.Visible = true;
             ruleChangeControl1.BringToFront();
         }
@@ -312,12 +279,24 @@ namespace Airline
         private void backPic_Click(object sender, EventArgs e)
         {
             ShowPicture();
-            if (ruleChangeControl1 != null)
-                ruleChangeControl1.Dispose();
-            if (searchControl1 != null)
+
+            if (searchControl1 != null && searchControl1.Visible == true)
+            {
                 searchControl1.Dispose();
-            if (reportControl1 != null)
-                reportControl1.Dispose();
+                searchControl1 = new SearchControl();
+                searchControl1.BackColor = System.Drawing.Color.Transparent;
+                searchControl1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+                searchControl1.Location = new System.Drawing.Point(66, 117);
+                searchControl1.Name = "searchControl1";
+                searchControl1.Size = new System.Drawing.Size(856, 523);
+                searchControl1.TabIndex = 16;
+                searchControl1.Visible = false;
+                this.Controls.Add(searchControl1);
+
+
+            }
+            reportControl1.Visible = false;
+            ruleChangeControl1.Visible = false;
         }
 
         private void btSwitch_Click(object sender, EventArgs e)

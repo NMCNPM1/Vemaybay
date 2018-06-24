@@ -49,6 +49,9 @@
             this.backPic = new System.Windows.Forms.PictureBox();
             this.creator = new Bunifu.Framework.UI.BunifuFlatButton();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.searchControl1 = new SearchControl();
+            this.reportControl1 = new ReportControl();
+            this.ruleChangeControl1 = new RuleChangeControl();
             this.TaskBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -60,6 +63,39 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.backPic)).BeginInit();
             this.SuspendLayout();
+
+            //
+            // searchControl1
+            //
+            this.searchControl1.BackColor = System.Drawing.Color.Transparent;
+            this.searchControl1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.searchControl1.Location = new System.Drawing.Point(66, 117);
+            this.searchControl1.Name = "searchControl1";
+            this.searchControl1.Size = new System.Drawing.Size(856, 523);
+            this.searchControl1.TabIndex = 16;
+            this.searchControl1.Visible = false;
+            //
+            //ruleChangeControl1
+            //            
+            this.ruleChangeControl1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ruleChangeControl1.BackColor = System.Drawing.Color.Transparent;
+            this.ruleChangeControl1.Location = new System.Drawing.Point(74, 117);
+            this.ruleChangeControl1.Name = "ruleChangeControl1";
+            this.ruleChangeControl1.Size = new System.Drawing.Size(848, 501);
+            this.ruleChangeControl1.TabIndex = 11;
+            this.ruleChangeControl1.Visible = false;
+            //
+            //reportControl
+            //
+            this.reportControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+|           System.Windows.Forms.AnchorStyles.Left)
+|           System.Windows.Forms.AnchorStyles.Right)));
+            this.reportControl1.BackColor = System.Drawing.Color.Transparent;
+            this.reportControl1.Cursor = System.Windows.Forms.Cursors.No;
+            this.reportControl1.Location = new System.Drawing.Point(95, 16);
+            this.reportControl1.Name = "reportControl1";
+            this.reportControl1.Size = new System.Drawing.Size(807, 672);
+            this.reportControl1.TabIndex = 9;
             // 
             // TaskBar
             // 
@@ -464,7 +500,7 @@
             // 
             // openFileDialog1
             // 
-            this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.FileName = "";
             // 
             // Form1
             // 
@@ -474,6 +510,9 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1000, 700);
+            this.Controls.Add(this.ruleChangeControl1);
+            this.Controls.Add(this.reportControl1);
+            this.Controls.Add(this.searchControl1);
             this.Controls.Add(this.creator);
             this.Controls.Add(this.backPic);
             this.Controls.Add(this.btSwitch);
@@ -490,6 +529,7 @@
             this.Controls.Add(this.TaskBar);
             this.Controls.Add(this.searchBt);
             this.Controls.Add(this.dock);
+
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
