@@ -43,15 +43,12 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.dock = new System.Windows.Forms.PictureBox();
-            this.reportControl1 = new Airline.ReportControl();
-            this.ruleChangeControl1 = new Airline.RuleChangeControl();
-            this.searchControl1 = new Airline.SearchControl();
-            this.databaseControl1 = new Airline.DatabaseControl();
             this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.backPic = new System.Windows.Forms.PictureBox();
             this.creator = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.TaskBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -363,49 +360,6 @@
             this.dock.TabStop = false;
             this.dock.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // reportControl1
-            // 
-            this.reportControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.reportControl1.BackColor = System.Drawing.Color.Transparent;
-            this.reportControl1.Cursor = System.Windows.Forms.Cursors.No;
-            this.reportControl1.Location = new System.Drawing.Point(95, 16);
-            this.reportControl1.Name = "reportControl1";
-            this.reportControl1.Size = new System.Drawing.Size(807, 672);
-            this.reportControl1.TabIndex = 9;
-            this.reportControl1.Visible = false;
-            // 
-            // ruleChangeControl1
-            // 
-            this.ruleChangeControl1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.ruleChangeControl1.Location = new System.Drawing.Point(74, 117);
-            this.ruleChangeControl1.Name = "ruleChangeControl1";
-            this.ruleChangeControl1.Size = new System.Drawing.Size(848, 501);
-            this.ruleChangeControl1.TabIndex = 11;
-            this.ruleChangeControl1.Visible = false;
-            // 
-            // searchControl1
-            // 
-            this.searchControl1.BackColor = System.Drawing.Color.Transparent;
-            this.searchControl1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("searchControl1.BackgroundImage")));
-            this.searchControl1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.searchControl1.Location = new System.Drawing.Point(66, 117);
-            this.searchControl1.Name = "searchControl1";
-            this.searchControl1.Size = new System.Drawing.Size(856, 523);
-            this.searchControl1.TabIndex = 16;
-            this.searchControl1.Visible = false;
-            // 
-            // databaseControl1
-            // 
-            this.databaseControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.databaseControl1.BackColor = System.Drawing.Color.Transparent;
-            this.databaseControl1.Location = new System.Drawing.Point(39, 117);
-            this.databaseControl1.Name = "databaseControl1";
-            this.databaseControl1.Size = new System.Drawing.Size(914, 555);
-            this.databaseControl1.TabIndex = 8;
-            this.databaseControl1.Visible = false;
-            // 
             // bunifuFlatButton3
             // 
             this.bunifuFlatButton3.Activecolor = System.Drawing.Color.Transparent;
@@ -471,6 +425,7 @@
             this.backPic.Size = new System.Drawing.Size(50, 50);
             this.backPic.TabIndex = 24;
             this.backPic.TabStop = false;
+            this.backPic.Visible = false;
             this.backPic.Click += new System.EventHandler(this.backPic_Click);
             // 
             // creator
@@ -506,11 +461,15 @@
             this.creator.Textcolor = System.Drawing.Color.White;
             this.creator.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.LightGray;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1000, 700);
@@ -527,13 +486,9 @@
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.reportBt);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.searchControl1);
-            this.Controls.Add(this.databaseControl1);
             this.Controls.Add(this.TaskBar);
             this.Controls.Add(this.searchBt);
             this.Controls.Add(this.dock);
-            this.Controls.Add(this.reportControl1);
-            this.Controls.Add(this.ruleChangeControl1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
@@ -556,11 +511,7 @@
         }
 
         #endregion
-        private DatabaseControl databaseControl1;
-        private ReportControl reportControl1;
-        private RuleChangeControl ruleChangeControl1;
         private System.Windows.Forms.Panel TaskBar;
-        private SearchControl searchControl1;
         private Bunifu.Framework.UI.BunifuFlatButton reportBt;
         private Bunifu.Framework.UI.BunifuFlatButton dataBt;
         private Bunifu.Framework.UI.BunifuFlatButton changeBt;
@@ -579,6 +530,7 @@
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox backPic;
         private Bunifu.Framework.UI.BunifuFlatButton creator;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
 

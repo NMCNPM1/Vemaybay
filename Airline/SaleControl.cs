@@ -31,6 +31,7 @@ namespace Airline
 
         public SaleControl()
         {
+            
             this.BackColor = Color.Transparent;
             InitializeComponent();
         }
@@ -59,6 +60,7 @@ namespace Airline
 
         public SaleControl(string sanBayDen, string sanBayDi, string maChuyenBay, string giaVeHang1, string giaVeHang2)
         {
+            //this.BackColor = Color.Transparent;
             _sanBayDen = sanBayDen;
             _sanBayDi = sanBayDi;
             _maChuyenBay = maChuyenBay;
@@ -74,6 +76,10 @@ namespace Airline
             TinhDi.IsAccessible = false;
             TinhDen.IsAccessible = false;
             price.IsAccessible = false;
+        }
+
+        private void SaleControl_Load(object sender, EventArgs e)
+        {
         }
 
         #endregion

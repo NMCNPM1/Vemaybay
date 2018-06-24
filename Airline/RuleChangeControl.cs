@@ -65,7 +65,7 @@ namespace Airline
                     string mes = ex.Message;
                     cmd.Dispose();
                 }
-                MessageBox.Show("Update số lượng sân bay thành công");
+                MessageBox.Show("Update successfull !");
             }
         }
 
@@ -85,7 +85,7 @@ namespace Airline
                     string mes = ex.Message;
                     cmd.Dispose();
                 }
-                MessageBox.Show("Update thời gian bay tối thiểu thành công");
+                MessageBox.Show("Update successfull !");
             }
         }
 
@@ -105,7 +105,7 @@ namespace Airline
                     string mes = ex.Message;
                     cmd.Dispose();
                 }
-                MessageBox.Show("Update số lượng sân bay trung gian tối đa thành công");
+                MessageBox.Show("Update successfull !");
             }
         }
 
@@ -125,7 +125,7 @@ namespace Airline
                     string mes = ex.Message;
                     cmd.Dispose();
                 }
-                MessageBox.Show("Update thời gian dừng tối thiểu thành công");
+                MessageBox.Show("Update successfull !");
             }
         }
 
@@ -145,7 +145,7 @@ namespace Airline
                     string mes = ex.Message;
                     cmd.Dispose();
                 }
-                MessageBox.Show("Update thời gian dừng tối đa thành công");
+                MessageBox.Show("Update successfull !");
             }
         }
 
@@ -165,7 +165,7 @@ namespace Airline
                     string mes = ex.Message;
                     cmd.Dispose();
                 }
-                MessageBox.Show("Update số lượng vé hạng 1 thành công");
+                MessageBox.Show("Update successfull !");
             }
         }
 
@@ -185,7 +185,7 @@ namespace Airline
                     string mes = ex.Message;
                     cmd.Dispose();
                 }
-                MessageBox.Show("Update số lượng vé hạng 2 thành công");
+                MessageBox.Show("Update successfull !");
             }
 
         }
@@ -206,7 +206,7 @@ namespace Airline
                     string mes = ex.Message;
                     cmd.Dispose();
                 }
-                MessageBox.Show("Update thời gian đặt vé chậm nhất thành công");
+                MessageBox.Show("Update successfull !");
             }
         }
 
@@ -226,7 +226,7 @@ namespace Airline
                     string mes = ex.Message;
                     cmd.Dispose();
                 }
-                MessageBox.Show("Update thời gian hủy đặt vé thành công");
+                MessageBox.Show("Update successfull !");
             }
         }
 

@@ -100,8 +100,12 @@ namespace Airline
 
         private void searchBt_Click(object sender, EventArgs e)
         {
+
             if ((fromStation.selectedIndex == 0) || (toStation.selectedIndex == 0))
+            {
+                MessageBox.Show("Please select station !");
                 return;
+            }
             string sql = "SELECT MACHUYENBAY, SB1.TENSANBAY AS SANBAYDI, SB2.TENSANBAY AS SANBAYDEN, GIO, HANG1CONLAI, GIAVEHANG1, HANG2CONLAI, GIAVEHANG2 " +
                 "FROM CHUYENBAY, SANBAY SB1, SANBAY SB2 " +
                 "WHERE CHUYENBAY.SANBAYDEN=SB2.MASANBAY AND CHUYENBAY.SANBAYDI= SB1.MASANBAY" +
@@ -116,6 +120,10 @@ namespace Airline
             DataTable dt = new DataTable();
             da.Fill(dt);
             flightInfo.DataSource = dt;
+            if (flightInfo.Rows.Count == 0) MessageBox.Show("No flight available at this time");
+            dt.Dispose();
+            da.Dispose();
+
         }
 
         #endregion        
@@ -132,17 +140,49 @@ namespace Airline
                 string tinhDen = toStation.selectedValue;
                 string giaVeHang1 = flightInfo.CurrentRow.Cells[5].Value.ToString();
                 string giaVeHang2 = flightInfo.CurrentRow.Cells[7].Value.ToString();
-                SaleControl saleControl = new SaleControl(tinhDi, tinhDen, maChuyenBay, giaVeHang1, giaVeHang2);// truyền tỉnh đến, tỉnh đi, mã chuyến bay vào
-                saleControl.BackColor = Color.Transparent;
-                saleControl.Visible = true;
-                saleControl.BackSearch.Visible = true;
-                saleControl.Size = new Size(856, 523);
-                saleControl.Location = new Point(66, 117);
-                saleControl.BringToFront();
+                this.SendToBack();
+                Form1.saleControl1 = new SaleControl(tinhDi, tinhDen, maChuyenBay, giaVeHang1, giaVeHang2);// truyền tỉnh đến, tỉnh đi, mã chuyến bay vào
+                this.Parent.Controls.Add(Form1.saleControl1);
+                Form1.saleControl1.Visible = true;
+                Form1.saleControl1.Size = new Size(856, 550);
+                Form1.saleControl1.Location = new Point(66, 117);
+                Form1.saleControl1.BringToFront();
+                Form1.saleControl1.BackColor = Color.Transparent;
+                
+
             }
             catch { }
            
         }
+
+        private void HideComp()
+        {
+            this.fromStation.Hide();
+            this.toStation.Hide();
+            this.datePicker.Hide();
+            this.gioKhoiHanh.Hide();
+            this.searchBt.Hide();
+            this.flightInfo.Hide();
+            this.label1.Hide();
+            this.label2.Hide();
+            this.label3.Hide();
+            this.label4.Hide();
+        }
+
+        private void ShowComp()
+        {
+            this.fromStation.Show();
+            this.toStation.Show();
+            this.datePicker.Show();
+            this.gioKhoiHanh.Show();
+            this.searchBt.Show();
+            this.flightInfo.Show();
+            this.label1.Show();
+            this.label2.Show();
+            this.label3.Show();
+            this.label4.Show();
+        }
+
 
         private void flightInfo_SelectionChanged(object sender, EventArgs e)
         {

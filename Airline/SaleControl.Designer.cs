@@ -264,7 +264,6 @@ namespace Airline
             this.backSearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.backSearch.Textcolor = System.Drawing.Color.White;
             this.backSearch.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.backSearch.Visible = false;
             this.backSearch.Click += new System.EventHandler(this.backBt_Click);
             // 
             // bunifuCustomLabel1
@@ -483,6 +482,7 @@ namespace Airline
             this.Controls.Add(this.contactName);
             this.Name = "SaleControl";
             this.Size = new System.Drawing.Size(617, 550);
+            this.Load += new System.EventHandler(this.SaleControl_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
