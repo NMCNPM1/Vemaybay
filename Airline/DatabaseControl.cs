@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Excel = Microsoft.Office.Interop.Excel;
 using System.Data.SqlClient;
+using System.Threading;
 
 
 namespace Airline
@@ -20,6 +21,8 @@ namespace Airline
         public DatabaseControl()
         {
             InitializeComponent();
+            UnableLoading();
+            Control.CheckForIllegalCrossThreadCalls = false;
         }
 
         #endregion
@@ -29,8 +32,21 @@ namespace Airline
         private void dataBt_Click(object sender, EventArgs e)
         {
 
+
+            Thread t = new Thread(new ThreadStart(EnableLoading));
+            LoadingDatabase(t);
+            t.Abort();
+            
+
+
+
+
+        }
+        private void LoadingDatabase(Thread t)
+        {
             openFileDialog1.Filter = "Excel | *.xlsx; *.xls| All File (*.*)|*.*";
             openFileDialog1.ShowDialog();
+            t.Start();
             if (openFileDialog1.FileName != "")
             {
                 // tạo đối tượng excel
@@ -43,7 +59,7 @@ namespace Airline
                     Excel.Workbook workbook = excel.Workbooks.Open(openFileDialog1.FileName);
                     // mở sheet
                     for (int i = 1; i < 4; i++)
-                    {                        
+                    {
                         Excel.Worksheet sheet = workbook.Sheets[i];
                         Excel.Range range = sheet.UsedRange;
                         object[,] valueArray = (object[,])range.get_Value(Excel.XlRangeValueDataType.xlRangeValueDefault);
@@ -61,10 +77,10 @@ namespace Airline
                                     command = "INSERT INTO SANBAY VALUES("
                                      + "'" + maSanBay + "'" + ", "
                                      + "N'" + tenSanBay + "'" + ", "
-                                     + "N'" + tinh + "'" +", " + "N'" + quocGia + "'" + ")";
+                                     + "N'" + tinh + "'" + ", " + "N'" + quocGia + "'" + ")";
                                     ExcuteCommand(command);
-                                }                                
-                                break;                    
+                                }
+                                break;
                             case 2: // CHUYENBAY
                                 for (int j = 2; j <= row; j++)
                                 {
@@ -108,6 +124,7 @@ namespace Airline
                                 }
                                 break;
                         }
+                        
                     }
                     MessageBox.Show("Data update successful !");
                 }
@@ -120,9 +137,18 @@ namespace Airline
             {
                 MessageBox.Show("Bạn chưa chọn tệp tin nào !", "Thông báo !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-
+            
         }
-
+        private void EnableLoading()
+        {
+            loading1.Visible = true;
+            loading1.BringToFront();
+        }
+        private void UnableLoading()
+        {
+            loading1.Visible = false;
+            loading1.SendToBack();
+        }
         #endregion
 
         #region Support Methods
@@ -134,5 +160,15 @@ namespace Airline
         }
 
         #endregion
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+            
+        }
+
+        private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            EnableLoading();
+        }
     }
 }

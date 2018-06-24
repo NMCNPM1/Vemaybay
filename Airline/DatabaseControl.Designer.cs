@@ -32,6 +32,8 @@
             this.dataBt = new Bunifu.Framework.UI.BunifuFlatButton();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.label1 = new System.Windows.Forms.Label();
+            this.loading1 = new Airline.Loading();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.SuspendLayout();
             // 
             // dataBt
@@ -84,12 +86,26 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Update Database(.xls, .xlsx): ";
             // 
+            // loading1
+            // 
+            this.loading1.BackColor = System.Drawing.Color.Transparent;
+            this.loading1.Location = new System.Drawing.Point(195, 96);
+            this.loading1.Name = "loading1";
+            this.loading1.Size = new System.Drawing.Size(217, 200);
+            this.loading1.TabIndex = 6;
+            // 
+            // backgroundWorker1
+            // 
+            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
+            this.backgroundWorker1.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorker1_ProgressChanged);
+            // 
             // DatabaseControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataBt);
+            this.Controls.Add(this.loading1);
             this.Name = "DatabaseControl";
             this.Size = new System.Drawing.Size(617, 550);
             this.ResumeLayout(false);
@@ -101,5 +117,7 @@
         private Bunifu.Framework.UI.BunifuFlatButton dataBt;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Label label1;
+        private Loading loading1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
