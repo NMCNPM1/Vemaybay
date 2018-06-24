@@ -142,6 +142,18 @@ namespace Airline
                         + ", " + _price.ToString() + ", '01-01-1998 23:59:59.999')";
                     cmd.CommandText = sql;
                     cmd.ExecuteNonQuery();
+                    if (hangVe == 1)
+                    {
+                        sql = "UPDATE CHUYENBAY SET HANG1CONLAI = HANG1CONLAI - 1 WHERE MACHUYENBAY='" + _maChuyenBay+"'";
+                        cmd.CommandText = sql;
+                        cmd.ExecuteNonQuery();
+                    }
+                    else
+                    {
+                        sql = "UPDATE CHUYENBAY SET HANG2CONLAI = HANG1CONLAI - 1 WHERE MACHUYENBAY='" + _maChuyenBay + "'";
+                        cmd.CommandText = sql;
+                        cmd.ExecuteNonQuery();
+                    }
                     BookedMessage();
                 }
                 else
@@ -169,6 +181,18 @@ namespace Airline
                         + ", " + _price.ToString() + ")";
                     cmd.CommandText = sql;
                     cmd.ExecuteNonQuery();
+                    if (hangVe == 1)
+                    {
+                        sql = "UPDATE CHUYENBAY SET HANG1CONLAI = HANG1CONLAI - 1 WHERE MACHUYENBAY='" + _maChuyenBay + "'";
+                        cmd.CommandText = sql;
+                        cmd.ExecuteNonQuery();
+                    }
+                    else
+                    {
+                        sql = "UPDATE CHUYENBAY SET HANG2CONLAI = HANG2CONLAI - 1 WHERE MACHUYENBAY='" + _maChuyenBay + "'";
+                        cmd.CommandText = sql;
+                        cmd.ExecuteNonQuery();
+                    }
                     BookedMessage();
                 }
                 #endregion
