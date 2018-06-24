@@ -52,7 +52,7 @@ namespace Airline
             {
                 this.Hide();
                 Form1 form = new Form1();
-                form.ShowDialog();
+                form.Show();
                  
             }
         }
@@ -94,7 +94,7 @@ namespace Airline
                     data.Dispose();
                     this.Hide();
                     Form1 form = new Form1();                    
-                    form.ShowDialog();
+                    form.Show();
                     
                 }
             }
