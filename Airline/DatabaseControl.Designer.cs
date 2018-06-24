@@ -38,7 +38,7 @@
             // 
             this.dataBt.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(76)))), ((int)(((byte)(157)))));
             this.dataBt.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataBt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
+            this.dataBt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.dataBt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.dataBt.BorderRadius = 7;
             this.dataBt.ButtonText = "        Upload ";

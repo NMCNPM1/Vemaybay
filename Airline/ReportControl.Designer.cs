@@ -86,8 +86,8 @@
             this.monthRp.Location = new System.Drawing.Point(314, 180);
             this.monthRp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.monthRp.Name = "monthRp";
-            this.monthRp.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
-            this.monthRp.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
+            this.monthRp.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.monthRp.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.monthRp.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.monthRp.selectedIndex = 0;
             this.monthRp.Size = new System.Drawing.Size(64, 31);
@@ -119,8 +119,8 @@
             this.yearRp.Location = new System.Drawing.Point(291, 230);
             this.yearRp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.yearRp.Name = "yearRp";
-            this.yearRp.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
-            this.yearRp.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
+            this.yearRp.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.yearRp.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.yearRp.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.yearRp.selectedIndex = 0;
             this.yearRp.Size = new System.Drawing.Size(87, 31);
@@ -130,7 +130,7 @@
             // 
             this.reportBt.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(76)))), ((int)(((byte)(157)))));
             this.reportBt.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.reportBt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
+            this.reportBt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.reportBt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.reportBt.BorderRadius = 7;
             this.reportBt.ButtonText = "  Export";
@@ -150,8 +150,8 @@
             this.reportBt.IsTab = true;
             this.reportBt.Location = new System.Drawing.Point(241, 295);
             this.reportBt.Name = "reportBt";
-            this.reportBt.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
-            this.reportBt.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(76)))), ((int)(((byte)(157)))));
+            this.reportBt.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.reportBt.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.reportBt.OnHoverTextColor = System.Drawing.Color.White;
             this.reportBt.selected = false;
             this.reportBt.Size = new System.Drawing.Size(112, 53);
@@ -204,6 +204,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.listView);
             this.Controls.Add(this.reportBt);
             this.Controls.Add(this.yearRp);

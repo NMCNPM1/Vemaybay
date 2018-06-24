@@ -49,7 +49,7 @@
             // listSex
             // 
             this.listSex.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.listSex.BackColor = System.Drawing.Color.Transparent;
+            this.listSex.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.listSex.BorderRadius = 3;
             this.listSex.DisabledColor = System.Drawing.Color.Gray;
             this.listSex.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -67,8 +67,8 @@
             this.listSex.Location = new System.Drawing.Point(174, 234);
             this.listSex.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listSex.Name = "listSex";
-            this.listSex.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
-            this.listSex.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
+            this.listSex.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.listSex.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.listSex.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.listSex.selectedIndex = -1;
             this.listSex.Size = new System.Drawing.Size(365, 31);
@@ -77,6 +77,7 @@
             // newValue
             // 
             this.newValue.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.newValue.BackColor = System.Drawing.SystemColors.Control;
             this.newValue.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.newValue.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.newValue.ForeColor = System.Drawing.Color.Black;
@@ -98,7 +99,7 @@
             // 
             this.updateRuleBt.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(76)))), ((int)(((byte)(157)))));
             this.updateRuleBt.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.updateRuleBt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
+            this.updateRuleBt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.updateRuleBt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.updateRuleBt.BorderRadius = 7;
             this.updateRuleBt.ButtonText = "  Update";
@@ -118,8 +119,8 @@
             this.updateRuleBt.IsTab = true;
             this.updateRuleBt.Location = new System.Drawing.Point(238, 328);
             this.updateRuleBt.Name = "updateRuleBt";
-            this.updateRuleBt.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
-            this.updateRuleBt.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(76)))), ((int)(((byte)(157)))));
+            this.updateRuleBt.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.updateRuleBt.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.updateRuleBt.OnHoverTextColor = System.Drawing.Color.White;
             this.updateRuleBt.selected = false;
             this.updateRuleBt.Size = new System.Drawing.Size(112, 49);

@@ -120,7 +120,7 @@ namespace Airline
             // 
             this.bookBt.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(76)))), ((int)(((byte)(157)))));
             this.bookBt.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bookBt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
+            this.bookBt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.bookBt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bookBt.BorderRadius = 7;
             this.bookBt.ButtonText = "  Book";
@@ -140,8 +140,8 @@ namespace Airline
             this.bookBt.IsTab = true;
             this.bookBt.Location = new System.Drawing.Point(237, 422);
             this.bookBt.Name = "bookBt";
-            this.bookBt.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
-            this.bookBt.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(76)))), ((int)(((byte)(157)))));
+            this.bookBt.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.bookBt.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.bookBt.OnHoverTextColor = System.Drawing.Color.White;
             this.bookBt.selected = false;
             this.bookBt.Size = new System.Drawing.Size(112, 52);
@@ -166,8 +166,8 @@ namespace Airline
             this.sex.Location = new System.Drawing.Point(129, 197);
             this.sex.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.sex.Name = "sex";
-            this.sex.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
-            this.sex.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
+            this.sex.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.sex.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.sex.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.sex.selectedIndex = 0;
             this.sex.Size = new System.Drawing.Size(87, 31);
@@ -234,7 +234,7 @@ namespace Airline
             // 
             this.backSearch.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(76)))), ((int)(((byte)(157)))));
             this.backSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.backSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
+            this.backSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.backSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.backSearch.BorderRadius = 7;
             this.backSearch.ButtonText = "Back to Search";
@@ -254,8 +254,8 @@ namespace Airline
             this.backSearch.IsTab = true;
             this.backSearch.Location = new System.Drawing.Point(385, 422);
             this.backSearch.Name = "backSearch";
-            this.backSearch.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
-            this.backSearch.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(76)))), ((int)(((byte)(157)))));
+            this.backSearch.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.backSearch.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.backSearch.OnHoverTextColor = System.Drawing.Color.White;
             this.backSearch.selected = false;
             this.backSearch.Size = new System.Drawing.Size(112, 52);
@@ -427,8 +427,8 @@ namespace Airline
             this.classInfo.Location = new System.Drawing.Point(323, 31);
             this.classInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.classInfo.Name = "classInfo";
-            this.classInfo.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
-            this.classInfo.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
+            this.classInfo.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.classInfo.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.classInfo.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.classInfo.selectedIndex = 0;
             this.classInfo.Size = new System.Drawing.Size(122, 31);

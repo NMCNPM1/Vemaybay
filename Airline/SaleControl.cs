@@ -31,6 +31,7 @@ namespace Airline
 
         public SaleControl()
         {
+            this.BackColor = Color.Transparent;
             InitializeComponent();
         }
 

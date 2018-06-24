@@ -29,129 +29,145 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.panel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.searchBt = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.dataBt = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.reportBt = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.changeBt = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.minimizeBt = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.closeBt = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.TaskBar = new System.Windows.Forms.Panel();
-            this.searchControl1 = new Airline.SearchControl();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.reportBt = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.dataBt = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.changeBt = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.searchBt = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.dock = new System.Windows.Forms.PictureBox();
             this.reportControl1 = new Airline.ReportControl();
             this.ruleChangeControl1 = new Airline.RuleChangeControl();
+            this.searchControl1 = new Airline.SearchControl();
             this.databaseControl1 = new Airline.DatabaseControl();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.backPic = new System.Windows.Forms.PictureBox();
+            this.creator = new Bunifu.Framework.UI.BunifuFlatButton();
             this.TaskBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dock)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.backPic)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // TaskBar
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.searchBt);
-            this.panel1.Controls.Add(this.dataBt);
-            this.panel1.Controls.Add(this.reportBt);
-            this.panel1.Controls.Add(this.changeBt);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 630);
-            this.panel1.TabIndex = 0;
+            this.TaskBar.BackColor = System.Drawing.Color.Transparent;
+            this.TaskBar.Controls.Add(this.pictureBox8);
+            this.TaskBar.Controls.Add(this.bunifuFlatButton2);
+            this.TaskBar.Controls.Add(this.bunifuFlatButton1);
+            this.TaskBar.Location = new System.Drawing.Point(0, 0);
+            this.TaskBar.Name = "TaskBar";
+            this.TaskBar.Size = new System.Drawing.Size(1008, 34);
+            this.TaskBar.TabIndex = 15;
+            this.TaskBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TaskBar_MouseDown);
+            this.TaskBar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.TaskBar_MouseMove);
+            this.TaskBar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.TaskBar_MouseUp);
             // 
-            // pictureBox1
+            // pictureBox8
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(197, 169);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox8.BackgroundImage")));
+            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox8.Location = new System.Drawing.Point(4, 2);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(100, 30);
+            this.pictureBox8.TabIndex = 25;
+            this.pictureBox8.TabStop = false;
             // 
-            // searchBt
+            // bunifuFlatButton2
             // 
-            this.searchBt.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(76)))), ((int)(((byte)(157)))));
-            this.searchBt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
-            this.searchBt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.searchBt.BorderRadius = 0;
-            this.searchBt.ButtonText = "  Flight Info";
-            this.searchBt.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.searchBt.DisabledColor = System.Drawing.Color.Gray;
-            this.searchBt.Iconcolor = System.Drawing.Color.Transparent;
-            this.searchBt.Iconimage = ((System.Drawing.Image)(resources.GetObject("searchBt.Iconimage")));
-            this.searchBt.Iconimage_right = null;
-            this.searchBt.Iconimage_right_Selected = null;
-            this.searchBt.Iconimage_Selected = null;
-            this.searchBt.IconMarginLeft = 0;
-            this.searchBt.IconMarginRight = 0;
-            this.searchBt.IconRightVisible = true;
-            this.searchBt.IconRightZoom = 0D;
-            this.searchBt.IconVisible = true;
-            this.searchBt.IconZoom = 70D;
-            this.searchBt.IsTab = true;
-            this.searchBt.Location = new System.Drawing.Point(3, 178);
-            this.searchBt.Name = "searchBt";
-            this.searchBt.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
-            this.searchBt.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(76)))), ((int)(((byte)(157)))));
-            this.searchBt.OnHoverTextColor = System.Drawing.Color.White;
-            this.searchBt.selected = false;
-            this.searchBt.Size = new System.Drawing.Size(200, 53);
-            this.searchBt.TabIndex = 1;
-            this.searchBt.Text = "  Flight Info";
-            this.searchBt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.searchBt.Textcolor = System.Drawing.Color.White;
-            this.searchBt.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchBt.Click += new System.EventHandler(this.saleBt_Click);
+            this.bunifuFlatButton2.Activecolor = System.Drawing.Color.Navy;
+            this.bunifuFlatButton2.BackColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton2.BorderRadius = 0;
+            this.bunifuFlatButton2.ButtonText = "_";
+            this.bunifuFlatButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton2.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton2.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton2.Iconimage = null;
+            this.bunifuFlatButton2.Iconimage_right = null;
+            this.bunifuFlatButton2.Iconimage_right_Selected = null;
+            this.bunifuFlatButton2.Iconimage_Selected = null;
+            this.bunifuFlatButton2.IconMarginLeft = 0;
+            this.bunifuFlatButton2.IconMarginRight = 0;
+            this.bunifuFlatButton2.IconRightVisible = true;
+            this.bunifuFlatButton2.IconRightZoom = 0D;
+            this.bunifuFlatButton2.IconVisible = true;
+            this.bunifuFlatButton2.IconZoom = 90D;
+            this.bunifuFlatButton2.IsTab = false;
+            this.bunifuFlatButton2.Location = new System.Drawing.Point(908, 2);
+            this.bunifuFlatButton2.Name = "bunifuFlatButton2";
+            this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.Navy;
+            this.bunifuFlatButton2.OnHoverTextColor = System.Drawing.Color.White;
+            this.bunifuFlatButton2.selected = false;
+            this.bunifuFlatButton2.Size = new System.Drawing.Size(33, 30);
+            this.bunifuFlatButton2.TabIndex = 23;
+            this.bunifuFlatButton2.Text = "_";
+            this.bunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuFlatButton2.Textcolor = System.Drawing.Color.White;
+            this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton2.Click += new System.EventHandler(this.bunifuFlatButton2_Click);
             // 
-            // dataBt
+            // bunifuFlatButton1
             // 
-            this.dataBt.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(76)))), ((int)(((byte)(157)))));
-            this.dataBt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
-            this.dataBt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.dataBt.BorderRadius = 0;
-            this.dataBt.ButtonText = "  Database Update";
-            this.dataBt.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dataBt.DisabledColor = System.Drawing.Color.Gray;
-            this.dataBt.Iconcolor = System.Drawing.Color.Transparent;
-            this.dataBt.Iconimage = ((System.Drawing.Image)(resources.GetObject("dataBt.Iconimage")));
-            this.dataBt.Iconimage_right = null;
-            this.dataBt.Iconimage_right_Selected = null;
-            this.dataBt.Iconimage_Selected = null;
-            this.dataBt.IconMarginLeft = 0;
-            this.dataBt.IconMarginRight = 0;
-            this.dataBt.IconRightVisible = true;
-            this.dataBt.IconRightZoom = 0D;
-            this.dataBt.IconVisible = true;
-            this.dataBt.IconZoom = 70D;
-            this.dataBt.IsTab = true;
-            this.dataBt.Location = new System.Drawing.Point(3, 237);
-            this.dataBt.Name = "dataBt";
-            this.dataBt.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
-            this.dataBt.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(76)))), ((int)(((byte)(157)))));
-            this.dataBt.OnHoverTextColor = System.Drawing.Color.White;
-            this.dataBt.selected = false;
-            this.dataBt.Size = new System.Drawing.Size(200, 53);
-            this.dataBt.TabIndex = 3;
-            this.dataBt.Text = "  Database Update";
-            this.dataBt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.dataBt.Textcolor = System.Drawing.Color.White;
-            this.dataBt.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataBt.Click += new System.EventHandler(this.dataBt_Click);
+            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.bunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton1.BorderRadius = 0;
+            this.bunifuFlatButton1.ButtonText = " x";
+            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton1.Iconimage = null;
+            this.bunifuFlatButton1.Iconimage_right = null;
+            this.bunifuFlatButton1.Iconimage_right_Selected = null;
+            this.bunifuFlatButton1.Iconimage_Selected = null;
+            this.bunifuFlatButton1.IconMarginLeft = 0;
+            this.bunifuFlatButton1.IconMarginRight = 0;
+            this.bunifuFlatButton1.IconRightVisible = true;
+            this.bunifuFlatButton1.IconRightZoom = 0D;
+            this.bunifuFlatButton1.IconVisible = true;
+            this.bunifuFlatButton1.IconZoom = 90D;
+            this.bunifuFlatButton1.IsTab = false;
+            this.bunifuFlatButton1.Location = new System.Drawing.Point(940, 2);
+            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
+            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
+            this.bunifuFlatButton1.selected = false;
+            this.bunifuFlatButton1.Size = new System.Drawing.Size(59, 30);
+            this.bunifuFlatButton1.TabIndex = 22;
+            this.bunifuFlatButton1.Text = " x";
+            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
+            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton1.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
             // 
             // reportBt
             // 
-            this.reportBt.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(76)))), ((int)(((byte)(157)))));
-            this.reportBt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
+            this.reportBt.Activecolor = System.Drawing.Color.Transparent;
+            this.reportBt.BackColor = System.Drawing.Color.Transparent;
             this.reportBt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.reportBt.BorderRadius = 0;
-            this.reportBt.ButtonText = " Revenue Report";
+            this.reportBt.ButtonText = "";
             this.reportBt.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.reportBt.DisabledColor = System.Drawing.Color.Gray;
+            this.reportBt.DisabledColor = System.Drawing.Color.Transparent;
             this.reportBt.Iconcolor = System.Drawing.Color.Transparent;
             this.reportBt.Iconimage = ((System.Drawing.Image)(resources.GetObject("reportBt.Iconimage")));
             this.reportBt.Iconimage_right = null;
@@ -162,31 +178,65 @@
             this.reportBt.IconRightVisible = true;
             this.reportBt.IconRightZoom = 0D;
             this.reportBt.IconVisible = true;
-            this.reportBt.IconZoom = 70D;
+            this.reportBt.IconZoom = 100D;
             this.reportBt.IsTab = true;
-            this.reportBt.Location = new System.Drawing.Point(3, 296);
+            this.reportBt.Location = new System.Drawing.Point(454, 363);
             this.reportBt.Name = "reportBt";
-            this.reportBt.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
-            this.reportBt.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(76)))), ((int)(((byte)(157)))));
+            this.reportBt.Normalcolor = System.Drawing.Color.Transparent;
+            this.reportBt.OnHovercolor = System.Drawing.Color.Transparent;
             this.reportBt.OnHoverTextColor = System.Drawing.Color.White;
             this.reportBt.selected = false;
-            this.reportBt.Size = new System.Drawing.Size(200, 53);
+            this.reportBt.Size = new System.Drawing.Size(86, 84);
             this.reportBt.TabIndex = 4;
-            this.reportBt.Text = " Revenue Report";
             this.reportBt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.reportBt.Textcolor = System.Drawing.Color.White;
             this.reportBt.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.reportBt.Click += new System.EventHandler(this.reportBt_Click);
             // 
+            // dataBt
+            // 
+            this.dataBt.Activecolor = System.Drawing.Color.Transparent;
+            this.dataBt.BackColor = System.Drawing.Color.Transparent;
+            this.dataBt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.dataBt.BorderRadius = 0;
+            this.dataBt.ButtonText = "";
+            this.dataBt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dataBt.DisabledColor = System.Drawing.Color.Transparent;
+            this.dataBt.ForeColor = System.Drawing.Color.Transparent;
+            this.dataBt.Iconcolor = System.Drawing.Color.Transparent;
+            this.dataBt.Iconimage = ((System.Drawing.Image)(resources.GetObject("dataBt.Iconimage")));
+            this.dataBt.Iconimage_right = null;
+            this.dataBt.Iconimage_right_Selected = null;
+            this.dataBt.Iconimage_Selected = null;
+            this.dataBt.IconMarginLeft = 0;
+            this.dataBt.IconMarginRight = 0;
+            this.dataBt.IconRightVisible = true;
+            this.dataBt.IconRightZoom = 0D;
+            this.dataBt.IconVisible = true;
+            this.dataBt.IconZoom = 100D;
+            this.dataBt.IsTab = true;
+            this.dataBt.Location = new System.Drawing.Point(290, 363);
+            this.dataBt.Name = "dataBt";
+            this.dataBt.Normalcolor = System.Drawing.Color.Transparent;
+            this.dataBt.OnHovercolor = System.Drawing.Color.Transparent;
+            this.dataBt.OnHoverTextColor = System.Drawing.Color.Transparent;
+            this.dataBt.selected = false;
+            this.dataBt.Size = new System.Drawing.Size(86, 84);
+            this.dataBt.TabIndex = 3;
+            this.dataBt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.dataBt.Textcolor = System.Drawing.Color.Transparent;
+            this.dataBt.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataBt.Click += new System.EventHandler(this.dataBt_Click);
+            // 
             // changeBt
             // 
-            this.changeBt.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(76)))), ((int)(((byte)(157)))));
-            this.changeBt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
+            this.changeBt.Activecolor = System.Drawing.Color.Transparent;
+            this.changeBt.BackColor = System.Drawing.Color.Transparent;
             this.changeBt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.changeBt.BorderRadius = 0;
-            this.changeBt.ButtonText = "  Rules Change";
+            this.changeBt.ButtonText = "";
             this.changeBt.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.changeBt.DisabledColor = System.Drawing.Color.Gray;
+            this.changeBt.DisabledColor = System.Drawing.Color.Transparent;
             this.changeBt.Iconcolor = System.Drawing.Color.Transparent;
             this.changeBt.Iconimage = ((System.Drawing.Image)(resources.GetObject("changeBt.Iconimage")));
             this.changeBt.Iconimage_right = null;
@@ -197,180 +247,338 @@
             this.changeBt.IconRightVisible = true;
             this.changeBt.IconRightZoom = 0D;
             this.changeBt.IconVisible = true;
-            this.changeBt.IconZoom = 70D;
+            this.changeBt.IconZoom = 100D;
             this.changeBt.IsTab = true;
-            this.changeBt.Location = new System.Drawing.Point(3, 355);
+            this.changeBt.Location = new System.Drawing.Point(619, 363);
             this.changeBt.Name = "changeBt";
-            this.changeBt.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
-            this.changeBt.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(76)))), ((int)(((byte)(157)))));
+            this.changeBt.Normalcolor = System.Drawing.Color.Transparent;
+            this.changeBt.OnHovercolor = System.Drawing.Color.Transparent;
             this.changeBt.OnHoverTextColor = System.Drawing.Color.White;
             this.changeBt.selected = false;
-            this.changeBt.Size = new System.Drawing.Size(200, 53);
+            this.changeBt.Size = new System.Drawing.Size(86, 84);
             this.changeBt.TabIndex = 5;
-            this.changeBt.Text = "  Rules Change";
             this.changeBt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.changeBt.Textcolor = System.Drawing.Color.White;
             this.changeBt.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.changeBt.Click += new System.EventHandler(this.changeBt_Click);
             // 
-            // minimizeBt
+            // searchBt
             // 
-            this.minimizeBt.ActiveBorderThickness = 1;
-            this.minimizeBt.ActiveCornerRadius = 20;
-            this.minimizeBt.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(235)))), ((int)(((byte)(243)))));
-            this.minimizeBt.ActiveForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
-            this.minimizeBt.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(235)))), ((int)(((byte)(243)))));
-            this.minimizeBt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.minimizeBt.BackColor = System.Drawing.Color.Transparent;
-            this.minimizeBt.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("minimizeBt.BackgroundImage")));
-            this.minimizeBt.ButtonText = "_";
-            this.minimizeBt.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.minimizeBt.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.minimizeBt.ForeColor = System.Drawing.Color.SeaGreen;
-            this.minimizeBt.IdleBorderThickness = 1;
-            this.minimizeBt.IdleCornerRadius = 1;
-            this.minimizeBt.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(235)))), ((int)(((byte)(243)))));
-            this.minimizeBt.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
-            this.minimizeBt.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(235)))), ((int)(((byte)(243)))));
-            this.minimizeBt.Location = new System.Drawing.Point(899, 0);
-            this.minimizeBt.Margin = new System.Windows.Forms.Padding(5);
-            this.minimizeBt.Name = "minimizeBt";
-            this.minimizeBt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.minimizeBt.Size = new System.Drawing.Size(58, 34);
-            this.minimizeBt.TabIndex = 13;
-            this.minimizeBt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.minimizeBt.Click += new System.EventHandler(this.minimizeBt_Click);
+            this.searchBt.Activecolor = System.Drawing.Color.Transparent;
+            this.searchBt.BackColor = System.Drawing.Color.Transparent;
+            this.searchBt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.searchBt.BorderRadius = 0;
+            this.searchBt.ButtonText = "";
+            this.searchBt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.searchBt.DisabledColor = System.Drawing.Color.Transparent;
+            this.searchBt.Iconcolor = System.Drawing.Color.Transparent;
+            this.searchBt.Iconimage = ((System.Drawing.Image)(resources.GetObject("searchBt.Iconimage")));
+            this.searchBt.Iconimage_right = null;
+            this.searchBt.Iconimage_right_Selected = null;
+            this.searchBt.Iconimage_Selected = null;
+            this.searchBt.IconMarginLeft = 0;
+            this.searchBt.IconMarginRight = 0;
+            this.searchBt.IconRightVisible = true;
+            this.searchBt.IconRightZoom = 0D;
+            this.searchBt.IconVisible = true;
+            this.searchBt.IconZoom = 100D;
+            this.searchBt.IsTab = true;
+            this.searchBt.Location = new System.Drawing.Point(120, 363);
+            this.searchBt.Name = "searchBt";
+            this.searchBt.Normalcolor = System.Drawing.Color.Transparent;
+            this.searchBt.OnHovercolor = System.Drawing.Color.Transparent;
+            this.searchBt.OnHoverTextColor = System.Drawing.Color.Transparent;
+            this.searchBt.selected = false;
+            this.searchBt.Size = new System.Drawing.Size(92, 84);
+            this.searchBt.TabIndex = 1;
+            this.searchBt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.searchBt.Textcolor = System.Drawing.Color.Transparent;
+            this.searchBt.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchBt.Click += new System.EventHandler(this.saleBt_Click);
             // 
-            // closeBt
+            // pictureBox9
             // 
-            this.closeBt.ActiveBorderThickness = 1;
-            this.closeBt.ActiveCornerRadius = 1;
-            this.closeBt.ActiveFillColor = System.Drawing.Color.Red;
-            this.closeBt.ActiveForecolor = System.Drawing.Color.White;
-            this.closeBt.ActiveLineColor = System.Drawing.Color.Red;
-            this.closeBt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.closeBt.BackColor = System.Drawing.Color.Transparent;
-            this.closeBt.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("closeBt.BackgroundImage")));
-            this.closeBt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.closeBt.ButtonText = "x  ";
-            this.closeBt.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.closeBt.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closeBt.ForeColor = System.Drawing.Color.SeaGreen;
-            this.closeBt.IdleBorderThickness = 1;
-            this.closeBt.IdleCornerRadius = 1;
-            this.closeBt.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
-            this.closeBt.IdleForecolor = System.Drawing.Color.White;
-            this.closeBt.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(88)))), ((int)(((byte)(173)))));
-            this.closeBt.Location = new System.Drawing.Point(954, -5);
-            this.closeBt.Margin = new System.Windows.Forms.Padding(5);
-            this.closeBt.Name = "closeBt";
-            this.closeBt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.closeBt.Size = new System.Drawing.Size(54, 43);
-            this.closeBt.TabIndex = 12;
-            this.closeBt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.closeBt.Click += new System.EventHandler(this.closeBt_Click);
+            this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox9.BackgroundImage")));
+            this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox9.Location = new System.Drawing.Point(754, 240);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(151, 80);
+            this.pictureBox9.TabIndex = 18;
+            this.pictureBox9.TabStop = false;
             // 
-            // panel2
+            // pictureBox5
             // 
-            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Location = new System.Drawing.Point(200, 28);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(807, 602);
-            this.panel2.TabIndex = 14;
+            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.BackgroundImage")));
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox5.Location = new System.Drawing.Point(595, 490);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(140, 80);
+            this.pictureBox5.TabIndex = 17;
+            this.pictureBox5.TabStop = false;
             // 
-            // TaskBar
+            // pictureBox4
             // 
-            this.TaskBar.BackColor = System.Drawing.Color.Transparent;
-            this.TaskBar.Controls.Add(this.closeBt);
-            this.TaskBar.Controls.Add(this.minimizeBt);
-            this.TaskBar.Location = new System.Drawing.Point(0, 0);
-            this.TaskBar.Name = "TaskBar";
-            this.TaskBar.Size = new System.Drawing.Size(1008, 34);
-            this.TaskBar.TabIndex = 15;
-            this.TaskBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TaskBar_MouseDown);
-            this.TaskBar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.TaskBar_MouseMove);
-            this.TaskBar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.TaskBar_MouseUp);
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox4.Location = new System.Drawing.Point(428, 240);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(140, 80);
+            this.pictureBox4.TabIndex = 16;
+            this.pictureBox4.TabStop = false;
             // 
-            // searchControl1
+            // pictureBox3
             // 
-            this.searchControl1.BackColor = System.Drawing.SystemColors.Control;
-            this.searchControl1.Location = new System.Drawing.Point(200, 28);
-            this.searchControl1.Name = "searchControl1";
-            this.searchControl1.Size = new System.Drawing.Size(807, 602);
-            this.searchControl1.TabIndex = 16;
-            this.searchControl1.Visible = false;
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Location = new System.Drawing.Point(261, 490);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(140, 80);
+            this.pictureBox3.TabIndex = 15;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(96, 240);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(140, 80);
+            this.pictureBox2.TabIndex = 14;
+            this.pictureBox2.TabStop = false;
+            // 
+            // dock
+            // 
+            this.dock.BackColor = System.Drawing.Color.Transparent;
+            this.dock.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("dock.BackgroundImage")));
+            this.dock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.dock.Location = new System.Drawing.Point(74, 326);
+            this.dock.Name = "dock";
+            this.dock.Size = new System.Drawing.Size(848, 158);
+            this.dock.TabIndex = 13;
+            this.dock.TabStop = false;
+            this.dock.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // reportControl1
             // 
-            this.reportControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.reportControl1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.reportControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.reportControl1.BackColor = System.Drawing.Color.Transparent;
             this.reportControl1.Cursor = System.Windows.Forms.Cursors.No;
-            this.reportControl1.Location = new System.Drawing.Point(200, 28);
+            this.reportControl1.Location = new System.Drawing.Point(95, 16);
             this.reportControl1.Name = "reportControl1";
-            this.reportControl1.Size = new System.Drawing.Size(807, 602);
+            this.reportControl1.Size = new System.Drawing.Size(807, 672);
             this.reportControl1.TabIndex = 9;
             this.reportControl1.Visible = false;
             // 
             // ruleChangeControl1
             // 
             this.ruleChangeControl1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.ruleChangeControl1.Location = new System.Drawing.Point(200, 28);
+            this.ruleChangeControl1.Location = new System.Drawing.Point(74, 117);
             this.ruleChangeControl1.Name = "ruleChangeControl1";
-            this.ruleChangeControl1.Size = new System.Drawing.Size(807, 602);
+            this.ruleChangeControl1.Size = new System.Drawing.Size(848, 501);
             this.ruleChangeControl1.TabIndex = 11;
             this.ruleChangeControl1.Visible = false;
+            // 
+            // searchControl1
+            // 
+            this.searchControl1.BackColor = System.Drawing.Color.Transparent;
+            this.searchControl1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("searchControl1.BackgroundImage")));
+            this.searchControl1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.searchControl1.Location = new System.Drawing.Point(66, 117);
+            this.searchControl1.Name = "searchControl1";
+            this.searchControl1.Size = new System.Drawing.Size(856, 523);
+            this.searchControl1.TabIndex = 16;
+            this.searchControl1.Visible = false;
             // 
             // databaseControl1
             // 
             this.databaseControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.databaseControl1.Location = new System.Drawing.Point(200, 28);
+            this.databaseControl1.BackColor = System.Drawing.Color.Transparent;
+            this.databaseControl1.Location = new System.Drawing.Point(39, 117);
             this.databaseControl1.Name = "databaseControl1";
-            this.databaseControl1.Size = new System.Drawing.Size(807, 602);
+            this.databaseControl1.Size = new System.Drawing.Size(914, 555);
             this.databaseControl1.TabIndex = 8;
             this.databaseControl1.Visible = false;
+            // 
+            // bunifuFlatButton3
+            // 
+            this.bunifuFlatButton3.Activecolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton3.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton3.BorderRadius = 0;
+            this.bunifuFlatButton3.ButtonText = "  Switch User";
+            this.bunifuFlatButton3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton3.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton3.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton3.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton3.Iconimage")));
+            this.bunifuFlatButton3.Iconimage_right = null;
+            this.bunifuFlatButton3.Iconimage_right_Selected = null;
+            this.bunifuFlatButton3.Iconimage_Selected = null;
+            this.bunifuFlatButton3.IconMarginLeft = 0;
+            this.bunifuFlatButton3.IconMarginRight = 0;
+            this.bunifuFlatButton3.IconRightVisible = true;
+            this.bunifuFlatButton3.IconRightZoom = 0D;
+            this.bunifuFlatButton3.IconVisible = true;
+            this.bunifuFlatButton3.IconZoom = 60D;
+            this.bunifuFlatButton3.IsTab = false;
+            this.bunifuFlatButton3.Location = new System.Drawing.Point(671, 80);
+            this.bunifuFlatButton3.Name = "bunifuFlatButton3";
+            this.bunifuFlatButton3.Normalcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton3.OnHovercolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton3.OnHoverTextColor = System.Drawing.Color.Black;
+            this.bunifuFlatButton3.selected = false;
+            this.bunifuFlatButton3.Size = new System.Drawing.Size(139, 31);
+            this.bunifuFlatButton3.TabIndex = 21;
+            this.bunifuFlatButton3.Text = "  Switch User";
+            this.bunifuFlatButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bunifuFlatButton3.Textcolor = System.Drawing.Color.Black;
+            this.bunifuFlatButton3.TextFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(707, 56);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(103, 21);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "Hello Admin";
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox6.BackgroundImage")));
+            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox6.Location = new System.Drawing.Point(824, 41);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(70, 70);
+            this.pictureBox6.TabIndex = 19;
+            this.pictureBox6.TabStop = false;
+            // 
+            // backPic
+            // 
+            this.backPic.BackColor = System.Drawing.Color.Transparent;
+            this.backPic.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("backPic.BackgroundImage")));
+            this.backPic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.backPic.Location = new System.Drawing.Point(39, 61);
+            this.backPic.Name = "backPic";
+            this.backPic.Size = new System.Drawing.Size(50, 50);
+            this.backPic.TabIndex = 24;
+            this.backPic.TabStop = false;
+            this.backPic.Click += new System.EventHandler(this.backPic_Click);
+            // 
+            // creator
+            // 
+            this.creator.Activecolor = System.Drawing.Color.Transparent;
+            this.creator.BackColor = System.Drawing.Color.Transparent;
+            this.creator.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.creator.BorderRadius = 0;
+            this.creator.ButtonText = "";
+            this.creator.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.creator.DisabledColor = System.Drawing.Color.Transparent;
+            this.creator.Iconcolor = System.Drawing.Color.Transparent;
+            this.creator.Iconimage = ((System.Drawing.Image)(resources.GetObject("creator.Iconimage")));
+            this.creator.Iconimage_right = null;
+            this.creator.Iconimage_right_Selected = null;
+            this.creator.Iconimage_Selected = null;
+            this.creator.IconMarginLeft = 0;
+            this.creator.IconMarginRight = 0;
+            this.creator.IconRightVisible = true;
+            this.creator.IconRightZoom = 0D;
+            this.creator.IconVisible = true;
+            this.creator.IconZoom = 100D;
+            this.creator.IsTab = true;
+            this.creator.Location = new System.Drawing.Point(789, 363);
+            this.creator.Name = "creator";
+            this.creator.Normalcolor = System.Drawing.Color.Transparent;
+            this.creator.OnHovercolor = System.Drawing.Color.Transparent;
+            this.creator.OnHoverTextColor = System.Drawing.Color.White;
+            this.creator.selected = false;
+            this.creator.Size = new System.Drawing.Size(86, 84);
+            this.creator.TabIndex = 25;
+            this.creator.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.creator.Textcolor = System.Drawing.Color.White;
+            this.creator.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(235)))), ((int)(((byte)(243)))));
-            this.ClientSize = new System.Drawing.Size(1007, 630);
-            this.Controls.Add(this.panel1);
+            this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1000, 700);
+            this.Controls.Add(this.creator);
+            this.Controls.Add(this.backPic);
+            this.Controls.Add(this.bunifuFlatButton3);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.pictureBox9);
+            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.dataBt);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.changeBt);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.reportBt);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.searchControl1);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.reportControl1);
-            this.Controls.Add(this.ruleChangeControl1);
             this.Controls.Add(this.databaseControl1);
             this.Controls.Add(this.TaskBar);
+            this.Controls.Add(this.searchBt);
+            this.Controls.Add(this.dock);
+            this.Controls.Add(this.reportControl1);
+            this.Controls.Add(this.ruleChangeControl1);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.TaskBar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dock)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.backPic)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.FlowLayoutPanel panel1;
-        private Bunifu.Framework.UI.BunifuFlatButton searchBt;
-        private Bunifu.Framework.UI.BunifuFlatButton dataBt;
-        private Bunifu.Framework.UI.BunifuFlatButton reportBt;
-        private Bunifu.Framework.UI.BunifuFlatButton changeBt;
         private DatabaseControl databaseControl1;
         private ReportControl reportControl1;
         private RuleChangeControl ruleChangeControl1;
-        private Bunifu.Framework.UI.BunifuThinButton2 minimizeBt;
-        private Bunifu.Framework.UI.BunifuThinButton2 closeBt;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel TaskBar;
         private SearchControl searchControl1;
+        private Bunifu.Framework.UI.BunifuFlatButton reportBt;
+        private Bunifu.Framework.UI.BunifuFlatButton dataBt;
+        private Bunifu.Framework.UI.BunifuFlatButton changeBt;
+        private Bunifu.Framework.UI.BunifuFlatButton searchBt;
+        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox dock;
+        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
+        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
+        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.PictureBox backPic;
+        private Bunifu.Framework.UI.BunifuFlatButton creator;
     }
 }
 
