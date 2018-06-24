@@ -31,8 +31,8 @@ namespace Airline
                 MessageBox.Show("Tháng này không có thu nhập !", "Thông báo");
                 return;
             }
-            string sql = "SELECT VE.MAVE, VE.MACHUYENBAY, VE.HANGVE, VE.GIAVE FROM VE , CHUYENBAY WHERE VE.MACHUYENBAY=CHUYENBAY.MACHUYENBAY AND month(CHUYENBAY.NGAY)=" +
-                monthRp.selectedValue + " AND YEAR(NGAY)=" + yearRp.selectedValue;
+            string sql = "SELECT VE.MAVE, VE.MACHUYENBAY, VE.HANGVE, VE.GIAVE FROM VE WHERE month(VE.NGAYDATVE)=" +
+                monthRp.selectedValue + " AND YEAR(VE.NGAYDATVE)=" + yearRp.selectedValue;
             SqlCommand cmd = new SqlCommand(sql, LoginForm.Connection.Connection);
             cmd.CommandType = CommandType.Text;
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -92,7 +92,7 @@ namespace Airline
                             sheet.Cells[i + 2, j+1].Borders.Weight = Excel.XlBorderWeight.xlThin;
                         }
                     }
-                    sheet.Cells[listView.Rows.Count+3, 3].Value = "Tổng doanh thu :" + countMoney();
+                    sheet.Cells[listView.Rows.Count+3, 3].Value = "Tổng doanh thu : " + countMoney();
                     sheet.Cells[listView.Rows.Count + 3, 3].HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
                     sheet.Cells[listView.Rows.Count + 3, 3].Font.Size = 20;
                     sheet.Cells[listView.Rows.Count + 3, 3].Borders.Weight = Excel.XlBorderWeight.xlThin;
@@ -136,8 +136,8 @@ namespace Airline
 
         private string countMoney()
         {
-            string sql = "SELECT sum(VE.GIAVE) FROM VE , CHUYENBAY WHERE VE.MACHUYENBAY=CHUYENBAY.MACHUYENBAY AND month(CHUYENBAY.NGAY)=" +
-                monthRp.selectedValue + " AND YEAR(NGAY)=" + yearRp.selectedValue;
+            string sql = "SELECT sum(VE.GIAVE) FROM VE WHERE month(VE.NGAYDATVE)=" +
+                monthRp.selectedValue + " AND YEAR(VE.NGAYDATVE)=" + yearRp.selectedValue;
 
             SqlCommand cmd = new SqlCommand(sql, LoginForm.Connection.Connection);
             SqlDataReader myReader;

@@ -14,10 +14,11 @@ namespace Airline
     public partial class LoginForm : Form
     {
         #region INIT
-
+        public static string accountName;
         private static ConnectToSQL connection;
 
         internal static ConnectToSQL Connection { get => connection; set => connection = value; }
+        public string AccountName { get => accountName; set => accountName = value; }
 
         public LoginForm()
         {
@@ -35,7 +36,7 @@ namespace Airline
         {
             string username = tbUser.Text;
             string password = tbPassword.Text;
-
+            accountName = tbUser.Text;
 
             string sql = "SELECT TENNGUOIDUNG, MATKHAU, LOAINGUOIDUNG FROM NGUOIDUNG WHERE TENNGUOIDUNG = '"
                 + username + "' AND MATKHAU = '" + password + "'";
@@ -49,10 +50,10 @@ namespace Airline
                 MessageBox.Show("Incorrect username or password !", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
             {
-                this.Visible = false;
+                this.Hide();
                 Form1 form = new Form1();
                 form.ShowDialog();
-                this.Visible = true;
+                 
             }
         }
 
@@ -76,7 +77,7 @@ namespace Airline
             {
                 string username = tbUser.Text;
                 string password = tbPassword.Text;
-
+                accountName = username;
 
                 string sql = "SELECT TENNGUOIDUNG, MATKHAU, LOAINGUOIDUNG FROM NGUOIDUNG WHERE TENNGUOIDUNG = '"
                     + username + "' AND MATKHAU = '" + password + "'";
@@ -91,10 +92,10 @@ namespace Airline
                 else
                 {
                     data.Dispose();
-                    this.Visible = false;
+                    this.Hide();
                     Form1 form = new Form1();                    
                     form.ShowDialog();
-                    this.Visible = true;
+                    
                 }
             }
 
@@ -106,7 +107,7 @@ namespace Airline
             {
                 string username = tbUser.Text;
                 string password = tbPassword.Text;
-
+                accountName = username;
 
                 string sql = "SELECT TENNGUOIDUNG, MATKHAU, LOAINGUOIDUNG FROM NGUOIDUNG WHERE TENNGUOIDUNG = '"
                     + username + "' AND MATKHAU = '" + password + "'";
@@ -123,10 +124,10 @@ namespace Airline
                 else
                 {
                     data.Dispose();
-                    this.Visible = false;
-                    Form1 form = new Form1();
-                    form.ShowDialog();
-                    this.Visible = true;
+                    this.Hide();
+                    Form1 form1 = new Form1();
+                    form1.Show();
+                    
                 }
             }
         }
