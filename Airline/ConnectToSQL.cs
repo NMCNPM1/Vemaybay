@@ -27,7 +27,9 @@ namespace Airline
         #region Constructor
         public ConnectToSQL()
         {
-            strCon = @"Data Source=DESKTOP-RJMJFDH\SQLEXPRESS;Initial Catalog=AIRLINE;Integrated Security=True";
+            string path = System.IO.Path.GetFullPath(Environment.CurrentDirectory);
+            string databaseName = "AIRLINE.mdf";
+            strCon = @"Data Source=(localdb)\mssqllocaldb;AttachDbFilename=" + path + @"\" + databaseName + ";Integrated Security=True";;
             Conn = new SqlConnection(strCon);
         }
         #endregion
