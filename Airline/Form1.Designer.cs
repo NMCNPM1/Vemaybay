@@ -51,7 +51,7 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.reportControl1 = new Airline.ReportControl();
             this.ruleChangeControl1 = new Airline.RuleChangeControl();
-            this.label2 = new System.Windows.Forms.Label();
+            searchControl1 = new SearchControl();
             this.TaskBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -66,6 +66,9 @@
             // 
             // TaskBar
             // 
+            //
+            //
+            //
             this.TaskBar.BackColor = System.Drawing.Color.Transparent;
             this.TaskBar.Controls.Add(this.pictureBox8);
             this.TaskBar.Controls.Add(this.bunifuFlatButton2);
@@ -464,6 +467,17 @@
             this.creator.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.creator.Textcolor = System.Drawing.Color.White;
             this.creator.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            //
+            //searchControl1
+            //
+            searchControl1.BackColor = System.Drawing.Color.Transparent;
+            searchControl1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            searchControl1.Location = new System.Drawing.Point(66, 117);
+            searchControl1.Name = "searchControl1";
+            searchControl1.Size = new System.Drawing.Size(856, 523);
+            searchControl1.TabIndex = 16;
+            searchControl1.Visible = false;
+            
             // 
             // reportControl1
             // 
@@ -487,17 +501,6 @@
             this.ruleChangeControl1.TabIndex = 11;
             this.ruleChangeControl1.Visible = false;
             // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(870, 672);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 19);
-            this.label2.TabIndex = 26;
-            this.label2.Text = "© 2018 SE Airline";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -506,7 +509,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1000, 700);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(searchControl1);
             this.Controls.Add(this.ruleChangeControl1);
             this.Controls.Add(this.reportControl1);
             this.Controls.Add(this.creator);
@@ -567,7 +570,6 @@
         private System.Windows.Forms.PictureBox backPic;
         private Bunifu.Framework.UI.BunifuFlatButton creator;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.Label label2;
     }
 }
 
