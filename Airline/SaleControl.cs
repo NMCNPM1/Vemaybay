@@ -146,13 +146,13 @@ namespace Airline
                     }
                     if (hangVe == 1)
                     {
-                        sql = "UPDATE CHUYENBAY SET HANG1CONLAI = HANG1CONLAI - 1 WHERE MACHUYENBAY='" + _maChuyenBay+"'";
+                        sql = "UPDATE CHUYENBAY SET HANG1CONLAI = HANG1CONLAI + 1 WHERE MACHUYENBAY='" + _maChuyenBay + "'";
                         cmd.CommandText = sql;
                         cmd.ExecuteNonQuery();
                     }
                     else
                     {
-                        sql = "UPDATE CHUYENBAY SET HANG2CONLAI = HANG1CONLAI - 1 WHERE MACHUYENBAY='" + _maChuyenBay + "'";
+                        sql = "UPDATE CHUYENBAY SET HANG2CONLAI = HANG1CONLAI + 1 WHERE MACHUYENBAY='" + _maChuyenBay + "'";
                         cmd.CommandText = sql;
                         cmd.ExecuteNonQuery();
                     }
@@ -192,13 +192,13 @@ namespace Airline
                     }
                     if (hangVe == 1)
                     {
-                        sql = "UPDATE CHUYENBAY SET HANG1CONLAI = HANG1CONLAI - 1 WHERE MACHUYENBAY='" + _maChuyenBay + "'";
+                        sql = "UPDATE CHUYENBAY SET HANG1CONLAI = HANG1CONLAI + 1 WHERE MACHUYENBAY='" + _maChuyenBay + "'";
                         cmd.CommandText = sql;
                         cmd.ExecuteNonQuery();
                     }
                     else
                     {
-                        sql = "UPDATE CHUYENBAY SET HANG2CONLAI = HANG2CONLAI - 1 WHERE MACHUYENBAY='" + _maChuyenBay + "'";
+                        sql = "UPDATE CHUYENBAY SET HANG2CONLAI = HANG1CONLAI + 1 WHERE MACHUYENBAY='" + _maChuyenBay + "'";
                         cmd.CommandText = sql;
                         cmd.ExecuteNonQuery();
                     }

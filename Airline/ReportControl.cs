@@ -31,7 +31,7 @@ namespace Airline
                 MessageBox.Show("Tháng này không có thu nhập !", "Thông báo");
                 return;
             }
-            string sql = "SELECT VE.MAVE, VE.MACHUYENBAY, VE.HANGVE, VE.GIAVE FROM VE WHERE month(VE.NGAYDATVE)=" +
+            string sql = "SELECT VE.MAVE, VE.MACHUYENBAY,VE.MAKHACHHANG, VE.HANGVE, VE.GIAVE, VE.NGAYDATVE FROM VE WHERE month(VE.NGAYDATVE)=" +
                 monthRp.selectedValue + " AND YEAR(VE.NGAYDATVE)=" + yearRp.selectedValue;
             SqlCommand cmd = new SqlCommand(sql, LoginForm.Connection.Connection);
             cmd.CommandType = CommandType.Text;
@@ -170,7 +170,7 @@ namespace Airline
                     cmd = new SqlCommand(sql, LoginForm.Connection.Connection);
                     cmd.ExecuteNonQuery();
                 }
-                revenue = money(float.Parse(revenue).ToString()) + " VNĐ";
+                revenue = money(double.Parse(revenue).ToString()) + " VNĐ";
             }
             return revenue;
         }
