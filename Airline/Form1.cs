@@ -42,17 +42,8 @@ namespace Airline
             searchControl1.BringToFront();
         }
         private bool CheckUser(string s)
-        {
-            string sql = "SELECT LOAINGUOIDUNG FROM NGUOIDUNG WHERE TENNGUOIDUNG='" + s + "'";
-            SqlCommand cmd = new SqlCommand(sql, LoginForm.Connection.Connection);
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = sql;
-            SqlDataReader myReader;
-            myReader = cmd.ExecuteReader();
-            myReader.Read();
-            string check = myReader[0].ToString();
-            myReader.Close();
-            if (check== "True")
+        { 
+            if (s == "True")
             {
                 return true;
             }
@@ -61,7 +52,7 @@ namespace Airline
 
         private void dataBt_Click(object sender, EventArgs e)
         {
-            if (CheckUser(LoginForm.accountName))
+            if (CheckUser(LoginForm.loaiNguoiDung))
             {
 
                 openFileDialog1.Filter = "Excel | *.xlsx; *.xls| All File (*.*)|*.*";
@@ -86,60 +77,83 @@ namespace Airline
                             string command = "";
                             switch (i)
                             {
-                                case 1: // SANBAY                              
-                                    for (int j = 2; j <= row; j++)
+                                case 1: // SANBAY    
+                                    try
                                     {
-                                        string maSanBay = valueArray[j, 1].ToString();
-                                        string tenSanBay = valueArray[j, 2].ToString();
-                                        string tinh = valueArray[j, 3].ToString();
-                                        string quocGia = valueArray[j, 4].ToString();
-                                        command = "INSERT INTO SANBAY VALUES("
-                                         + "'" + maSanBay + "'" + ", "
-                                         + "N'" + tenSanBay + "'" + ", "
-                                         + "N'" + tinh + "'" + ", " + "N'" + quocGia + "'" + ")";
-                                        ExcuteCommand(command);
+                                        for (int j = 2; j <= row; j++)
+                                        {
+                                            string maSanBay = valueArray[j, 1].ToString();
+                                            string tenSanBay = valueArray[j, 2].ToString();
+                                            string tinh = valueArray[j, 3].ToString();
+                                            string quocGia = valueArray[j, 4].ToString();
+                                            command = "INSERT INTO SANBAY VALUES("
+                                             + "'" + maSanBay + "'" + ", "
+                                             + "N'" + tenSanBay + "'" + ", "
+                                             + "N'" + tinh + "'" + ", " + "N'" + quocGia + "'" + ")";
+                                            ExcuteCommand(command);
+                                        }
+                                    } catch(Exception ex)
+                    {
+                                        MessageBox.Show(ex.ToString());
+                                        return;
                                     }
                                     break;
                                 case 2: // CHUYENBAY
-                                    for (int j = 2; j <= row; j++)
+                                    try
                                     {
-                                        if (valueArray[j, 1] == null)
+                                        for (int j = 2; j <= row; j++)
                                         {
-                                            break;
-                                        }
-                                        string maChuyenBay = valueArray[j, 1].ToString();
-                                        long giaVeHang1 = long.Parse(valueArray[j, 2].ToString());
-                                        long giaVeHang2 = long.Parse(valueArray[j, 3].ToString());
-                                        string sanBayDi = valueArray[j, 4].ToString();
-                                        string sanBayDen = valueArray[j, 5].ToString();
-                                        string ngayBay = valueArray[j, 6].ToString();
-                                        string gioBay = valueArray[j, 13].ToString();
-                                        int thoiGianBay = int.Parse(valueArray[j, 8].ToString());
-                                        int hang1 = int.Parse(valueArray[j, 9].ToString());
-                                        int hang2 = int.Parse(valueArray[j, 10].ToString());
-                                        int hang1conlai = int.Parse(valueArray[j, 11].ToString());
-                                        int hang2conlai = int.Parse(valueArray[j, 12].ToString());
+                                            if (valueArray[j, 1] == null)
+                                            {
+                                                break;
+                                            }
+                                            string maChuyenBay = valueArray[j, 1].ToString();
+                                            long giaVeHang1 = long.Parse(valueArray[j, 2].ToString());
+                                            long giaVeHang2 = long.Parse(valueArray[j, 3].ToString());
+                                            string sanBayDi = valueArray[j, 4].ToString();
+                                            string sanBayDen = valueArray[j, 5].ToString();
+                                            string ngayBay = valueArray[j, 6].ToString();
+                                            string gioBay = valueArray[j, 13].ToString();
+                                            int thoiGianBay = int.Parse(valueArray[j, 8].ToString());
+                                            int hang1 = int.Parse(valueArray[j, 9].ToString());
+                                            int hang2 = int.Parse(valueArray[j, 10].ToString());
+                                            int hang1conlai = int.Parse(valueArray[j, 11].ToString());
+                                            int hang2conlai = int.Parse(valueArray[j, 12].ToString());
 
-                                        command = "INSERT INTO CHUYENBAY VALUES("
-                                         + "'" + maChuyenBay + "'" + ", "
-                                         + giaVeHang2 + ", " + giaVeHang1 + ", " + "'" + sanBayDi + "'" + ", "
-                                         + "'" + sanBayDen + "'" + ", " + "'" + ngayBay + "'" + ", "
-                                         + "'" + gioBay + "'" + ", " + thoiGianBay + ", " + hang1 + ", "
-                                         + hang2 + ", " + hang1conlai + ", " + hang2conlai + ")";
-                                        ExcuteCommand(command);
+                                            command = "INSERT INTO CHUYENBAY VALUES("
+                                             + "'" + maChuyenBay + "'" + ", "
+                                             + giaVeHang2 + ", " + giaVeHang1 + ", " + "'" + sanBayDi + "'" + ", "
+                                             + "'" + sanBayDen + "'" + ", " + "'" + ngayBay + "'" + ", "
+                                             + "'" + gioBay + "'" + ", " + thoiGianBay + ", " + hang1 + ", "
+                                             + hang2 + ", " + hang1conlai + ", " + hang2conlai + ")";
+                                            ExcuteCommand(command);
+                                        }
+                                    }
+                                    catch (Exception ex)
+                                    {
+                                        MessageBox.Show(ex.ToString());
+                                        return;
                                     }
                                     break;
                                 case 3: // SANBAYTRUNGGIAN
-                                    for (int j = 2; j <= row; j++)
+                                    try
                                     {
-                                        string chuyenBay = valueArray[j, 1].ToString();
-                                        string sanbay = valueArray[j, 2].ToString();
-                                        int thoiGianDung = int.Parse(valueArray[j, 3].ToString());
-                                        command = "INSERT INTO SANBAYTRUNGGIAN VALUES("
-                                         + "'" + chuyenBay + "'" + ", "
-                                         + "'" + sanbay + "'" + ", "
-                                         + thoiGianDung + ")";
-                                        ExcuteCommand(command);
+                                        for (int j = 2; j <= row; j++)
+                                        {
+                                            string chuyenBay = valueArray[j, 1].ToString();
+                                            string sanbay = valueArray[j, 2].ToString();
+                                            int thoiGianDung = int.Parse(valueArray[j, 3].ToString());
+                                            command = "INSERT INTO SANBAYTRUNGGIAN VALUES("
+                                             + "'" + chuyenBay + "'" + ", "
+                                             + "'" + sanbay + "'" + ", "
+                                             + thoiGianDung + ")";
+                                            ExcuteCommand(command);
+                                        }
+                                    }
+                                    catch (Exception ex)
+                                    {
+                                        MessageBox.Show(ex.ToString());
+                                        return;
                                     }
                                     break;
                             }
@@ -147,14 +161,16 @@ namespace Airline
                     }
                     catch (Exception ex)
                     {
-                        
+                        MessageBox.Show(ex.ToString());
+                        return;
                     }
-
+                    searchControl1.LoadData();
                     MessageBox.Show("Data update successful !");
+
                 }
                 else
                 {
-                    MessageBox.Show("Bạn chưa chọn tệp tin nào !", "Thông báo !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("No file was selected !", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             else
@@ -167,7 +183,7 @@ namespace Airline
 
         private void reportBt_Click(object sender, EventArgs e)
         {
-            if (CheckUser(LoginForm.accountName))
+            if (CheckUser(LoginForm.loaiNguoiDung))
             {
 
                 HidePicture();
@@ -181,9 +197,9 @@ namespace Airline
 
             }
 
-            private void changeBt_Click(object sender, EventArgs e)
+        private void changeBt_Click(object sender, EventArgs e)
         {
-            if (CheckUser(LoginForm.accountName))
+            if (CheckUser(LoginForm.loaiNguoiDung))
             {
                 HidePicture();
             ruleChangeControl1.Visible = true;
@@ -268,10 +284,7 @@ namespace Airline
 
         #endregion
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
@@ -338,11 +351,14 @@ namespace Airline
                 searchControl1.TabIndex = 16;
                 searchControl1.Visible = false;
                 this.Controls.Add(searchControl1);
-
-
             }
             reportControl1.Visible = false;
             ruleChangeControl1.Visible = false;
+            aboutControl1.Visible = false;
+            if(saleControl1 != null)
+            {
+                saleControl1.Dispose();
+            }
         }
 
         private void btSwitch_Click(object sender, EventArgs e)
@@ -352,9 +368,11 @@ namespace Airline
             lgForm.Show();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void creator_Click(object sender, EventArgs e)
         {
-
+            HidePicture();
+            aboutControl1.Visible = true;
+            aboutControl1.BringToFront();
         }
     }
 

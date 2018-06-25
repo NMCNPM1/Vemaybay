@@ -51,7 +51,9 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.reportControl1 = new Airline.ReportControl();
             this.ruleChangeControl1 = new Airline.RuleChangeControl();
-            searchControl1 = new SearchControl();
+            this.searchControl1 = new Airline.SearchControl();
+            this.aboutControl1 = new Airline.AboutControl();
+            this.name = new System.Windows.Forms.Label();
             this.TaskBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -66,9 +68,6 @@
             // 
             // TaskBar
             // 
-            //
-            //
-            //
             this.TaskBar.BackColor = System.Drawing.Color.Transparent;
             this.TaskBar.Controls.Add(this.pictureBox8);
             this.TaskBar.Controls.Add(this.bunifuFlatButton2);
@@ -364,7 +363,6 @@
             this.dock.Size = new System.Drawing.Size(848, 158);
             this.dock.TabIndex = 13;
             this.dock.TabStop = false;
-            this.dock.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // btSwitch
             // 
@@ -387,18 +385,18 @@
             this.btSwitch.IconVisible = true;
             this.btSwitch.IconZoom = 60D;
             this.btSwitch.IsTab = false;
-            this.btSwitch.Location = new System.Drawing.Point(671, 80);
+            this.btSwitch.Location = new System.Drawing.Point(688, 80);
             this.btSwitch.Name = "btSwitch";
             this.btSwitch.Normalcolor = System.Drawing.Color.Transparent;
             this.btSwitch.OnHovercolor = System.Drawing.Color.Transparent;
             this.btSwitch.OnHoverTextColor = System.Drawing.Color.Black;
             this.btSwitch.selected = false;
-            this.btSwitch.Size = new System.Drawing.Size(139, 31);
+            this.btSwitch.Size = new System.Drawing.Size(131, 31);
             this.btSwitch.TabIndex = 21;
             this.btSwitch.Text = "  Switch User";
             this.btSwitch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btSwitch.Textcolor = System.Drawing.Color.Black;
-            this.btSwitch.TextFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btSwitch.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btSwitch.Click += new System.EventHandler(this.btSwitch_Click);
             // 
             // label1
@@ -409,7 +407,6 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 24);
             this.label1.TabIndex = 20;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pictureBox6
             // 
@@ -467,17 +464,7 @@
             this.creator.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.creator.Textcolor = System.Drawing.Color.White;
             this.creator.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            //
-            //searchControl1
-            //
-            searchControl1.BackColor = System.Drawing.Color.Transparent;
-            searchControl1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            searchControl1.Location = new System.Drawing.Point(66, 117);
-            searchControl1.Name = "searchControl1";
-            searchControl1.Size = new System.Drawing.Size(856, 523);
-            searchControl1.TabIndex = 16;
-            searchControl1.Visible = false;
-            
+            this.creator.Click += new System.EventHandler(this.creator_Click);
             // 
             // reportControl1
             // 
@@ -501,6 +488,35 @@
             this.ruleChangeControl1.TabIndex = 11;
             this.ruleChangeControl1.Visible = false;
             // 
+            // searchControl1
+            // 
+            this.searchControl1.BackColor = System.Drawing.Color.Transparent;
+            this.searchControl1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.searchControl1.Location = new System.Drawing.Point(66, 117);
+            this.searchControl1.Name = "searchControl1";
+            this.searchControl1.Size = new System.Drawing.Size(856, 523);
+            this.searchControl1.TabIndex = 16;
+            this.searchControl1.Visible = false;
+            // 
+            // aboutControl1
+            // 
+            this.aboutControl1.BackColor = System.Drawing.Color.Transparent;
+            this.aboutControl1.Location = new System.Drawing.Point(190, 126);
+            this.aboutControl1.Name = "aboutControl1";
+            this.aboutControl1.Size = new System.Drawing.Size(620, 483);
+            this.aboutControl1.TabIndex = 26;
+            this.aboutControl1.Visible = false;
+            // 
+            // name
+            // 
+            this.name.AutoSize = true;
+            this.name.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.name.Location = new System.Drawing.Point(924, 675);
+            this.name.Name = "name";
+            this.name.Size = new System.Drawing.Size(64, 16);
+            this.name.TabIndex = 27;
+            this.name.Text = "© SE Airline";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -509,8 +525,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1000, 700);
-            this.Controls.Add(searchControl1);
-            this.Controls.Add(this.ruleChangeControl1);
+            this.Controls.Add(this.name);
             this.Controls.Add(this.reportControl1);
             this.Controls.Add(this.creator);
             this.Controls.Add(this.backPic);
@@ -528,6 +543,9 @@
             this.Controls.Add(this.TaskBar);
             this.Controls.Add(this.searchBt);
             this.Controls.Add(this.dock);
+            this.Controls.Add(this.aboutControl1);
+            this.Controls.Add(this.ruleChangeControl1);
+            this.Controls.Add(this.searchControl1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
@@ -570,6 +588,8 @@
         private System.Windows.Forms.PictureBox backPic;
         private Bunifu.Framework.UI.BunifuFlatButton creator;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private AboutControl aboutControl1;
+        private System.Windows.Forms.Label name;
     }
 }
 

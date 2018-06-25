@@ -48,8 +48,6 @@
             this.price2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fromStation = new Bunifu.Framework.UI.BunifuDropdown();
             this.toStation = new Bunifu.Framework.UI.BunifuDropdown();
-            this.label4 = new System.Windows.Forms.Label();
-            this.gioKhoiHanh = new Bunifu.Framework.UI.BunifuDropdown();
             ((System.ComponentModel.ISupportInitialize)(this.flightInfo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -127,7 +125,7 @@
             this.searchBt.IconVisible = true;
             this.searchBt.IconZoom = 65D;
             this.searchBt.IsTab = true;
-            this.searchBt.Location = new System.Drawing.Point(189, 278);
+            this.searchBt.Location = new System.Drawing.Point(189, 250);
             this.searchBt.Name = "searchBt";
             this.searchBt.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.searchBt.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
@@ -292,46 +290,11 @@
             this.toStation.TabIndex = 10;
             this.toStation.onItemSelected += new System.EventHandler(this.toStation_onItemSelected);
             // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.label4.Location = new System.Drawing.Point(40, 226);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(110, 17);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Departure Time:";
-            // 
-            // gioKhoiHanh
-            // 
-            this.gioKhoiHanh.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.gioKhoiHanh.BackColor = System.Drawing.Color.Transparent;
-            this.gioKhoiHanh.BorderRadius = 3;
-            this.gioKhoiHanh.Cursor = System.Windows.Forms.Cursors.Default;
-            this.gioKhoiHanh.DisabledColor = System.Drawing.Color.Gray;
-            this.gioKhoiHanh.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gioKhoiHanh.ForeColor = System.Drawing.Color.White;
-            this.gioKhoiHanh.Items = new string[] {
-        "..."};
-            this.gioKhoiHanh.Location = new System.Drawing.Point(189, 217);
-            this.gioKhoiHanh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gioKhoiHanh.Name = "gioKhoiHanh";
-            this.gioKhoiHanh.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.gioKhoiHanh.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.gioKhoiHanh.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.gioKhoiHanh.selectedIndex = 0;
-            this.gioKhoiHanh.Size = new System.Drawing.Size(246, 31);
-            this.gioKhoiHanh.TabIndex = 12;
-            // 
             // SearchControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.Controls.Add(this.gioKhoiHanh);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.toStation);
             this.Controls.Add(this.fromStation);
             this.Controls.Add(this.flightInfo);
@@ -359,8 +322,6 @@
         private Bunifu.Framework.UI.BunifuCustomDataGrid flightInfo;
         private Bunifu.Framework.UI.BunifuDropdown fromStation;
         private Bunifu.Framework.UI.BunifuDropdown toStation;
-        private System.Windows.Forms.Label label4;
-        private Bunifu.Framework.UI.BunifuDropdown gioKhoiHanh;
         private System.Windows.Forms.DataGridViewTextBoxColumn stt;
         private System.Windows.Forms.DataGridViewTextBoxColumn from;
         private System.Windows.Forms.DataGridViewTextBoxColumn to;

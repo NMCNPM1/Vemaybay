@@ -15,20 +15,23 @@ namespace Airline
     {
         #region INIT
         public static string accountName;
-        private static ConnectToSQL connection;
+        public static string loaiNguoiDung;
+        private static ConnectToSQL connection =new ConnectToSQL();
 
         internal static ConnectToSQL Connection { get => connection; set => connection = value; }
+
         public string AccountName { get => accountName; set => accountName = value; }
 
         public LoginForm()
         {
-            Connection = new ConnectToSQL();
             Connection.OpenConn();
             InitializeComponent();
             tbPassword.isPassword = true;
         }
 
         #endregion
+
+
 
         #region Main Event      
 
@@ -50,6 +53,9 @@ namespace Airline
                 MessageBox.Show("Incorrect username or password !", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
             {
+                DataRow row = dataTable.Select()[0];
+                loaiNguoiDung = row[2].ToString();
+                data.Dispose();
                 this.Hide();
                 Form1 form = new Form1();
                 form.Show();
@@ -91,6 +97,8 @@ namespace Airline
                     MessageBox.Show("Incorrect username or password !", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 else
                 {
+                    DataRow row = dataTable.Select()[0];
+                    loaiNguoiDung = row[2].ToString();
                     data.Dispose();
                     this.Hide();
                     Form1 form = new Form1();                    
@@ -123,6 +131,8 @@ namespace Airline
                     MessageBox.Show("Incorrect username or password !", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 else
                 {
+                    DataRow row = dataTable.Select()[0];
+                    loaiNguoiDung = row[2].ToString();
                     data.Dispose();
                     this.Hide();
                     Form1 form1 = new Form1();

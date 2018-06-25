@@ -4,12 +4,6 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Data;
 using System.Linq;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -127,7 +121,7 @@ namespace Airline
                     da = new SqlDataAdapter(cmd);
                     dt.Dispose();
                     da.Fill(dt);
-                    row = dt.Select()[0];
+                    row = dt.Select()[1];
                     soLuong = row[0].ToString();
                     int soLuongKhachHang = int.Parse(soLuong);
                     string code = (Form1.ChuanHoaMa(soLuongKhachHang));
@@ -141,7 +135,15 @@ namespace Airline
                         + "', '" + maKhachHang + "', " + hangVe.ToString()
                         + ", " + _price.ToString() + ", '01-01-1998 23:59:59.999')";
                     cmd.CommandText = sql;
-                    cmd.ExecuteNonQuery();
+                    try
+                    {
+                        cmd.ExecuteNonQuery();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.ToString());
+                        return;
+                    }
                     if (hangVe == 1)
                     {
                         sql = "UPDATE CHUYENBAY SET HANG1CONLAI = HANG1CONLAI - 1 WHERE MACHUYENBAY='" + _maChuyenBay+"'";
@@ -180,7 +182,14 @@ namespace Airline
                         + "', '" + maKhachHang + "', " + hangVe.ToString()
                         + ", " + _price.ToString() + ")";
                     cmd.CommandText = sql;
-                    cmd.ExecuteNonQuery();
+                    try
+                    {
+                        cmd.ExecuteNonQuery();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.ToString());
+                    }
                     if (hangVe == 1)
                     {
                         sql = "UPDATE CHUYENBAY SET HANG1CONLAI = HANG1CONLAI - 1 WHERE MACHUYENBAY='" + _maChuyenBay + "'";

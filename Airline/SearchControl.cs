@@ -15,12 +15,9 @@ namespace Airline
     {
         #region INIT
 
-        SqlCommand cmd = new SqlCommand();
-
         public SearchControl()
         {
-            this.SetStyle(ControlStyles.SupportsTransparentBackColor, true);
-            
+            this.SetStyle(ControlStyles.SupportsTransparentBackColor, true);            
             InitializeComponent();
             LoadData();
         }
@@ -28,12 +25,9 @@ namespace Airline
         public void LoadData()
         {
             // load sân bay đến và sân bay đi
+
             string sql = "SELECT TINH FROM dbo.SANBAY ORDER BY MASANBAY ASC";
-            cmd.Connection = LoginForm.Connection.Connection;
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = sql;
-
-
+            SqlCommand cmd = new SqlCommand(sql, LoginForm.Connection.Connection);
             SqlDataReader myReader;
             try
             {
@@ -72,28 +66,6 @@ namespace Airline
             }
             catch { }
             // Load giờ bay
-            sql = "SELECT DISTINCT GIO FROM dbo.CHUYENBAY ORDER BY GIO ASC";
-            cmd = new SqlCommand(sql, LoginForm.Connection.Connection);
-            try
-            {
-                myReader = cmd.ExecuteReader();
-                if (myReader.HasRows)
-                {
-                    if (gioKhoiHanh.selectedValue == "...")
-                    {
-                        gioKhoiHanh.RemoveItem("...");
-                        gioKhoiHanh.AddItem("Any Time");
-                        gioKhoiHanh.selectedIndex = 0;
-                        while (myReader.Read())
-                        {
-                            string sName = myReader[0].ToString();
-                            gioKhoiHanh.AddItem(sName);
-                        }
-                    }
-                }
-                myReader.Close();
-            }
-            catch { }
         }
 
         #endregion
@@ -113,9 +85,8 @@ namespace Airline
                 "WHERE CHUYENBAY.SANBAYDEN=SB2.MASANBAY AND CHUYENBAY.SANBAYDI= SB1.MASANBAY" +
                 " AND SB1.TINH=N'" + fromStation.selectedValue +
                 "' AND SB2.TINH=N'" + toStation.selectedValue +
-                "' AND NGAY='" + datePicker.Value.ToString() + "'";
-            if (gioKhoiHanh.selectedValue != "Any Time")
-                sql += "AND GIO='" + gioKhoiHanh.selectedValue + "'";
+               "' AND NGAY='" + datePicker.Value.ToString() + "'";
+           
             SqlCommand cmd = new SqlCommand(sql, LoginForm.Connection.Connection);
             cmd.CommandType = CommandType.Text;
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -162,13 +133,13 @@ namespace Airline
             this.fromStation.Hide();
             this.toStation.Hide();
             this.datePicker.Hide();
-            this.gioKhoiHanh.Hide();
+
             this.searchBt.Hide();
             this.flightInfo.Hide();
             this.label1.Hide();
             this.label2.Hide();
             this.label3.Hide();
-            this.label4.Hide();
+
         }
 
         private void ShowComp()
@@ -176,13 +147,13 @@ namespace Airline
             this.fromStation.Show();
             this.toStation.Show();
             this.datePicker.Show();
-            this.gioKhoiHanh.Show();
+
             this.searchBt.Show();
             this.flightInfo.Show();
             this.label1.Show();
             this.label2.Show();
             this.label3.Show();
-            this.label4.Show();
+
         }
 
 
