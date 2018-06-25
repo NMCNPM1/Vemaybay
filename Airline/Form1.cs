@@ -52,6 +52,7 @@ namespace Airline
 
         private void dataBt_Click(object sender, EventArgs e)
         {
+            
             if (CheckUser(LoginForm.loaiNguoiDung))
             {
 
@@ -177,7 +178,7 @@ namespace Airline
             {
                 MessageBox.Show("You don't have permission !");
             }
-            
+            LoginForm.Connection.CloseConn();
 
         }
 
@@ -373,6 +374,11 @@ namespace Airline
             HidePicture();
             aboutControl1.Visible = true;
             aboutControl1.BringToFront();
+        }
+
+        private void aboutControl1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 

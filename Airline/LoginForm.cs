@@ -59,7 +59,7 @@ namespace Airline
                 this.Hide();
                 Form1 form = new Form1();
                 form.Show();
-                 
+                Connection.CloseConn();
             }
         }
 
@@ -90,7 +90,7 @@ namespace Airline
 
                 DataTable dataTable = new DataTable();
                 SqlDataAdapter data = new SqlDataAdapter(sql, Connection.Connection);
-
+                dataTable.Clear();
                 data.Fill(dataTable);
 
                 if (dataTable.Rows.Count == 0)
@@ -100,6 +100,7 @@ namespace Airline
                     DataRow row = dataTable.Select()[0];
                     loaiNguoiDung = row[2].ToString();
                     data.Dispose();
+                    
                     this.Hide();
                     Form1 form = new Form1();                    
                     form.Show();

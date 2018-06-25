@@ -506,6 +506,7 @@
             this.aboutControl1.Size = new System.Drawing.Size(620, 483);
             this.aboutControl1.TabIndex = 26;
             this.aboutControl1.Visible = false;
+            this.aboutControl1.Load += new System.EventHandler(this.aboutControl1_Load);
             // 
             // name
             // 

@@ -91,6 +91,7 @@ namespace Airline
             cmd.CommandType = CommandType.Text;
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
+            
             da.Fill(dt);
             flightInfo.DataSource = dt;
             if (flightInfo.Rows.Count == 0) MessageBox.Show("No flight available at this time");
